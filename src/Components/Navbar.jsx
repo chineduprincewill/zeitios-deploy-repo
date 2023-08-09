@@ -17,25 +17,25 @@ const Navbar = () => {
     return (
         <>
             <div className='flex w-full p-2 items-center justify-around'>
-                <div className="max-sm:border max-sm:border-white md:border-none  max-sm:rounded-lg  max-sm:p-2 max-sm:ml-4 md:ml-0 md:h-0 md:w-0" >
-                    <FontAwesomeIcon icon="fa-solid fa-bars" className=" max-sm:text-white md:h-0 md:w-0 "> </FontAwesomeIcon>
+                <div className="max-md:border max-sm:border max-sm:border-white max-md:border-white lg:border-none  max-sm:rounded-lg max-md:rounded-lg lg:rounded-none max-sm:p-2 max-md:p-2 max-sm:ml-4 max-md:ml-4 lg:ml-0 lg:h-0 lg:w-0" >
+                    <FontAwesomeIcon icon="fa-solid fa-bars" className=" max-sm:text-white max-md:text-white lg:h-0 lg:w-0 "> </FontAwesomeIcon>
                 </div>
 
                 <div>
                     <img src={Logo} alt="Logo" className="" />
                 </div>
-                <div className="flex justify-around items-center max-sm:fixed max-sm:mt-28">
-                    <div className="text-white lg:px-2 px-1 max-sm:text-sm"> Home </div>
-                    <div className="text-white lg:px-2 px-1 max-sm:text-sm"> About </div>
-                    <div className="text-white lg:px-2 flex flex-col justify-around items-center relative px-1 max-sm:text-sm">  <div className="text-white lg:px-2 px-1 flex justify-around items-center"> Browse Jobs <MdKeyboardArrowDown onClick={handleClick} className='h-3 w-3' /> </div>
-                        {showDiv && <div className="bg-secondary p-4 fixed mt-28 max-sm:text-sm">
+                <div className="flex justify-around items-center max-sm:fixed max-md:fixed max-sm:mt-28 max-md:mt-28">
+                    <div className="text-white lg:px-2 px-1 max-sm:text-sm max-md:text-sm"> Home </div>
+                    <div className="text-white lg:px-2 px-1 max-sm:text-sm max-md:text-sm"> About </div>
+                    <div className="text-white lg:px-2 flex flex-col justify-around items-center relative px-1 max-sm:text-sm max-md:text-sm">  <div className="text-white lg:px-2 px-1 flex justify-around items-center"> Browse Jobs <MdKeyboardArrowDown onClick={handleClick} className='h-4 w-4' /> </div>
+                        {showDiv && <div className="bg-secondary p-4 fixed mt-28 max-sm:text-sm max-md:text-sm">
                             <div>Freelancers</div>
                             <div>Teams</div>
                         </div>}
                     </div>
-                    <div className="text-white lg:px-2 px-1 max-sm:text-sm"> Services </div>
-                    <div className="text-white lg:px-2 px-1 max-sm:text-sm"> Blog </div>
-                    <div className="text-white lg:px-2 px-1 max-sm:text-sm"> Contacts </div>
+                    <div className="text-white lg:px-2 px-1 max-sm:text-sm max-md:text-sm"> Services </div>
+                    <div className="text-white lg:px-2 px-1 max-sm:text-sm max-md:text-sm"> Blog </div>
+                    <div className="text-white lg:px-2 px-1 max-sm:text-sm max-md:text-sm"> Contacts </div>
                 </div>
 
                 <div>
