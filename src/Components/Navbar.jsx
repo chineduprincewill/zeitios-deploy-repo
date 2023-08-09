@@ -24,11 +24,11 @@ const Navbar = () => {
                 <div>
                     <img src={Logo} alt="Logo" className="" />
                 </div>
-                <div className="flex justify-around items-center max-sm:fixed max-md:fixed max-sm:mt-28 max-md:mt-28">
+                <div className="flex justify-around items-center max-sm:absolute max-md:absolute max-sm:mt-28 max-md:mt-28">
                     <div className="text-white lg:px-2 px-1 max-sm:text-sm max-md:text-sm"> Home </div>
                     <div className="text-white lg:px-2 px-1 max-sm:text-sm max-md:text-sm"> About </div>
                     <div className="text-white lg:px-2 flex flex-col justify-around items-center relative px-1 max-sm:text-sm max-md:text-sm">  <div className="text-white lg:px-2 px-1 flex justify-around items-center"> Browse Jobs <MdKeyboardArrowDown onClick={handleClick} className='h-4 w-4' /> </div>
-                        {showDiv && <div className="bg-secondary p-4 fixed mt-28 max-sm:text-sm max-md:text-sm">
+                        {showDiv && <div className="bg-secondary p-4 absolute mt-28 max-sm:text-sm max-md:text-sm">
                             <div>Freelancers</div>
                             <div>Teams</div>
                         </div>}
