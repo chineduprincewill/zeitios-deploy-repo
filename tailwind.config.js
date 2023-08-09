@@ -18,7 +18,12 @@ export default {
         primary: '#0259DB',
         basic: '#0259DB99',
         secondary: '#073E90',
-        dark: '#000000E5'
+        dark: '#000000E5',
+        lightGray: '#989797',
+        lighterGray: '#D0E1FA',
+        darkGray: '#323232',
+        lightOrange: ' #F9BDAC',
+        lightPink: '#FFB19D',
       }),
       backgroundImage: {
         "home": "url('/src/assets/image/background-image.png')"
