@@ -3,6 +3,10 @@ import Navbar from '../Components/Navbar'
 import firstPicture from '../assets/image/first_picture.png'
 import secondPicture from '../assets/image/second_picture.png'
 import thirdPicture from '../assets/image/third_picture.png'
+import fourthPicture from '../assets/image/fourth_picture.png'
+import fifthPicture from '../assets/image/fifth_picture.png'
+import sixthPicture from '../assets/image/sixth_picture.png'
+import seventhPicture from '../assets/image/seventh_picture.png'
 import starIcon from '../assets/icons/star_icon.png'
 import googleIcon from '../assets/icons/Google.png'
 import microsoftIcon from '../assets/icons/Microsoft.png'
@@ -48,11 +52,11 @@ const Home = () => {
             <div className=" w-full pt-10 pb-20">
                 <h1 className="text-center font-bold text-3xl">About Zeitious</h1>
                 <p className="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et  dolore magna aliqua. Ut enim ad minim veniam, quui nostrud </p>
-                <div className="w-2/3 max-lg:w-5/6 max-sm:w-full max-md:w-5/6 max-sm:flex-col  p-4 flex justify-around border items-center mx-auto mt-10">
-                    <div className="w-2/5 max-sm:w-5/6  max-sm:mb-5   border">
+                <div className="w-2/3 max-lg:w-5/6 max-sm:w-full max-md:w-5/6 max-sm:flex-col  p-4 flex justify-around items-center mx-auto mt-10">
+                    <div className="w-2/5 max-sm:w-5/6  max-sm:mb-5 ">
                         <img src={firstPicture} alt="" className="object-cover max-sm:w-full  " />
                     </div>
-                    <div className="w-1/2 2xl:w-2/5 max-lg:w-1/2 max-sm:w-5/6 max-md:w-1/2  text-center border">
+                    <div className="w-1/2 2xl:w-2/5 max-lg:w-1/2 max-sm:w-5/6 max-md:w-1/2  text-center">
                         "Lorem ipsum dolor sit amet, consectetur adipiscing
                         elit, sed do eiusmod tempor incididunt ut labore et
                         dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -74,7 +78,7 @@ const Home = () => {
                 </div>
                 <div className="w-11/12 mx-auto flex flex-wrap justify-between items-stretch p-4 max-sm:p-2 ">
                     <div className=" flex justify-between  w-2/5 max-sm:w-full max-md:w-5/12  p-6 shadow-2xl max-sm:p-2 max-sm:py-6 mb-10  ">
-                        <div className='1/4'>
+                        <div className=' '>
                             <div className='rounded-full p-4 bg-lighterGray'>
                                 <img src={googleIcon} alt="Google" />
                             </div>
@@ -93,7 +97,7 @@ const Home = () => {
                         </div>
                     </div>
                     <div className=" flex justify-between max-sm:w-full w-2/5 max-md:w-5/12 p-6 shadow-2xl max-sm:p-2 max-sm:py-6 mb-10">
-                        <div className='1/4'>
+                        <div className=''>
                             <div className='rounded-full p-4 bg-lightOrange'>
                                 <img src={microsoftIcon} alt="Google" />
                             </div>
@@ -112,7 +116,7 @@ const Home = () => {
                         </div>
                     </div>
                     <div className=" flex justify-between max-sm:w-full max-md:w-5/12  w-2/5 p-6 shadow-2xl max-sm:p-2 max-sm:py-6 mb-10">
-                        <div className='1/4'>
+                        <div className=''>
                             <div className='rounded-full p-4 bg-lighterGray'>
                                 <img src={googleIcon} alt="Google" />
                             </div>
@@ -131,7 +135,7 @@ const Home = () => {
                         </div>
                     </div>
                     <div className=" flex justify-between max-sm:w-full max-md:w-5/12  w-2/5 p-6 shadow-2xl max-sm:px-2 max-sm:py-6 mb-10">
-                        <div className='1/4'>
+                        <div className=''>
                             <div className='rounded-full p-4 bg-lightOrange'>
                                 <img src={microsoftIcon} alt="Google" />
                             </div>
@@ -332,7 +336,7 @@ const Home = () => {
                     <p>Osaze Michael</p>
                     <p className="text-sm">Client</p>
                 </div>
-                <div className="flex items-center justify-around w-1/2 max-md:w-2/3 max-sm:w-full mt-10 mx-auto mb-10">
+                <div className="flex items-center justify-around w-2/5 max-md:w-2/3 max-sm:w-full max-lg:w-1/2 mt-10 mx-auto mb-16">
                     <div className="rounded-full"><img src={secondPicture} alt="profile picture" /></div>
                     <div className="rounded-full"><img src={thirdPicture} alt="profile picture" /></div>
                     <div className="rounded-full"><img src={secondPicture} alt="profile picture" /></div>
@@ -340,38 +344,81 @@ const Home = () => {
                     <div className="rounded-full"><img src={secondPicture} alt="profile picture" /></div>
                 </div>
             </div>
-            <div className="w-full ">
-                <div className='bg-lightPink w-2/3 pt-10 pb-32  pl-10'>
+            <div className="w-full relative">
+                <div className='bg-lightPink w-2/3 max-lg:w-11/12  max-sm:w-full pt-16 pb-96 z-2 absolute top-0 left-0  pl-16 max-lg:pl-8'>
                     <div>
-                        <h2 className="font-bold text-3xl">Need something done?</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
+                        <h2 className="font-bold text-3xl ">Need something done?</h2>
+                        <p className=' max-lg:w-1/2 max-sm:w-full'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
                     </div>
-                    <div className="flex items-center justify-between w-full mt-10">
-                        <div className="pt-5 shadow-2xl px-4 bg-white w-1/4">
-                            <img src={bagIcon} alt="icon" />
-                            <div className='mt-5'>
-                                <p className='text-lg mb-5 font-semibold'>Post a Job</p>
-                                <p className=' mb-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
-                            </div>
+
+                </div>
+                <div className='absolute right-0 top-10 w-[36rem] max-lg:w-80 max-md:w-64 max-xl:w-[28rem] max-lg:h-[30rem] max-lg:top-6 h-[28rem] max-sm:w-0 max-sm:h-0 z-20 cursor-pointer bg-transparent bg-fourthPicture bg-blend-multiply'>
+
+                    {/* <img src={fourthPicture} alt="" className='object-cover' /> */}
+                </div>
+                <div className="flex  max-md:flex-wrap max-lg:flex-wrap  items-center justify-between w-7/12 max-lg:w-5/6 max-sm:w-11/12 mt-10
+                absolute left-16 max-lg:left-8 top-32 max-lg:top-32 max-sm:top-28 z-30 cursor-pointer">
+                    <div className="pt-5 shadow-2xl px-4 bg-white w-1/4   max-lg:w-3/10 max-lg:mb-5 ">
+                        <img src={bagIcon} alt="icon" />
+                        <div className='mt-5'>
+                            <p className='text-lg mb-5 font-semibold'>Post a Job</p>
+                            <p className=' mb-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
                         </div>
-                        <div className="pt-5 shadow-2xl px-4  bg-white w-1/4">
-                            <img src={profileIcon} alt="icon" />
-                            <div className='mt-5'>
-                                <p className='text-lg font-semibold mb-5'>Choose Freelancer</p>
-                                <p className=' mb-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
-                            </div>
+                    </div>
+                    <div className="pt-5 shadow-2xl px-4  bg-white w-1/4  max-lg:w-3/10 max-lg:mb-5   ">
+                        <img src={profileIcon} alt="icon" />
+                        <div className='mt-5'>
+                            <p className='text-lg font-semibold mb-5'>Choose Freelancer</p>
+                            <p className=' mb-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
                         </div>
-                        <div className="pt-5 shadow-2xl px-4 bg-white w-1/4">
-                            <img src={boxIcon} alt="icon" />
-                            <div className='mt-5'>
-                                <p className='text-lg font-semibold mb-5'>Pay safely</p>
-                                <p className=' mb-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
-                            </div>
+                    </div>
+                    <div className="pt-5 shadow-2xl px-4 bg-white w-1/4  max-lg:w-3/10 max-lg:mb-5  ">
+                        <img src={boxIcon} alt="icon" />
+                        <div className='mt-5'>
+                            <p className='text-lg font-semibold mb-5'>Pay safely</p>
+                            <p className=' mb-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
                         </div>
                     </div>
                 </div>
 
+            </div>
+            <div className="w-full mt-[40rem]">
+                <div className="w-11/12 mx-auto p-4">
+                    <h1 className="font-bold text-3xl">Our Blog</h1>
+                    <div className="flex items-center justify-between max-sm:flex-col max-sm:items-start">
+                        <p className="max-sm:text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
+                        <p className=" text-primary"><a href="/">View All</a></p>
+                    </div>
+                </div>
+                <div className="w-11/12 mx-auto flex max-md:flex-wrap justify-between items-stretch p-4 max-sm:p-2 ">
+                    <div className="   w-2/7 max-sm:w-full max-md:w-5/12   shadow-2xl  mb-10  ">
+                        <div className='mb-5 w-full border'>
+                            <img src={fifthPicture} alt="image" className="object-cover w-full" />
+                        </div>
+                        <div className='px-5 my-2 max-sm:my-5 text-lightGray'>January 13, 2023</div>
+                        <div className='px-5 my-2 max-sm:my-5' >Learn a tech skills today and work from the comfort of your home</div>
+                        <div className='px-5 my-2 max-sm:my-5  text-darkGray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</div>
+                    </div>
+                    <div className="   w-2/7 max-sm:w-full max-md:w-5/12   shadow-2xl  mb-10  ">
+                        <div className='mb-5 w-full border '>
+                            <img src={sixthPicture} alt="image" className="object-cover w-full" />
+                        </div>
+                        <div className='px-5 my-2 max-sm:my-5 text-lightGray'>January 13, 2023</div>
+                        <div className='px-5 my-2 max-sm:my-5' >Learn a tech skills today and work from the comfort of your home</div>
+                        <div className='px-5 my-2 max-sm:my-5  text-darkGray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</div>
+                    </div>
+                    <div className="   w-2/7 max-sm:w-full max-md:w-5/12   shadow-2xl  mb-10  ">
+                        <div className='mb-5 w-full border'>
+                            <img src={seventhPicture} alt="image" className="object-cover w-full" />
+                        </div>
+                        <div className='px-5 my-2 max-sm:my-5 text-lightGray'>January 13, 2023</div>
+                        <div className='px-5 my-2 max-sm:my-5' >Learn a tech skills today and work from the comfort of your home</div>
+                        <div className='px-5 my-2 max-sm:my-5 text-darkGray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</div>
+                    </div>
 
+
+
+                </div>
             </div>
         </div>
 
