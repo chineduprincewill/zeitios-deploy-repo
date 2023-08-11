@@ -24,13 +24,18 @@ export default {
         darkGray: '#323232',
         lightOrange: ' #F9BDAC',
         lightPink: '#FFB19D',
+        whiteSmoke: '#F5F5F5',
+        darkBlue: '#0259DB',
+        darkerBlue: '#032B68',
+        lighterGray: '#9D9D9D',
       }),
       backgroundImage: {
         "home": "url('/src/assets/image/background-image.png')",
         "fourthPicture": "url('/src/assets/image/fourth_picture.png')",
         "fifthPicture": "url('/src/assets/image/fifth_picture.png')",
         "sixthPicture": "url('/src/assets/image/sixth_picture.png')",
-        "seventhPicture": "url('/src/assets/image/seventh_picture.png')"
+        "seventhPicture": "url('/src/assets/image/seventh_picture.png')",
+        "eighthPicture": "url('/src/assets/image/eighth_picture.png')"
       },
       width: ({ theme }) => ({
         auto: 'auto',
@@ -52,6 +57,7 @@ export default {
         '7/9': '77.777777%',
         '8/9': '88.888888%',
         '3/10': '30%',
+        '9/10': '90%',
         '3/11': '27.272727%'
       }),
     },

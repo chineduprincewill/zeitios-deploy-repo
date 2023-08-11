@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../Components/Navbar'
 import firstPicture from '../assets/image/first_picture.png'
 import secondPicture from '../assets/image/second_picture.png'
 import thirdPicture from '../assets/image/third_picture.png'
-import fourthPicture from '../assets/image/fourth_picture.png'
+import Logo from '../assets/logo/Logo.png'
 import fifthPicture from '../assets/image/fifth_picture.png'
 import sixthPicture from '../assets/image/sixth_picture.png'
 import seventhPicture from '../assets/image/seventh_picture.png'
+import ninthPicture from '../assets/image/ninth_picture.png'
+import tenthPicture from '../assets/image/tenth_picture.png'
+import eleventhPicture from '../assets/image/eleventh_picture.png'
 import starIcon from '../assets/icons/star_icon.png'
 import googleIcon from '../assets/icons/Google.png'
 import microsoftIcon from '../assets/icons/Microsoft.png'
@@ -17,7 +20,12 @@ import quotes from '../assets/icons/quotes.png'
 import bagIcon from '../assets/icons/bag.png'
 import profileIcon from '../assets/icons/profile.png'
 import boxIcon from '../assets/icons/box.png'
+import facebookIcon from '../assets/icons/facebook.png'
+import twitterIcon from '../assets/icons/twitter.png'
+import linkedinIcon from '../assets/icons/linkedin.png'
+import { RiFacebookFill } from 'react-icons/ri'
 const Home = () => {
+    const [data, setData] = useState({ name: '', email: '', phoneNumber: '', message: '' })
     return (
         <div>
 
@@ -154,6 +162,77 @@ const Home = () => {
                         </div>
                     </div>
 
+                </div>
+            </div>
+            <div className=' bg-blue-100 w-full'>
+                <div className="w-11/12 mx-auto p-4">
+                    <h1 className="font-bold text-3xl">Trending Services</h1>
+                    <div className="flex items-center justify-between max-sm:flex-col max-sm:items-start">
+                        <p className="max-sm:text-sm">Most viewed and all-time rendered services</p>
+                        <p className=" text-primary"><a href="/">View All</a></p>
+                    </div>
+                </div>
+                <div className="w-11/12 mx-auto flex max-md:flex-wrap justify-between items-stretch p-4 max-sm:p-2 ">
+                    <div className="   w-2/7 max-sm:w-full max-md:w-5/12 bg-white  shadow-2xl  mb-10  ">
+                        <div className='mb-5 w-full border'>
+                            <img src={ninthPicture} alt="image" className="object-cover w-full" />
+                        </div>
+                        <div className=' my-2 max-sm:my-5 text-lightGray px-3'>Web & App Design</div>
+                        <div className=' my-2 max-sm:my-5  px-3'>I will design a creative modern websites in figma</div>
+                        <div className="w-full  flex justify-between items-center mt-5 px-3">
+                            <div className='w-2/3 flex justify-start items-center'><img src={starIcon} alt="star icon" /><p className="ml-4 text-lightGray"><span className="font-medium text-darkGray pr-2">4.51 </span>  42 reviews</p></div>
+
+                        </div>
+                        <div className='flex w-full items-center justify-between my-3 px-3'>
+                            <div className='w-1/2 flex items-start justify-start'>
+                                <div className='rounded-full w-6 h-4'>
+                                    <img src={secondPicture} alt="image" />
+                                </div>
+                                <div>15 articles</div>
+                            </div>
+                            <div className='w-1/2 text-end text-lightGray'>Starting at <span className='text-darkGray'>$123</span> </div>
+                        </div>
+                    </div>
+                    <div className="   w-2/7 max-sm:w-full max-md:w-5/12 bg-white  shadow-2xl  mb-10  ">
+                        <div className='mb-5 w-full border'>
+                            <img src={tenthPicture} alt="image" className="object-cover w-full" />
+                        </div>
+                        <div className=' my-2 max-sm:my-5 text-lightGray px-3'>Illustration Design</div>
+                        <div className=' my-2 max-sm:my-5  px-3'>I will design a creative modern websites in figma</div>
+                        <div className="w-full  flex justify-between items-center mt-5 px-3 ">
+                            <div className='w-2/3 flex justify-start items-center'><img src={starIcon} alt="star icon" /><p className="ml-4 text-lightGray"><span className="font-medium text-darkGray pr-2">4.51 </span>  42 reviews</p></div>
+
+                        </div>
+                        <div className='flex w-full items-center justify-between my-3 px-3'>
+                            <div className='w-1/2 flex items-start justify-start'>
+                                <div className='rounded-full w-6 h-4'>
+                                    <img src={secondPicture} alt="image" />
+                                </div>
+                                <div>15 articles</div>
+                            </div>
+                            <div className='w-1/2 text-end text-lightGray'>Starting at <span className='text-darkGray'>$123</span> </div>
+                        </div>
+                    </div>
+                    <div className="   w-2/7 max-sm:w-full max-md:w-5/12 bg-white  shadow-2xl  mb-10  ">
+                        <div className='mb-5 w-full border'>
+                            <img src={eleventhPicture} alt="image" className="object-cover w-full" />
+                        </div>
+                        <div className=' my-2 max-sm:my-5 text-lightGray px-3'>Web Development</div>
+                        <div className=' my-2 max-sm:my-5  px-3'>I will design a creative modern websites in figma</div>
+                        <div className="w-full  flex justify-between items-center mt-5 px-3 ">
+                            <div className='w-2/3 flex justify-start items-center'><img src={starIcon} alt="star icon" /><p className="ml-4 text-lightGray"><span className="font-medium text-darkGray pr-2">4.51 </span>  42 reviews</p></div>
+
+                        </div>
+                        <div className='flex w-full items-center justify-between my-3 px-3'>
+                            <div className='w-1/2 flex items-start justify-start'>
+                                <div className='rounded-full w-6 h-4'>
+                                    <img src={secondPicture} alt="image" />
+                                </div>
+                                <div>15 articles</div>
+                            </div>
+                            <div className='w-1/2 text-end text-lightGray'>Starting at <span className=' text-darkGray'>$123</span> </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className="w-full">
@@ -418,6 +497,112 @@ const Home = () => {
 
 
 
+                </div>
+            </div>
+            <div className='w-full bg-lightPink pt-5 px-10 max-sm:px-5 pb-16'>
+                <div className=''>
+                    <h1 className="font-bold text-3xl"> Contact Us</h1>
+                    <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
+                </div>
+                <div className='w-full flex items-center justify-between mt-10'>
+                    <form className=' bg-white w-4/9 max-sm:w-full  flex flex-col items-center shadow-2xl'>
+                        <div className='flex flex-col justify-center w-5/8 py-3'>
+                            <label>Name</label>
+                            <input type="text" id="name" value={data.name} onChange={(e) => { setData({ ...data, [e.target.id]: e.target.value }) }} className='border border-black bg-transparent' />
+                        </div>
+                        <div className='flex flex-col justify-center w-5/8 py-3'>
+                            <label>Email</label>
+                            <input type="text" id="email" value={data.email} onChange={(e) => { setData({ ...data, [e.target.id]: e.target.value }) }} className='border border-black bg-transparent' />
+                        </div>
+                        <div className='flex flex-col justify-center w-5/8 py-3'>
+                            <label>Phone Number</label>
+                            <input type="text" id="phoneNumber" value={data.phoneNumber} onChange={(e) => { setData({ ...data, [e.target.id]: e.target.value }) }} className='border border-black bg-transparent' />
+                        </div>
+                        <div className='flex flex-col justify-center w-5/8 py-3'>
+                            <label>Message</label>
+                            <textarea rows="4" id="message" value={data.message} onChange={(e) => { setData({ ...data, [e.target.id]: e.target.value }) }} className='border border-black bg-transparent' />
+                        </div>
+                        <div className='py-5 w-5/8'>
+                            <button className='bg-darkBlue text-white text-center w-full py-2 '> Submit</button>
+                        </div>
+                    </form>
+                    <div className=' bg-lighterGray bg-eighthPicture bg-blend-multiply w-4/9 h-80 max-sm:h-0 max-sm:w-0'></div>
+                </div>
+            </div>
+            <div className=' bg-darkerBlue w-full px-5 pt-10'>
+                <div className=" w-full flex justify-center items-center flex-col">
+                    <h1 className="text-4xl font-semibold text-white text-center">Subscribe to our Newsletter</h1>
+                    <div className=" mb-8 text-white text-center">Get timely updates from your favourite products</div>
+                    <form className=" w-1/3 bg-white  flex items-center p-2 rounded-md">
+                        <input id="text" type="text" placeholder="your email address" className="bg-transparent w-5/6" />
+                        <button className="rounded-md w-1/4 text-white py-2 flex items-center justify-center bg-darkBlue"> Send</button>
+                    </form>
+                </div>
+                <div className="flex max-sm:flex-wrap justify-between  w-full pt-10 pb-20 mt-10 text-white px-5 border">
+                    <div className=" w-1/4 max-sm:w-1/2 flex flex-col ">
+                        <h1 className="font-medium text-lg mb-4  ">Navigation</h1>
+                        <div className="flex flex-col">
+                            <div className=""> Home</div>
+                            <div className=""> About Us</div>
+                            <div className=""> What We Do </div>
+                            <div className=""> To The Power of 10</div>
+                            <div className=""> Donate</div>
+
+                        </div>
+
+                    </div>
+                    <div className=" w-1/4 max-sm:w-1/2 flex flex-col  ">
+                        <h1 className="font-medium text-lg mb-4 ">What We Do</h1>
+                        <div className="flex  flex-col">
+                            <div className=""> Web & App Development</div>
+                            <div className=""> UI/UX Design</div>
+                            <div className=""> Graphics Design </div>
+
+                        </div>
+
+                    </div>
+                    <div className=" w-1/4 max-sm:w-1/2 flex flex-col ">
+                        <h1 className="font-medium text-lg mb-4 ">Categories</h1>
+                        <div className="flex flex-col">
+                            <div className=""> Jobs</div>
+                            <div className=""> Freelancer</div>
+                            <div className=""> Team</div>
+
+                        </div>
+
+                    </div>
+                    <div className=" w-1/4 max-sm:w-1/2 flex flex-col ">
+                        <h1 className="font-medium text-lg mb-4 ">Support</h1>
+                        <div className="flex  flex-col">
+                            <div className=""> support@zeitios.com</div>
+                            <div className="">  +66 2399 1145</div>
+                            <div className=""> Contact Us</div>
+                            <div className=""> Facebook</div>
+                            <div className=""> Linkedin</div>
+                            <div className=""> Twitter</div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div className='flex justify-between items-center w-full py-10 px-10 border-t border-white'>
+                    <div className='w-1/3'><img src={Logo} alt="" /></div>
+                    <div className='w-1/3 text-white'>© 2023 Zeitios. All Rights Reserved. </div>
+                    <div className='w-1/3 flex items-center justify-around'>
+                        <div className='rounded-full p-3 border border-white text-white'>
+                            {/* <img src={facebookIcon} alt="" className='' /> */}
+                            < RiFacebookFill />
+
+                        </div>
+                        <div className='rounded-full p-3 border border-white'>
+                            <img src={twitterIcon} alt="" />
+                        </div>
+                        <div className='rounded-full p-3 border border-white'>
+                            <img src={linkedinIcon} alt="" />
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
