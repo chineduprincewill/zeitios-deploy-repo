@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { MdKeyboardArrowDown } from 'react-icons/md'
 import { CiSearch } from 'react-icons/ci'
 import Logo from '../assets/logo/Logo.png'
-import Search from "../assets/icons/Search.png"
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
@@ -41,7 +40,7 @@ const Navbar = () => {
                         <div className="text-white lg:px-2 px-1 max-sm:text-sm max-md:text-sm"> Home </div>
                         <div className="text-white lg:px-2 px-1 max-sm:text-sm max-md:text-sm"> About </div>
                         <div className="text-white lg:px-2 flex flex-col justify-around items-center relative px-1 max-sm:text-sm max-md:text-sm">  <div className="text-white lg:px-2 px-1 flex justify-around items-center"> Browse Jobs <MdKeyboardArrowDown onClick={handleClick} className='h-4 w-4' /> </div>
-                            {showDropdown && <div className="bg-secondary p-4 absolute mt-28 max-sm:text-sm max-md:text-sm">
+                            {showDropdown && <div className="bg-secondary p-2 absolute mt-24 max-lg:mt-28 max-sm:mt-20 max-md:mt-20 max-sm:text-sm max-md:text-sm">
                                 <div>Freelancers</div>
                                 <div>Teams</div>
                             </div>}
