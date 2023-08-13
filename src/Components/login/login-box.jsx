@@ -1,5 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 export default function LoginBox() {
   return (
     <div className="bg-white w-full pb-8 px-4 mb-8">
