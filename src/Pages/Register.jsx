@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../Components/Navbar";
 import RegisterBox from "../Components/register/register-box";
 
 const Register = () => {

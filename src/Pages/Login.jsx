@@ -4,16 +4,21 @@ import LoginBox from "../Components/login/login-box";
 
 const Login = () => {
   return (
-    <div className="bg-pink-100 text-black pb-8">
-      <Navbar />
-      <div className="">
-        <div className="text-2xl font-bold  w-[100%] flex flex-col items-center">
-          Log in
+    <div className="text-black px-8 py-8 w-[100%] bg-[url('/regBg.png')]">
+      <div className="flex shadow">
+        <div className="w-[0%] md:w-[50%] relative">
+          <div className="absolute bg-[#0259DB] w-[100%] h-[100%] opacity-50"></div>
+          <img src="/hand.png" alt="hand" className="w-[100%] h-[100%]" />
         </div>
-        <div className="w-[100%] flex flex-col items-center">
-          Give your visitor a smooth online experience wuth a solid UX design
+        <div className="w-[100%] ml-[0%] sm:w-[70%] sm:ml-[15%] md:ml-[0%] md:w-[50%]  bg-white py-8">
+          <div className="text-2xl font-bold  w-[100%] flex flex-col items-center">
+            Login
+          </div>
+          <div className="w-[100%] flex flex-col items-center">
+            Kindly fill in your details
+          </div>
+          <LoginBox />
         </div>
-        <LoginBox />
       </div>
     </div>
   );
