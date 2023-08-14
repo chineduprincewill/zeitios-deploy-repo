@@ -75,7 +75,8 @@ const Home = () => {
 
             <div className={`h-full w-full pb-20 relative transition duration-500 ${currentImage} bg-blend-multiply font-['Montserrat'] transition duration-500 ${currentColor}`}>
                 <Navbar />
-                <img src={currentSecondImage} alt="image" className='absolute right-5 top-32 w-60' />
+                <img src={currentSecondImage} alt="" placeholder="https://via.placeholder.com/100x100" className={`absolute right-5 top-32 w-60 transition-opacity duration-500 ${currentSecondImage ? 'opacity-100' : 'opacity-0'
+                    }`} />
                 <h1 className="text-center text-white md:text-5xl text-2xl  font-bold mt-20 max-sm:mt-[6.5rem] max-md:mt-[6.5rem] max-lg:mt-[7rem] w-2/3">Find the best Freelance service for your business</h1>
                 <p className="text-center font-normal text-white md:text-2xl text-sm w-2/3">Work with talented people and see your ideas turn into reality</p>
                 <div className=" w-2/3 md:w-1/3  mx-auto flex justify-between  items-center mt-20">
