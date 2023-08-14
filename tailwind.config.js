@@ -35,7 +35,8 @@ export default {
         "fifthPicture": "url('/src/assets/image/fifth_picture.png')",
         "sixthPicture": "url('/src/assets/image/sixth_picture.png')",
         "seventhPicture": "url('/src/assets/image/seventh_picture.png')",
-        "eighthPicture": "url('/src/assets/image/eighth_picture.png')"
+        "eighthPicture": "url('/src/assets/image/eighth_picture.png')",
+        "twelvethPicture": "url('/src/assets/image/twelveth_picture.png')"
       },
       width: ({ theme }) => ({
         auto: 'auto',
@@ -58,6 +59,7 @@ export default {
         '8/9': '88.888888%',
         '3/10': '30%',
         '9/10': '90%',
+        '2/11': '18.181818%',
         '3/11': '27.272727%'
       }),
     },
