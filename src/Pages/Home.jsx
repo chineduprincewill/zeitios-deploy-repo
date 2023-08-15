@@ -75,13 +75,15 @@ const Home = () => {
 
             <div className={`h-full w-full pb-20 relative transition duration-500 ${currentImage} bg-blend-multiply font-['Montserrat'] transition duration-500 ${currentColor}`}>
                 <Navbar />
-                <img src={currentSecondImage} alt="" placeholder="https://via.placeholder.com/100x100" className={`absolute right-5 top-32 w-60 transition-opacity duration-500 ${currentSecondImage ? 'opacity-100' : 'opacity-0'
+                <img src={currentSecondImage} alt="" className={`absolute right-5 top-32 w-60 transition-opacity duration-500 ${currentSecondImage ? 'opacity-100' : 'opacity-0'
                     }`} />
-                <h1 className="text-center text-white md:text-5xl text-2xl  font-bold mt-20 max-sm:mt-[6.5rem] max-md:mt-[6.5rem] max-lg:mt-[7rem] w-2/3">Find the best Freelance service for your business</h1>
-                <p className="text-center font-normal text-white md:text-2xl text-sm w-2/3">Work with talented people and see your ideas turn into reality</p>
-                <div className=" w-2/3 md:w-1/3  mx-auto flex justify-between  items-center mt-20">
-                    <button className="text-white bg-primary md:p-3 p-2 rounded-lg">Hire a team</button>
-                    <button className="text-white border border-white md:p-3 p-2 rounded-lg">Hire a freelancer</button>
+                <div className='w-2/3'>
+                    <h1 className="text-center text-white md:text-5xl text-2xl  font-bold mt-20 max-sm:mt-[6.5rem] max-md:mt-[6.5rem] max-lg:mt-[7rem] w-full">Find the best Freelance service for your business</h1>
+                    <p className="text-center font-normal text-white md:text-2xl text-sm w-full">Work with talented people and see your ideas turn into reality</p>
+                    <div className=" w-full md:w-2/3 border mx-auto  flex justify-center  items-center mt-20">
+                        <button className="text-white bg-primary md:p-3 p-2 rounded-lg mr-5 lg:mr-16">Hire a team</button>
+                        <button className="text-white border border-white md:p-3 p-2 rounded-lg">Hire a freelancer</button>
+                    </div>
                 </div>
                 <div className="bg-basic w-full p-4 flex-wrap text-white mt-24 flex items-center justify-around align-self-bottom">
                     <div className=" px-2 py-2 text-center w-1/2 md:w-1/4">
@@ -444,31 +446,31 @@ const Home = () => {
                     </div>
 
                 </div>
-                <div className='absolute right-0 top-10 w-[36rem] max-lg:w-80 max-md:w-64 max-xl:w-[28rem] max-lg:h-[30rem] max-lg:top-6 h-[28rem] max-sm:w-0 max-sm:h-0 z-20 cursor-pointer bg-transparent bg-fourthPicture bg-blend-multiply'>
+                <div className='absolute right-0 top-10 w-[36rem] max-lg:w-80 max-md:w-64 max-xl:w-[30rem] max-lg:h-[30rem] max-lg:top-6 h-[28rem] max-sm:w-0 max-sm:h-0 z-20 cursor-pointer bg-transparent bg-fourthPicture bg-blend-multiply'>
 
                     {/* <img src={fourthPicture} alt="" className='object-cover' /> */}
                 </div>
                 <div className="flex  max-md:flex-wrap max-lg:flex-wrap  items-center justify-between w-7/12 max-lg:w-5/6 max-sm:w-11/12 mt-10
                 absolute left-16 max-lg:left-8 max-sm:left-4 top-32 max-lg:top-32 max-sm:top-28 z-30 cursor-pointer text-sm">
-                    <div className="pt-5 shadow-2xl px-4 bg-white w-1/4   max-lg:w-3/10 max-lg:mb-5 ">
+                    <div className="pt-5 shadow-md rounded-md px-4 bg-white w-2/7   max-lg:w-3/10 max-lg:mb-5 ">
                         <img src={bagIcon} alt="icon" />
                         <div className='mt-5'>
-                            <p className='text-lg mb-5 font-medium'>Post a Job</p>
-                            <p className=' mb-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+                            <p className='text-sm mb-5 font-medium'>Post a Job</p>
+                            <p className=' mb-5 text-sm'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
                         </div>
                     </div>
-                    <div className="pt-5 shadow-2xl px-4  bg-white w-1/4  max-lg:w-3/10 max-lg:mb-5   ">
+                    <div className="pt-5 shadow-md rounded-md px-4    bg-white w-2/7  max-lg:w-3/10 max-lg:mb-5   ">
                         <img src={profileIcon} alt="icon" />
                         <div className='mt-5'>
-                            <p className='text-lg font-medium mb-5'>Choose Freelancer</p>
-                            <p className=' mb-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+                            <p className='text-sm font-medium mb-5'>Choose Freelancer</p>
+                            <p className=' mb-5 text-sm'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
                         </div>
                     </div>
-                    <div className="pt-5 shadow-2xl px-4 bg-white w-1/4  max-lg:w-3/10 max-lg:mb-5  ">
+                    <div className="pt-5 shadow-md rounded-md px-4   bg-white w-2/7  max-lg:w-3/10 max-lg:mb-5  ">
                         <img src={boxIcon} alt="icon" />
                         <div className='mt-5'>
-                            <p className='text-lg font-medium mb-5'>Pay safely</p>
-                            <p className=' mb-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+                            <p className='text-sm font-medium mb-5'>Pay safely</p>
+                            <p className=' mb-5 text-sm'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
                         </div>
                     </div>
                 </div>
@@ -518,7 +520,7 @@ const Home = () => {
                     <p className='text-[16px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
                 </div>
                 <div className='w-full flex items-center justify-between mt-10'>
-                    <form className=' bg-white w-1/3 max-sm:w-full  flex flex-col items-center shadow-2xl rounded-md text-[14px]'>
+                    <form className=' bg-white w-1/4 max-sm:w-full  flex flex-col items-center shadow-md rounded-md text-[14px]'>
                         <div className='flex flex-col justify-center w-5/8 py-3'>
                             <label>Name</label>
                             <input type="text" id="name" value={data.name} onChange={(e) => { setData({ ...data, [e.target.id]: e.target.value }) }} className='border border-black bg-transparent rounded-md' />
@@ -536,7 +538,7 @@ const Home = () => {
                             <textarea rows="4" id="message" value={data.message} onChange={(e) => { setData({ ...data, [e.target.id]: e.target.value }) }} className='border border-black bg-transparent rounded-md' />
                         </div>
                         <div className='py-5 w-5/8'>
-                            <button className='bg-darkBlue text-white text-center w-full py-2 text-[24px] rounded-md '> Submit</button>
+                            <button className='bg-darkBlue text-white text-center w-full text-[20px] rounded-md '> Submit</button>
                         </div>
                     </form>
                     <div className=' bg-lighterGray bg-eighthPicture bg-blend-multiply w-5/9 h-96 max-sm:h-0 max-sm:w-0'></div>
