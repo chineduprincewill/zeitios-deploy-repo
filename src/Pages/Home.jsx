@@ -75,17 +75,22 @@ const Home = () => {
 
             <div className={`h-full w-full pb-20 relative transition duration-500 ${currentImage} bg-blend-multiply font-['Montserrat'] transition duration-500 ${currentColor}`}>
                 <Navbar />
-                <img src={currentSecondImage} alt="" className={`absolute right-5 top-32 w-60 transition-opacity duration-500 ${currentSecondImage ? 'opacity-100' : 'opacity-0'
-                    }`} />
-                <div className='w-2/3'>
-                    <h1 className="text-center text-white md:text-5xl text-2xl  font-bold mt-20 max-sm:mt-[6.5rem] max-md:mt-[6.5rem] max-lg:mt-[7rem] w-full">Find the best Freelance service for your business</h1>
-                    <p className="text-center font-normal text-white md:text-2xl text-sm w-full">Work with talented people and see your ideas turn into reality</p>
-                    <div className=" w-full md:w-2/3 border mx-auto  flex justify-center  items-center mt-20">
-                        <button className="text-white bg-primary md:p-3 p-2 rounded-lg mr-5 lg:mr-16">Hire a team</button>
-                        <button className="text-white border border-white md:p-3 p-2 rounded-lg">Hire a freelancer</button>
+                <div className='flex'>
+                    <div className='w-2/3 pb-24'>
+                        <h1 className="text-center text-white md:text-5xl text-2xl  font-bold mt-20 max-sm:mt-[6.5rem] max-md:mt-[6.5rem] max-lg:mt-[7rem] w-full">Find the best Freelance service for your business</h1>
+                        <p className="text-center font-normal text-white md:text-2xl text-sm w-full">Work with talented people and see your ideas turn into reality</p>
+                        <div className=" w-full md:w-2/3 mx-auto  flex justify-center  items-center mt-20">
+                            <button className="text-white bg-primary md:p-3 p-2 rounded-lg mr-5 lg:mr-16 hover:cursor-pointer hover:bg-transparent hover:border hover:border-white">Hire a team</button>
+                            <button className="text-white border border-white md:p-3 p-2 rounded-lg hover:cursor-pointer hover:bg-primary hover:border-none">Hire a freelancer</button>
+                        </div>
+                    </div>
+                    <div className='w-1/3 self-end flex justify-center'>
+                        <img src={currentSecondImage} alt="" className={` w-64   transition-opacity duration-500 ${currentSecondImage ? 'opacity-100' : 'opacity-0'
+                            }`} />
                     </div>
                 </div>
-                <div className="bg-basic w-full p-4 flex-wrap text-white mt-24 flex items-center justify-around align-self-bottom">
+
+                <div className="bg-basic w-full p-4 flex-wrap text-white  flex items-center justify-around align-self-bottom">
                     <div className=" px-2 py-2 text-center w-1/2 md:w-1/4">
                         <h1 className="font-bold text-2xl">52k</h1>
                         <p className="text-lg">Total Freelancer</p>
@@ -213,7 +218,7 @@ const Home = () => {
                 </div>
             </div>
             <div className=' bg-blue-100 w-full relative'>
-                <div className="w-11/12 mx-auto p-4">
+                <div className="w-11/12 mx-auto p-4 pt-16">
                     <h1 className="font-bold text-3xl">Trending Services</h1>
                     <div className="flex items-center justify-between max-sm:flex-col max-sm:items-start">
                         <p className="text-[16px] ">Most viewed and all-time rendered services</p>
@@ -251,7 +256,7 @@ const Home = () => {
                 <div className="flex z-10 absolute cursor-pointer opacity-50 top-0  bottom-0 m-auto left-0 lg:left-5 md:left-1 h-10 w-10 bg-transparent text-black rounded-full items-center justify-center border border-black" onClick={firstHandleClick}>< MdKeyboardArrowLeft className='w-10 h-10' /></div>
             </div>
             <div className="w-full">
-                <div className="w-11/12 mx-auto p-4 text-[16px]">
+                <div className="w-11/12 mx-auto p-4 pt-16 text-[16px]">
                     <h1 className="font-bold text-3xl">Highest Rated Freelancers</h1>
                     <div className="flex items-center justify-between max-sm:flex-col max-sm:items-start">
                         <p className="max-sm:text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
@@ -452,22 +457,22 @@ const Home = () => {
                 </div>
                 <div className="flex  max-md:flex-wrap max-lg:flex-wrap  items-center justify-between w-7/12 max-lg:w-5/6 max-sm:w-11/12 mt-10
                 absolute left-16 max-lg:left-8 max-sm:left-4 top-32 max-lg:top-32 max-sm:top-28 z-30 cursor-pointer text-sm">
-                    <div className="pt-5 shadow-md rounded-md px-4 bg-white w-2/7   max-lg:w-3/10 max-lg:mb-5 ">
-                        <img src={bagIcon} alt="icon" />
+                    <div className="pt-5 shadow-md rounded-md px-4 max-sm:h-80 bg-white w-2/7 max-sm:flex max-sm:flex-col max-sm:justify-center   max-lg:w-3/10 max-lg:mb-5 ">
+                        <img src={bagIcon} alt="icon" className='max-sm:h-10 max-sm:w-10' />
                         <div className='mt-5'>
                             <p className='text-sm mb-5 font-medium'>Post a Job</p>
                             <p className=' mb-5 text-sm'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
                         </div>
                     </div>
-                    <div className="pt-5 shadow-md rounded-md px-4    bg-white w-2/7  max-lg:w-3/10 max-lg:mb-5   ">
-                        <img src={profileIcon} alt="icon" />
+                    <div className="pt-5 shadow-md rounded-md px-4 max-sm:h-80 max-sm:flex max-sm:flex-col max-sm:justify-center   bg-white w-2/7  max-lg:w-3/10 max-lg:mb-5   ">
+                        <img src={profileIcon} alt="icon" className='max-sm:h-10 max-sm:w-10' />
                         <div className='mt-5'>
                             <p className='text-sm font-medium mb-5'>Choose Freelancer</p>
                             <p className=' mb-5 text-sm'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
                         </div>
                     </div>
-                    <div className="pt-5 shadow-md rounded-md px-4   bg-white w-2/7  max-lg:w-3/10 max-lg:mb-5  ">
-                        <img src={boxIcon} alt="icon" />
+                    <div className="pt-5 shadow-md rounded-md px-4 max-sm:h-80 max-sm:flex max-sm:flex-col max-sm:justify-center  bg-white w-2/7  max-lg:w-3/10 max-lg:mb-5  ">
+                        <img src={boxIcon} alt="icon" className='max-sm:h-10 max-sm:w-10' />
                         <div className='mt-5'>
                             <p className='text-sm font-medium mb-5'>Pay safely</p>
                             <p className=' mb-5 text-sm'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
@@ -514,13 +519,13 @@ const Home = () => {
 
                 </div>
             </div>
-            <div className='w-full bg-lightPink pt-5 px-10 max-sm:px-5 pb-16'>
+            <div className='w-full bg-lightPink pt-16 px-10 max-sm:px-5 pb-16'>
                 <div className=''>
                     <h1 className="font-bold text-3xl"> Contact Us</h1>
                     <p className='text-[16px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
                 </div>
                 <div className='w-full flex items-center justify-between mt-10'>
-                    <form className=' bg-white w-1/4 max-sm:w-full  flex flex-col items-center shadow-md rounded-md text-[14px]'>
+                    <form className=' bg-white w-1/3 max-sm:w-full  max-lg:w-2/5 max-xl:w-2/5 flex flex-col items-center shadow-md rounded-md text-[14px]'>
                         <div className='flex flex-col justify-center w-5/8 py-3'>
                             <label>Name</label>
                             <input type="text" id="name" value={data.name} onChange={(e) => { setData({ ...data, [e.target.id]: e.target.value }) }} className='border border-black bg-transparent rounded-md' />

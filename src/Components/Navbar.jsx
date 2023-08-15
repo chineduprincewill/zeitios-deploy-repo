@@ -37,17 +37,17 @@ const Navbar = () => {
                 </div>
 
                 <div className="flex justify-around items-center max-sm:absolute max-lg:absolute max-sm:mt-28 max-lg:mt-28">
-                    <div className="text-white lg:px-2 px-1 max-sm:text-sm max-md:text-sm"> Home </div>
-                    <div className="text-white lg:px-2 px-1 max-sm:text-sm max-md:text-sm"> About </div>
-                    <div className="text-white lg:px-2 flex flex-col justify-around items-center relative px-1 max-sm:text-sm max-md:text-sm">  <div className="text-white lg:px-2 px-1 flex justify-around items-center"> Browse Jobs <MdKeyboardArrowDown onClick={handleClick} className='h-4 w-4' /> </div>
+                    <div className="text-white lg:px-2 px-1 max-sm:text-sm max-md:text-sm hover:cursor-pointer hover:text-blue-100"> Home </div>
+                    <div className="text-white lg:px-2 px-1 max-sm:text-sm max-md:text-sm hover:cursor-pointer hover:text-blue-100"> About </div>
+                    <div className="text-white lg:px-2 flex flex-col justify-around items-center relative px-1 max-sm:text-sm max-md:text-sm">  <div className="text-white lg:px-2 px-1 flex justify-around items-center hover:cursor-pointer hover:text-blue-100"> Browse Jobs <MdKeyboardArrowDown onClick={handleClick} className='h-4 w-4' /> </div>
                         {showDropdown && <div className="bg-secondary p-3 absolute mt-[5.5rem] max-lg:mt-[6.5rem] max-sm:mt-20 max-md:mt-[5.5rem] text-sm cursor-pointer font-['Poppins']">
-                            <div>Freelancers</div>
-                            <div>Teams</div>
+                            <div className='hover:cursor-pointer hover:text-blue-100'>Freelancers</div>
+                            <div className='hover:cursor-pointer hover:text-blue-100'>Teams</div>
                         </div>}
                     </div>
-                    <div className="text-white lg:px-2 px-1 max-sm:text-sm max-md:text-sm"> Services </div>
-                    <div className="text-white lg:px-2 px-1 max-sm:text-sm max-md:text-sm"> Blog </div>
-                    <div className="text-white lg:px-2 px-1 max-sm:text-sm max-md:text-sm"> Contacts </div>
+                    <div className="text-white lg:px-2 px-1 max-sm:text-sm max-md:text-sm hover:cursor-pointer hover:text-blue-100"> Services </div>
+                    <div className="text-white lg:px-2 px-1 max-sm:text-sm max-md:text-sm hover:cursor-pointer hover:text-blue-100"> Blog </div>
+                    <div className="text-white lg:px-2 px-1 max-sm:text-sm max-md:text-sm hover:cursor-pointer hover:text-blue-100 "> Contacts </div>
                 </div>
 
                 {showDiv ? <input type="text" autoFocus value={text} className='bg-transparent px-2 text-white w-1/6 rounded-xl border border-white' onChange={(e) => {
@@ -57,8 +57,8 @@ const Navbar = () => {
                 </div>}
 
 
-                <button className="border border-white md:p-3  p-1 text-white rounded-md text-center text-2xl">Login</button>
-                <button className="bg-primary text-white md:p-3  p-1 text-center rounded-md text-2xl">Register</button>
+                <button className="border border-white md:p-3  p-1 text-white rounded-md text-center text-2xl hover:cursor-pointer hover:bg-primary hover:border-none">Login</button>
+                <button className="bg-primary text-white md:p-3  p-1 text-center rounded-md text-2xl hover:cursor-pointer hover:bg-transparent hover:border hover:border-white">Register</button>
             </div>
 
         </>
