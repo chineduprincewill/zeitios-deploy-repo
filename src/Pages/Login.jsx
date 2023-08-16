@@ -3,7 +3,7 @@ import LoginBox from "../Components/login/login-box";
 
 const Login = () => {
   return (
-    <div className="text-black px-8 py-8 w-[100%] bg-[url('/regBg.png')]">
+    <div className="text-black px-12 py-12 w-[100%] bg-[url('/regBg.png')]">
       <div className="flex shadow">
         <div className="w-[0%] md:w-[50%] relative">
           <div className="absolute bg-[#0259DB] w-[100%] h-[100%] opacity-50"></div>

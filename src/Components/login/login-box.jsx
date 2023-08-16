@@ -28,13 +28,13 @@ export default function LoginBox() {
             }
             `}
       >
-        Register
+        Login
       </button>
       <div className="w-full flex flex-row justify-center my-4">
         You don't have an account?{" "}
         <a href="/register" className="text-[#0259DB]">
-          {" "}
-          Login
+          {"  "}
+          Register
         </a>
       </div>
     </div>

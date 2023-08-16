@@ -1,60 +1,60 @@
 export default function RegisterBox() {
   return (
-    <div className="bg-white w-full pb-8 px-4 mb-8">
+    <div className="bg-white w-full py-2 px-4">
       <div className="flex flex-col sm:flex-row flex-wrap justify-between">
-        <div className="my-4 w-[100%] md:w-[45%]">
+        <div className="my-2 w-[100%] md:w-[45%]">
           <div className="font-medium mb-2">First Name</div>
           <input
             type="text"
-            className="border border-gray-light outline-none rounded text-sm w-full py-3 px-3 leading-tight focus:outline-none"
+            className="border border-gray-light outline-none rounded text-sm w-full py-2 px-3 leading-tight focus:outline-none"
           />
         </div>
-        <div className="my-4 w-[100%] md:w-[45%]">
+        <div className="my-2 w-[100%] md:w-[45%]">
           <div className="font-medium mb-2">Last Name</div>
           <input
             type="text"
-            className="border border-gray-light outline-none rounded text-sm w-full py-3 px-3 leading-tight focus:outline-none"
+            className="border border-gray-light outline-none rounded text-sm w-full py-2 px-3 leading-tight focus:outline-none"
           />
         </div>
-        <div className="my-4 w-[100%] md:w-[45%]">
+        <div className="my-2 w-[100%] md:w-[45%]">
           <div className="font-medium mb-2">Phone Number</div>
           <input
             type="text"
-            className="border border-gray-light outline-none rounded text-sm w-full py-3 px-3 leading-tight focus:outline-none"
+            className="border border-gray-light outline-none rounded text-sm w-full py-2 px-3 leading-tight focus:outline-none"
           />
         </div>
-        <div className="my-4 w-[100%] md:w-[45%]">
+        <div className="my-2 w-[100%] md:w-[45%]">
           <div className="font-medium mb-2">Email Address</div>
           <input
             type="text"
-            className="border border-gray-light outline-none rounded text-sm w-full py-3 px-3 leading-tight focus:outline-none"
+            className="border border-gray-light outline-none rounded text-sm w-full py-2 px-3 leading-tight focus:outline-none"
           />
         </div>
-        <div className="my-4 w-[100%] md:w-[45%]">
+        <div className="my-2 w-[100%] md:w-[45%]">
           <div className="font-medium mb-2">Password</div>
           <input
             type="password"
             placeholder="*****"
-            className="border border-gray-light outline-none rounded text-sm w-full py-3 px-3 leading-tight focus:outline-none"
+            className="border border-gray-light outline-none rounded text-sm w-full py-2 px-3 leading-tight focus:outline-none"
           />
         </div>
-        <div className="my-4 w-[100%] md:w-[45%]">
+        <div className="my-2 w-[100%] md:w-[45%]">
           <div className="font-medium mb-2">Confirm Password</div>
           <input
             type="password"
             placeholder="*****"
-            className="border border-gray-light outline-none rounded text-sm w-full py-3 px-3 leading-tight focus:outline-none"
+            className="border border-gray-light outline-none rounded text-sm w-full py-2 px-3 leading-tight focus:outline-none"
           />
         </div>
-        <div className="my-4 w-[100%] md:w-[45%]">
+        <div className="my-2 w-[100%] md:w-[45%]">
           <div className="font-medium mb-2">Category</div>
-          <select className="border border-gray-light outline-none rounded bg-white text-sm w-full py-3 px-3 leading-tight focus:outline-none">
+          <select className="border border-gray-light outline-none rounded bg-white text-sm w-full py-2 px-3 leading-tight focus:outline-none">
             <option>Hello</option>
           </select>
         </div>
-        <div className="my-4 w-[100%] md:w-[45%]">
+        <div className="my-2 w-[100%] md:w-[45%]">
           <div className="font-medium mb-2">Skills</div>
-          <select className="border border-gray-light outline-none rounded bg-white text-sm w-full py-3 px-3 leading-tight focus:outline-none">
+          <select className="border border-gray-light outline-none rounded bg-white text-sm w-full py-2 px-3 leading-tight focus:outline-none">
             <option>Hello</option>
           </select>
         </div>
