@@ -1,6 +1,6 @@
 export default function RegisterBox() {
   return (
-    <div className="bg-white w-full py-2 px-4">
+    <div className="bg-white w-full py-2 px-8 md:px-4">
       <div className="flex flex-col sm:flex-row flex-wrap justify-between">
         <div className="my-2 w-[100%] md:w-[45%]">
           <div className="font-medium mb-2">First Name</div>

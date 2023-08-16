@@ -3,8 +3,8 @@ import RegisterBox from "../Components/register/register-box";
 
 const Register = () => {
   return (
-    <div className="text-black px-8 py-4 w-[100%] h-[100vh] box-border bg-[url('/regBg.png')]">
-      <div className="flex shadow w-[90%] ml-[5%] h-full">
+    <div className="text-black px-8 py-4 w-[100%] h-full md:h-[100vh] box-border bg-[url('/regBg.png')]">
+      <div className="flex shadow w-[100%] md:w-[90%] ml-[0%] md:ml-[5%] h-full">
         <div className="w-[0%] md:w-[50%] h-[0%] md:h-full relative bg-red-700">
           <div className="absolute bg-[#0259DB] w-[100%] h-[100%] opacity-50"></div>
           <div className="absolute text-white font-bold left-8 top-8 hidden md:block">

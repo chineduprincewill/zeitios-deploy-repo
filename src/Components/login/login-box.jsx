@@ -1,6 +1,6 @@
 export default function LoginBox() {
   return (
-    <div className="bg-white w-full pb-8 px-4 mb-8">
+    <div className="bg-white w-full pb-8 px-8 md:px-4 mb-8">
       <div className="flex flex-col">
         <div className="my-4 w-[100%]">
           <div className="font-medium mb-2">Email Address</div>
