@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './Pages/Home'
 import Error from './Pages/Error'
 
-import Job from './Pages/Job'
+import Job from './Pages/Freelancer/Job'
 import Freelancerboard from './Pages/Freelancer/Freelancerboard'
 
 function App() {
