@@ -205,6 +205,97 @@ const Freelancerboard = () => {
                                 </div>
                             </div>
                         </div>
+                        <div className="flex flex-row gap-4 w-full items-center py-2">
+                            <img
+                                src={thirdProfileIcon}
+                                className=""
+                            />
+                            <div className="flex flex-col w-5/6 gap-1 items-start">
+                                <div className='flex justify-between items-center w-full'>
+                                    <p className="font-['Montserrat'] text-sm font-medium text-[#323232]">
+                                        Client 1
+                                    </p>
+                                    <p className="text-xs font-['Montserrat'] text-[#343f42] w-min">12:05pm</p>
+
+                                </div>
+                                <div className="flex justify-between items-start w-full">
+                                    <div className="text-[0.7rem] font-['Montserrat'] text-[#343f42] ">
+                                        Lorem Ipsum is simply kajns dskjas........
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex flex-row gap-4 w-full items-center py-2">
+                            <img
+                                src={thirdProfileIcon}
+                                className=""
+                            />
+                            <div className="flex flex-col w-5/6 gap-1 items-start ">
+                                <div className='flex justify-between items-center  w-full'>
+                                    <p className="font-['Montserrat'] text-sm font-medium text-[#323232]">
+                                        Client 2
+                                    </p>
+                                    <p className="text-xs font-['Montserrat'] text-[#343f42] w-min">12:05pm</p>
+
+                                </div>
+                                <div className="flex justify-between items-start w-full">
+                                    <div className="text-[0.7rem] font-['Montserrat'] text-[#343f42] ">
+                                        Lorem Ipsum is simply kajns dskjas........
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex flex-row gap-4 w-full items-center py-2">
+                            <img
+                                src={thirdProfileIcon}
+                                className=""
+                            />
+                            <div className="flex flex-col w-5/6 gap-1 items-start ">
+                                <div className='flex justify-between items-center  w-full'>
+                                    <p className="font-['Montserrat'] text-sm font-medium text-[#323232]">
+                                        Client 3
+                                    </p>
+                                    <p className="text-xs font-['Montserrat'] text-[#343f42] w-min">12:05pm</p>
+
+                                </div>
+                                <div className="flex justify-between items-start w-full">
+                                    <div className="text-[0.7rem] font-['Montserrat'] text-[#343f42] ">
+                                        Lorem Ipsum is simply kajns dskjas........
+                                    </div>
+                                    <div className='bg-[#032b68] p-[0.1rem] rounded-full self-start'>
+                                        {/* <div className="bg-[#032b68] p-[0.1rem] rounded-full self-start"> */}
+                                        <div className="text-xs font-['Montserrat'] font-medium text-white">12</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex flex-row gap-4 w-full items-center py-2">
+                            <img
+                                src={thirdProfileIcon}
+                                className=""
+                            />
+                            <div className="flex flex-col w-5/6 gap-1 items-start ">
+                                <div className='flex justify-between items-center  w-full'>
+                                    <p className="font-['Montserrat'] text-sm font-medium text-[#323232]">
+                                        Team: Group Ferran
+                                    </p>
+                                    <p className="text-xs font-['Montserrat'] text-[#343f42] w-min">12:05pm</p>
+
+                                </div>
+                                <div className="flex justify-between items-start w-full">
+                                    <div className="text-[0.7rem] font-['Montserrat'] text-[#343f42] ">
+                                        Lorem Ipsum is simply kajns dskjas........
+                                    </div>
+                                    <div className='bg-[#032b68] p-[0.1rem] rounded-full self-start'>
+                                        {/* <div className="bg-[#032b68] p-[0.1rem] rounded-full self-start"> */}
+                                        <div className="text-xs font-['Montserrat'] font-medium text-white">12</div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
                     </div>
                 </div>
 
