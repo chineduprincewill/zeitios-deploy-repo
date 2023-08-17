@@ -113,8 +113,101 @@ const Freelancerboard = () => {
                                 />
                             </div>
                         </div>
+                        <div className="shadow-[0px_4px_76px_0px_rgba(0,_0,_0,_0.1)] bg-white flex w-full rounded-md mt-2 pb-4">
+                            <div className='w-1/4 flex justify-center pt-3'>
+                                <div className='rounded-full p-4 bg-blue-100 self-start'>
+                                    <img src={googleIcon} alt="icon" />
+                                </div>
+                            </div>
+                            <div className="flex flex-col items-start  w-3/4">
+                                <div>
+                                    <p className="text-2xl font-['Montserrat'] font-medium text-[#989797]">
+                                        Web Developer
+                                    </p>
+                                    <p className="text-sm font-['Montserrat'] font-medium text-[#323232]">
+                                        Google
+                                    </p>
+                                </div>
+                                <div className="font-['Montserrat'] text-[#323232] self-end mb-2 ">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore et
+
+                                    dolore magna aliqua. Ut enim ad minim veniam, quui nostrud
+                                </div>
+                                <div className="flex flex-row gap-16 mb-5 w-full items-start">
+
+                                    <div className="text-xs font-['Montserrat'] text-[#323232] mt-px mb-1">
+                                        London
+                                    </div>
+                                    <div className="text-xs font-['Montserrat'] text-[#323232] mr-2">
+                                        $20k Hourly
+                                    </div>
+                                    <div className="text-xs font-['Montserrat'] text-[#323232] mr-3">
+                                        3 Days left
+                                    </div>
+                                    <div className="text-xs font-['Montserrat'] text-[#323232]">
+                                        Remote
+                                    </div>
+                                </div>
+                                <div className='h-[0.05rem] w-8/11 bg-lightBlue ml-6 flex items-center justify-between'>
+                                    <div className='rounded-full w-2 h-2 bg-primary'></div>
+                                    <div className='rounded-full w-2 h-2 bg-primary'></div>
+                                    <div className='rounded-full w-2 h-2 bg-primary'></div>
+                                    <div className='rounded-full w-1 h-1 bg-primary'></div>
+                                    <div className='rounded-full w-2 h-2 bg-lightMilk'></div>
+                                </div>
+                                <div className="flex flex-row gap-8 w-full items-start">
+                                    <div className="text-xs font-['Montserrat'] text-[#323232] mb-px mr-px">
+                                        Milestone 1
+                                    </div>
+                                    <div className="text-xs font-['Montserrat'] text-[#323232]">
+                                        Milestone 2
+                                    </div>
+                                    <div className="text-xs font-['Montserrat'] text-[#323232]">
+                                        Milestone 3
+                                    </div>
+                                    <div className="text-xs font-['Montserrat'] text-[#323232] mr-px">
+                                        Milestone 4
+                                    </div>
+                                    <div className="text-xs font-['Montserrat'] text-[#323232]">
+                                        Milestone 5
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div className='bg-white w-3/10 px-3 pt-3 h-full'>
+                        <div className='flex justify-between items-center '>
+                            <p className="text-lg font-['Montserrat'] text-[#323232]">Messages</p>
+                            <p className="text-sm font-['Montserrat'] text-[#0259db]">View all</p>
+                        </div>
+                        <div className="flex flex-row gap-4 w-full items-center pt-5 pb-2">
+                            <img
+                                src={thirdProfileIcon}
+                                className=""
+                            />
+                            <div className="flex flex-col w-5/6 gap-1 items-start ">
+                                <div className='flex justify-between items-center w-full'>
+                                    <p className="font-['Montserrat'] text-sm font-medium text-[#323232]">
+                                        Team: Group Ferran
+                                    </p>
+                                    <p className="text-xs font-['Montserrat'] text-[#343f42] w-min">12:05pm</p>
+
+                                </div>
+                                <div className="flex justify-between items-start w-full">
+                                    <div className="text-[0.7rem] font-['Montserrat'] text-[#343f42] ">
+                                        Lorem Ipsum is simply kajns dskjas........
+                                    </div>
+                                    <div className='bg-[#032b68] p-[0.1rem] rounded-full self-start'>
+                                        <div className="text-xs font-['Montserrat'] font-medium text-white">12</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
         </div>
