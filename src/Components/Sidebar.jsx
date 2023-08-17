@@ -22,9 +22,9 @@ import secondDashboardIcon2 from '../assets/icons/dash.png'
 
 const Sidebar = () => {
     return (
-        <div className="w-1/5 flex flex-col px-5 bg-primary h-full justify-center font-normal text-sm font-['Montserrat'] ">
-            <div className='w-full'>
-                <div className='flex pl-8  items-center mt-5 mb-10'>
+        <div className="w-1/5 flex flex-col px-5 bg-primary h-full  font-normal text-sm font-['Montserrat'] max-md:w-1/2 max-md:absolute max-md:z-10">
+            <div className='w-full h-1/2 flex-col flex justify-between'>
+                <div className='flex pl-8  items-center my-10'>
                     <img src={Logo} alt="logo" />
                 </div>
                 <div className='text-white flex  rounded-md px-2 py-4  relative border group'>
@@ -96,14 +96,14 @@ const Sidebar = () => {
                 </div>
             </div>
             <div>
-                <div className='mt-14'>
+                <div className='mt-10 h-2/5 flex flex-col justify-between border'>
                     <p className='mb-2 text-xs text-gray-300 '>Organize and manage</p>
-                    <div className='text-white flex  rounded-md px-2 py-4  relative border group'>
-                        <div className='opacity-100 bg-transparent flex hover:opacity-0 absolute top-0 pt-2 left-0 px-2 '>
+                    <div className='text-white flex  rounded-md px-2 py-6 relative border group'>
+                        <div className='opacity-100 bg-transparent flex hover:opacity-0 absolute top-0 pt-3 left-0 px-2 '>
                             <img src={servicesIcon} alt="services" className='mr-3 h-4 w-4' />
                             Manage Services
                         </div>
-                        <div className='opacity-0 bg-white flex hover:opacity-100 text-primary absolute top-0 left-0 px-2 pt-2 w-full h-full rounded-md'>
+                        <div className='opacity-0 bg-white flex hover:opacity-100 text-primary absolute top-0 left-0 px-3 pt-2 w-full h-full rounded-md'>
                             <img src={secondServicesIcon} alt="services" className='mr-3 h-4 w-4' />
                             <p className=''>Manage Services</p>
                         </div>
@@ -114,7 +114,7 @@ const Sidebar = () => {
                     </div>
 
                 </div>
-                <div className='mt-14'>
+                <div className='mt-10 h-2/5 flex flex-col justify-around border'>
                     <p className='mb-2 text-xs  text-gray-300'>Account</p>
                     <div className='text-white flex  rounded-md px-2 py-4  relative border group'>
                         <div className='opacity-100 bg-transparent flex hover:opacity-0 absolute top-0 pt-2 left-0 px-2 '>

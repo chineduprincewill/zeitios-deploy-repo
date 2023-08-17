@@ -1,32 +1,7 @@
-import React from 'react'
-import Logo from '../../assets/logo/Logo.png'
-import dashboardIcon from '../../assets/icons/dashboard_icon.png'
-import jobIcon from '../../assets/icons/job_icon.png'
-import secondJobIcon from '../../assets/icons/second_job_icon.png'
-import messageIcon from '../../assets/icons/message_icon.png'
-import secondMessageIcon from '../../assets/icons/second_message_icon.png'
-import reviewIcon from '../../assets/icons/review_icon.png'
-import secondReviewIcon from '../../assets/icons/second_review_icon.png'
-import payoutIcon from '../../assets/icons/payout_icon.png'
-import secondPayoutIcon from '../../assets/icons/second_payout_icon.png'
-import statementIcon from '../../assets/icons/statement_icon.png'
-import secondStatementIcon from '../../assets/icons/second_statement_icon.png'
-import servicesIcon from '../../assets/icons/manage_services_icon.png'
-import secondServicesIcon from '../../assets/icons/second_manage_services_icon.png'
-import projectIcon from '../../assets/icons/manage_project_icon.png'
-import profileIcon from '../../assets/icons/profile_icon.png'
-import profileIcon2 from '../../assets/icons/second_profile_icon.png'
-import logoutIcon from '../../assets/icons/logout_icon.png'
-import manageIcon from '../../assets/icons/manage_project_icon2.png'
-import searchIcon from '../../assets/icons/Search2.png'
-import mailIcon from '../../assets/icons/mail.png'
-import bellIcon from '../../assets/icons/bell.png'
-import secondProfileIcon from '../../assets/icons/second_profile.png'
+import React, { useState } from 'react'
 import thirdProfileIcon from '../../assets/icons/third_profile.png'
-import dropdownIcon from '../../assets/icons/dropdown.png'
 import firstDashboardIcon from '../../assets/icons/first_dashboard_icon.png'
 import secondDashboardIcon from '../../assets/icons/second_dashboard_icon.png'
-
 import thirdDashboardIcon from '../../assets/icons/third_dashboard_icon.png'
 import fourthDashboardIcon from '../../assets/icons/fourth_dashboard_icon.png'
 import fifthDashboardIcon from '../../assets/icons/fifth_dashboard_icon.png'
@@ -36,74 +11,79 @@ import Navbar from '../../Components/Freelancer/Navbar'
 
 
 const Freelancerboard = () => {
+    const [showNavbar, setShowNavbar] = useState(false)
+    const handleClick = (e) => {
+        console.log(showNavbar)
+        setShowNavbar(prev => !prev)
+    }
     return (
         <div className='w-full h-screen flex bg-[#F5F5F5]'>
             <Sidebar />
 
-            <div className='w-4/5 mx-6 h-full'>
-                <Navbar />
-                <p className="text-2xl font-['Montserrat'] font-medium text-[#323232] w-full mt-3  py-0">
+            <div className=' w-4/5 max-md:w-full mx-6  max-md:mx-0 h-full'>
+                <Navbar handleClick={handleClick} />
+                <p className="text-2xl font-['Montserrat'] font-medium text-[#323232] w-full mt-3  py-0 max-md:px-3 ">
                     Welcome back, Osaze
                 </p>
-                <p className="font-['Montserrat'] text-[#323232] w-full mt-0 ">
+                <p className="font-['Montserrat'] text-[#323232] w-full mt-0  max-md:px-3">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                 </p>
-                <div className="flex flex-row justify-between w-full mt-2 h-1/5">
+                <div className="flex flex-row justify-between w-full mt-2 h-1/5 max-md:px-3">
                     <div className="shadow-[0px_4px_21px_0px_rgba(1,_14,_35,_0.15)] w-2/9  bg-[#c00e3a] px-2 py-3 rounded-lg flex flex-col justify-between">
-                        <p className="text-lg font-['Poppins'] font-medium  text-white">
+                        <p className="text-lg max-xl:text-sm font-['Poppins'] font-medium  text-white">
                             Number of <br />
                             Projects
                         </p>
                         <div className='flex justify-between items-center mb-2'>
-                            <p className="text-lg font-['Poppins'] font-semibold text-white ml-0">
+                            <p className="text-lg max-xl:text-sm font-['Poppins'] font-semibold text-white ml-0">
                                 1000
                             </p>
                             <img src={firstDashboardIcon} alt="icon" className='w-4 h-4' />
                         </div>
                     </div>
                     <div className="shadow-[0px_4px_21px_0px_rgba(1,_14,_35,_0.15)] w-2/9 overflow-hidden bg-[#049f6d]  px-2 py-3 rounded-lg flex flex-col justify-between">
-                        <p className="text-lg font-['Poppins'] font-medium text-white">
+                        <p className="text-lg  max-xl:text-sm font-['Poppins'] font-medium text-white">
                             Number of <br />
                             Completed Projects
                         </p>
                         <div className='flex justify-between items-center mb-2'>
-                            <p className="text-lg font-['Poppins'] font-semibold text-white ml-0">
+                            <p className="text-lg  max-xl:text-sm font-['Poppins'] font-semibold text-white ml-0">
                                 1000
                             </p>
                             <img src={secondDashboardIcon} alt="icon" className='w-4 h-4' />
                         </div>
                     </div>
                     <div className="shadow-[0px_4px_21px_0px_rgba(1,_14,_35,_0.15)] w-2/9 overflow-hidden bg-[#a8a108]  px-2 py-3 rounded-lg flex flex-col justify-between">
-                        <p className="text-lg font-['Poppins'] font-medium  text-white">
+                        <p className="text-lg max-xl:text-sm font-['Poppins'] font-medium  text-white">
                             Number of Running <br />
                             Projects
                         </p>
                         <div className='flex justify-between items-center mb-2'>
-                            <p className="text-lg font-['Poppins'] font-semibold text-white ml-0">
+                            <p className="text-lg max-xl:text-sm font-['Poppins'] font-semibold text-white ml-0">
                                 1000
                             </p>
                             <img src={thirdDashboardIcon} alt="icon" className='w-4 h-4' />
                         </div>
                     </div>
                     <div className="shadow-[0px_4px_21px_0px_rgba(1,_14,_35,_0.15)] w-2/9 overflow-hidden bg-[#981010]  px-2 py-3 rounded-lg flex flex-col justify-between">
-                        <p className="text-lg font-['Poppins'] font-medium  text-white">
+                        <p className="text-lg font-['Poppins'] max-xl:text-sm font-medium  text-white">
                             Total Payment
                         </p>
                         <div className='flex justify-between items-center mb-2'>
-                            <p className="text-lg font-['Poppins'] font-semibold text-white ml-0">
+                            <p className="text-lg font-['Poppins'] max-xl:text-sm font-semibold text-white ml-0">
                                 $1000
                             </p>
                             <img src={fourthDashboardIcon} alt="icon" className='w-4 h-4' />
                         </div>
                     </div>
                 </div>
-                <div className='flex w-full mt-3 h-6/11 justify-between'>
-                    <div className='w-7/11 h-full '>
-                        <div className="shadow-[0px_4px_21px_0px_rgba(1,_14,_35,_0.15)]  bg-[#2d7f04] flex flex-col justify-between h-2/5 px-2 py-3 rounded-lg">
+                <div className='flex w-full mt-3 h-6/11 justify-between max-md:px-3'>
+                    <div className='w-7/11 max-md:w-6/11 h-full flex flex-col justify-between'>
+                        <div className="shadow-[0px_4px_21px_0px_rgba(1,_14,_35,_0.15)]  bg-[#2d7f04] flex flex-col justify-between h-1/3 px-2 py-3 rounded-lg">
                             <p className="text-lg font-['Poppins'] font-medium  text-white">
                                 Payment Balance
                             </p>
-                            <div className="flex flex-row ml-px gap-px items-center justify-between mb-2">
+                            <div className="flex flex-row ml-px gap-px items-center justify-between">
                                 <p className="text-lg font-['Poppins'] font-semibold text-white">
                                     $1000
                                 </p>
@@ -113,28 +93,28 @@ const Freelancerboard = () => {
                                 />
                             </div>
                         </div>
-                        <div className="shadow-[0px_4px_76px_0px_rgba(0,_0,_0,_0.1)] bg-white flex w-full rounded-md mt-2 pb-4">
-                            <div className='w-1/4 flex justify-center pt-3'>
-                                <div className='rounded-full p-4 bg-blue-100 self-start'>
-                                    <img src={googleIcon} alt="icon" />
+                        <div className="shadow-[0px_4px_76px_0px_rgba(0,_0,_0,_0.1)] bg-white flex w-full rounded-md pb-4 h-5/8">
+                            <div className='w-1/4 max-lg:w-1/6 flex justify-center pt-3'>
+                                <div className='rounded-full p-4 max-lg:p-2 bg-blue-100 self-start'>
+                                    <img src={googleIcon} alt="icon" className='max-md:w-6 max-md:h-6' />
                                 </div>
                             </div>
-                            <div className="flex flex-col items-start  w-3/4">
+                            <div className="flex flex-col items-start justify-between  w-3/4 max-lg:w-5/6 max-xl:pt-2 max-lg:pt-1 pr-2">
                                 <div>
-                                    <p className="text-2xl font-['Montserrat'] font-medium text-[#989797]">
+                                    <p className="text-2xl max-lg:text-base font-['Montserrat'] font-medium text-[#989797]">
                                         Web Developer
                                     </p>
-                                    <p className="text-sm font-['Montserrat'] font-medium text-[#323232]">
+                                    <p className="text-sm max-lg:text-xs font-['Montserrat'] font-medium text-[#323232]">
                                         Google
                                     </p>
                                 </div>
-                                <div className="font-['Montserrat'] text-[#323232] self-end mb-2 ">
+                                <div className="font-['Montserrat'] text-[#323232] self-end mb-2 max-lg:mb-1  max-lg:text-sm">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                     tempor incididunt ut labore et
 
                                     dolore magna aliqua. Ut enim ad minim veniam, quui nostrud
                                 </div>
-                                <div className="flex flex-row gap-16 mb-5 w-full items-start">
+                                <div className="flex items-center justify-around  mb-5 max-lg:mb-2 w-full">
 
                                     <div className="text-xs font-['Montserrat'] text-[#323232] mt-px mb-1">
                                         London
@@ -149,40 +129,42 @@ const Freelancerboard = () => {
                                         Remote
                                     </div>
                                 </div>
-                                <div className='h-[0.05rem] w-8/11 bg-lightBlue ml-6 flex items-center justify-between'>
-                                    <div className='rounded-full w-2 h-2 bg-primary'></div>
-                                    <div className='rounded-full w-2 h-2 bg-primary'></div>
-                                    <div className='rounded-full w-2 h-2 bg-primary'></div>
-                                    <div className='rounded-full w-1 h-1 bg-primary'></div>
-                                    <div className='rounded-full w-2 h-2 bg-lightMilk'></div>
-                                </div>
-                                <div className="flex flex-row gap-8 w-full items-start">
-                                    <div className="text-xs font-['Montserrat'] text-[#323232] mb-px mr-px">
-                                        Milestone 1
+                                <div className='w-full'>
+                                    <div className='h-[0.05rem] w-4/5 bg-lightBlue mx-auto flex items-center justify-between'>
+                                        <div className='rounded-full w-2 h-2 bg-primary'></div>
+                                        <div className='rounded-full w-2 h-2 bg-primary'></div>
+                                        <div className='rounded-full w-2 h-2 bg-primary'></div>
+                                        <div className='rounded-full w-1 h-1 bg-primary'></div>
+                                        <div className='rounded-full w-2 h-2 bg-lightMilk'></div>
                                     </div>
-                                    <div className="text-xs font-['Montserrat'] text-[#323232]">
-                                        Milestone 2
-                                    </div>
-                                    <div className="text-xs font-['Montserrat'] text-[#323232]">
-                                        Milestone 3
-                                    </div>
-                                    <div className="text-xs font-['Montserrat'] text-[#323232] mr-px">
-                                        Milestone 4
-                                    </div>
-                                    <div className="text-xs font-['Montserrat'] text-[#323232]">
-                                        Milestone 5
+                                    <div className="flex items-center justify-around  w-full">
+                                        <div className="text-xs font-['Montserrat'] text-[#323232] mb-px mr-px max-md:text-center">
+                                            Milestone 1
+                                        </div>
+                                        <div className="text-xs font-['Montserrat'] text-[#323232] max-md:text-center">
+                                            Milestone 2
+                                        </div>
+                                        <div className="text-xs font-['Montserrat'] text-[#323232] max-md:text-center">
+                                            Milestone 3
+                                        </div>
+                                        <div className="text-xs font-['Montserrat'] text-[#323232] mr-px max-md:text-center">
+                                            Milestone 4
+                                        </div>
+                                        <div className="text-xs font-['Montserrat'] text-[#323232] max-md:text-center">
+                                            Milestone 5
+                                        </div>
                                     </div>
                                 </div>
 
                             </div>
                         </div>
                     </div>
-                    <div className='bg-white w-3/10 px-3 pt-3 h-full'>
+                    <div className='bg-white w-3/10 max-lg:w-1/3 max-md:w-4/10 px-3 py-2  h-full flex flex-col justify-between'>
                         <div className='flex justify-between items-center '>
                             <p className="text-lg font-['Montserrat'] text-[#323232]">Messages</p>
                             <p className="text-sm font-['Montserrat'] text-[#0259db]">View all</p>
                         </div>
-                        <div className="flex flex-row gap-4 w-full items-center pt-5 pb-2">
+                        <div className="flex flex-row gap-4 w-full items-center pt-2   ">
                             <img
                                 src={thirdProfileIcon}
                                 className=""
@@ -205,7 +187,7 @@ const Freelancerboard = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex flex-row gap-4 w-full items-center py-2">
+                        <div className="flex flex-row gap-4 w-full items-center ">
                             <img
                                 src={thirdProfileIcon}
                                 className=""
@@ -225,7 +207,7 @@ const Freelancerboard = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex flex-row gap-4 w-full items-center py-2">
+                        <div className="flex flex-row gap-4 w-full items-center">
                             <img
                                 src={thirdProfileIcon}
                                 className=""
@@ -245,7 +227,7 @@ const Freelancerboard = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex flex-row gap-4 w-full items-center py-2">
+                        <div className="flex flex-row gap-4 w-full items-center">
                             <img
                                 src={thirdProfileIcon}
                                 className=""
@@ -269,7 +251,7 @@ const Freelancerboard = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex flex-row gap-4 w-full items-center py-2">
+                        <div className="flex flex-row gap-4 w-full items-center">
                             <img
                                 src={thirdProfileIcon}
                                 className=""
