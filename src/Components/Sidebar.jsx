@@ -21,6 +21,8 @@ import manageIcon from '../assets/icons/manage_project_icon2.png'
 import secondDashboardIcon2 from '../assets/icons/dash.png'
 
 const Sidebar = ({ handleClick }) => {
+
+    console.log('good')
     return (
         <div className="w-1/5 flex flex-col px-5 max-lg:px-2 max-lg:text-[10px] max-md:px-5 max-md:text-sm max-sm:text-xs max-sm:px-2 bg-primary h-full  font-normal text-sm  font-['Montserrat'] max-md:w-1/2 max-md:fixed max-md:z-10">
             <div className='w-full h-1/3 flex-col flex justify-between'>
