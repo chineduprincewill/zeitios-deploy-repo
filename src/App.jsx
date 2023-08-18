@@ -5,6 +5,7 @@ import Error from './Pages/Error'
 
 import Job from './Pages/Freelancer/Job'
 import Freelancerboard from './Pages/Freelancer/Freelancerboard'
+import Messages from './Pages/Freelancer/Messages'
 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
             {/* <Route path="/freelancer/dashboard" exact element={<Dashboard />} /> */}
             <Route path="/freelancer/job" exact element={<Job />} />
             <Route path="/freelancer/dashboard" exact element={<Freelancerboard />} />
-
+            <Route path="/freelancer/messages" exact element={<Messages />} />
             <Route path="*" exact element={<Error />} />
 
             {/* <ProtectedRoute path='/' exact>

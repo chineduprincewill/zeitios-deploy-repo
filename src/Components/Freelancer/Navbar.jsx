@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import searchIcon from '../../assets/icons/Search2.png'
 import mailIcon from '../../assets/icons/mail.png'
 import bellIcon from '../../assets/icons/bell.png'
@@ -11,15 +11,44 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
 const Navbar = ({ handleClick }) => {
+    const [showIcon, setShowIcon] = useState(false)
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+    const [showDiv, setShowDiv] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setScreenWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        // Cleanup the event listener when the component unmounts
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    useEffect(() => {
+        // Conditionally update the showDiv state based on screen width
+        if (screenWidth < 768) {
+            setShowDiv(true);
+        } else {
+            setShowDiv(false);
+        }
+    }, [screenWidth]);
+
+
     return (
-        <div className='  border bg-primary flex h-1/10 items-center  justify-around rounded-sm w-full'>
-            <div className='border border-white p-2 rounded-md'>
-                <FontAwesomeIcon icon="fa-solid fa-bars" className="h-6 w-6 text-white" onClick={handleClick} > </FontAwesomeIcon>
-            </div>
+
+        <div className='  border bg-primary flex h-1/10 max-xl:h-1/12 max-sm:h-1/7 max-sm:py-2 items-center py-1 justify-around rounded-sm w-full'>
+
+            {showDiv && <div className='border border-white p-2 rounded-md '>
+                <FontAwesomeIcon icon="fa-solid fa-bars" className="h-6 w-6 text-white " onClick={handleClick} > </FontAwesomeIcon>
+            </div>}
 
             <div className='flex flex-row bg-[#dfe1e3] w-1/3 px-4 py-1 rounded-[20px] items-center'>
                 <img src={searchIcon} alt="search icon" />
-                <input placeholder="Search" name="search" className="ml-3 bg-transparent font-[' Poppins'] text-[#343f42]" />
+                <input placeholder="Search" name="search" className="ml-3 bg-transparent font-[' Poppins'] text-[#343f42] w-full" />
             </div>
             <div className='flex flex-row gap-2 items-center'>
                 <img src={bellIcon} alt="search icon" />
