@@ -40,7 +40,7 @@ const Navbar = ({ handleClick }) => {
 
     return (
 
-        <div className='  border bg-primary flex h-1/10 max-xl:h-1/12 max-sm:h-1/7 max-sm:py-2 items-center py-1 justify-around rounded-sm w-full'>
+        <div className=' bg-primary flex h-1/10 max-xl:h-1/12 max-sm:h-1/7 max-sm:py-2 items-center py-1 justify-around rounded-sm w-full'>
 
             {showDiv && <div className='border border-white p-2 rounded-md '>
                 <FontAwesomeIcon icon="fa-solid fa-bars" className="h-6 w-6 text-white " onClick={handleClick} > </FontAwesomeIcon>

@@ -46,7 +46,7 @@ const Messages = () => {
     return (
         <div className='w-full h-screen relative border-4 border-green-300 flex bg-[#F5F5F5]'>
             {showNavbar && <Sidebar handleClick={handleClick} />}
-            <div className='w-4/5 mx-6 h-full mr-'>
+            <div className='w-4/5 mx-6 h-full max-md:mx-0  max-md:w-full'>
                 <Navbar handleClick={handleClick} />
                 <p className="text-xl font-['Montserrat'] font-semibold text-[#323232] w-full   py-0">
                     Messages

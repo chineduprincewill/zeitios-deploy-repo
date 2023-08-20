@@ -31,6 +31,7 @@ export default {
         lighterGray: '#9D9D9D',
         lightBlue: '#6CA7FF',
         lightMilk: '#BABCBE',
+        lightGrey: '#CBC8C8',
       }),
       backgroundImage: {
         "home": "url('/src/assets/image/background-image.png')",
