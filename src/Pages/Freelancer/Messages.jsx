@@ -44,37 +44,36 @@ const Messages = () => {
         }
     }, [screenWidth]);
     return (
-        <div className='w-full h-screen relative border-4 border-green-300 flex bg-[#F5F5F5]'>
+        <div className='w-full h-screen relative flex bg-[#F5F5F5]'>
             {showNavbar && <Sidebar handleClick={handleClick} />}
-            <div className='w-4/5 mx-6 h-full max-md:mx-0  max-md:w-full'>
+            <div className='w-[76%] ml-auto mx-6 h-full max-md:mx-0  max-md:w-full'>
                 <Navbar handleClick={handleClick} />
-                <p className="text-xl font-['Montserrat'] font-semibold text-[#323232] w-full   py-0">
+                <p className="text-xl font-['Montserrat'] font-semibold text-[#323232] w-full  mt-5">
                     Messages
                 </p>
 
                 <p className="font-['Montserrat'] text-[#323232] w-full mt-0 ">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                 </p>
-                <div className="text-sm font-['Montserrat'] text-[#ee2a1d] text-end ">
+                <div className="text-sm font-['Montserrat'] text-[#ee2a1d] text-end mb-2">
                     Leave group
                 </div>
 
-                <div className='flex items-center justify-between w-full h-4/5 pb-3'>
-                    <div className="shadow-[0px_4px_76px_0px_rgba(0,_0,_0,_0.1)]  bg-white flex flex-col   px-5 py-3 rounded w-1/3 h-full">
+                <div className='flex items-center justify-between w-full h-[75%] pb-3'>
+                    <div className="shadow-[0px_4px_76px_0px_rgba(0,_0,_0,_0.1)]  bg-white flex flex-col justify-around   px-5 py-3 rounded w-1/3 h-full">
                         <div className='flex flex-row bg-[#e1edff]  w-full px-4 py-1 rounded items-center'>
                             <img src={searchIcon} alt="search icon" />
                             <input type="text" className="bg-transparent w-full ml-3 font-[' Poppins'] text-[#343f42]" />
                         </div>
-                        <div className='w-full'>
-                            <MessageNotifications heading="Team: Group Ferran" text="Lorem Ipsum is simply dummy text of the skajns dskjas........" image={thirdProfileIcon} number="12" time="12:05pm" />
-                            <MessageNotifications heading="Team: Group Oscar" text="Lorem Ipsum is simply dummy text of the skajns dskjas........" image={thirdProfileIcon} number="12" time="12:05pm" />
-                            <MessageNotifications heading="Client 1" text="Lorem Ipsum is simply dummy text of the skajns dskjas........" image={thirdProfileIcon} time="12:05pm" />
-                            <MessageNotifications heading="Client 2" text="Lorem Ipsum is simply dummy text of the skajns dskjas........" image={thirdProfileIcon} time="12:05pm" />
-                            <MessageNotifications heading="Client 3" text="Lorem Ipsum is simply dummy text of the skajns dskjas........" image={thirdProfileIcon} time="12:05pm" />
-                            <MessageNotifications heading="Client 4" text="Lorem Ipsum is simply dummy text of the skajns dskjas........" image={thirdProfileIcon} time="12:05pm" />
-                            <MessageNotifications heading="Client 5" text="Lorem Ipsum is simply dummy text of the skajns dskjas........" image={thirdProfileIcon} time="12:05pm" />
-                            <MessageNotifications heading="Client 6" text="Lorem Ipsum is simply dummy text of the skajns dskjas........" image={thirdProfileIcon} time="12:05pm" />
-                        </div>
+
+                        <MessageNotifications heading="Team: Group Ferran" text="Lorem Ipsum is simply dummy text of the skajns dskjas........" image={thirdProfileIcon} number="12" time="12:05pm" />
+                        <MessageNotifications heading="Team: Group Oscar" text="Lorem Ipsum is simply dummy text of the skajns dskjas........" image={thirdProfileIcon} number="12" time="12:05pm" />
+                        <MessageNotifications heading="Client 1" text="Lorem Ipsum is simply dummy text of the skajns dskjas........" image={thirdProfileIcon} time="12:05pm" />
+                        <MessageNotifications heading="Client 2" text="Lorem Ipsum is simply dummy text of the skajns dskjas........" image={thirdProfileIcon} time="12:05pm" />
+                        <MessageNotifications heading="Client 3" text="Lorem Ipsum is simply dummy text of the skajns dskjas........" image={thirdProfileIcon} time="12:05pm" />
+                        <MessageNotifications heading="Client 4" text="Lorem Ipsum is simply dummy text of the skajns dskjas........" image={thirdProfileIcon} time="12:05pm" />
+                        <MessageNotifications heading="Client 5" text="Lorem Ipsum is simply dummy text of the skajns dskjas........" image={thirdProfileIcon} time="12:05pm" />
+
                     </div>
 
                     <div className="shadow-[0px_4px_76px_0px_rgba(0,_0,_0,_0.1)] bg-white flex flex-col  w-7/11 h-full  p-5 rounded justify-between">

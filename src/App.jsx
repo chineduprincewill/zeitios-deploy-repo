@@ -24,7 +24,7 @@ function App() {
             <Route path="/freelancer/job" exact element={<Job />} />
             <Route path="/freelancer/dashboard" exact element={<Freelancerboard />} />
             <Route path="/freelancer/messages" exact element={<Messages />} />
-            <Route path="/freelancer/reviews" exact element={<Reviews />} />
+            <Route path="/freelancer/reviews/project" exact element={<Reviews />} />
             <Route path="/freelancer/reviews/job" exact element={<JobReview />} />
             <Route path="/freelancer/reviews/job/all" exact element={<ManageJobs />} />
             <Route path="*" exact element={<Error />} />

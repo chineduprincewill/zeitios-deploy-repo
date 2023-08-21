@@ -47,7 +47,7 @@ const Freelancerboard = () => {
             {showNavbar && <Sidebar handleClick={handleClick} />}
 
 
-            <div className=' w-4/5 max-md:w-full mx-6  max-md:mx-0 h-full'>
+            <div className=' w-[76%] max-md:w-full mx-6  max-md:mx-0 h-full ml-auto'>
                 <Navbar handleClick={handleClick} />
                 <p className="text-2xl font-['Montserrat'] font-medium text-[#323232] w-full mt-3  py-0 max-md:px-3 ">
                     Welcome back, Osaze

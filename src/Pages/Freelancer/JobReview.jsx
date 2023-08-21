@@ -18,7 +18,7 @@ const JobReview = () => {
     const totalNotifications = posts.length;
 
 
-    const pageSize = 3;
+    const pageSize = 6;
     const pages = Math.ceil(totalNotifications / pageSize);
 
     const goToPrev = () => {
@@ -73,26 +73,26 @@ const JobReview = () => {
         pageNumbers.push(i);
     }
     return (
-        <div className='w-full h-screen relative flex bg-[#F5F5F5]'>
+        <div className='w-full max-h-fit pb-10 relative flex bg-[#F5F5F5] '>
             {showNavbar && <Sidebar handleClick={handleClick} />}
-            <div className='w-4/5 mx-6 h-full max-md:mx-0  max-md:w-full'>
+            <div className='w-[76%] ml-auto mx-6 h-full max-md:mx-0  max-md:w-full'>
                 <Navbar handleClick={handleClick} />
-                <p className="text-xl font-['Montserrat'] font-semibold text-[#323232] w-full   py-0">
+                <p className="text-xl font-['Montserrat'] font-semibold text-[#323232] w-full mt-10">
                     Reviews
                 </p>
 
-                <p className="font-['Montserrat'] text-[#323232] w-full mt-0 ">
+                <p className="font-['Montserrat'] text-[#323232] w-full mb-5 ">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                 </p>
                 <div className='w-full flex items-center justify-between'>
                     <div className='w-1/7 items-center flex border justify-around'>
 
-                        <Link to="/freelancer/reviews">
+                        <Link to="/freelancer/reviews/job">
                             <p className="text-base font-['Montserrat'] underline font-semibold text-[#928e8e] active:text-[#0259db]">
                                 Jobs
                             </p>
                         </Link>
-                        <Link to='/freelancer/reviews/job'>
+                        <Link to='/freelancer/reviews/project'>
                             <p className="text-base font-['Montserrat'] font-medium tracking-[0.5] text-[#928e8e] active:text-[#0259db]">
                                 Projects
                             </p>
@@ -109,7 +109,7 @@ const JobReview = () => {
                         </p>
                     </button>
                 </div>
-                <div className="shadow-[0px_4px_76px_0px_rgba(0,_0,_0,_0.1)] bg-white flex flex-col w-full items-center py-2 rounded h-3/4">
+                <div className="shadow-[0px_4px_76px_0px_rgba(0,_0,_0,_0.1)] bg-white flex flex-col w-full items-center py-2 rounded h-full mt-3">
                     {postsPerPage.map(item => <ReviewNotification key={item} />)}
 
                     {/* <ReviewNotification />
