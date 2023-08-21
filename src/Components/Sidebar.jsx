@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Logo from '../assets/logo/Logo.png'
 import dashboardIcon from '../assets/icons/dashboard_icon.png'
 import jobIcon from '../assets/icons/job_icon.png'
@@ -28,20 +29,18 @@ const Sidebar = ({ handleClick }) => {
                 <div className='flex pl-8  items-center my-10'>
                     <img src={Logo} alt="logo" />
                 </div>
-                <div className='text-white flex  rounded-md px-2 py-4  relative  group' onClick={handleClick} >
-
-                    <div className='opacity-100 bg-transparent flex hover:opacity-0 absolute top-2 left-0 px-2 '>
-                        <img src={secondDashboardIcon2} alt="dashboard" className='mr-3 h-4 w-4 ' />
-                        <p className=''>Dashboard</p>
+                <Link to="/freelancer/dashboard">
+                    <div className='text-white flex  rounded-md px-2 py-4  relative  group' onClick={handleClick} >
+                        <div className='opacity-100 bg-transparent flex hover:opacity-0 absolute top-2 left-0 px-2 '>
+                            <img src={secondDashboardIcon2} alt="dashboard" className='mr-3 h-4 w-4 ' />
+                            <p className=''>Dashboard</p>
+                        </div>
+                        <div className='opacity-0 bg-white flex hover:opacity-100 text-primary absolute top-0 left-0 px-2 pt-2 w-full h-full rounded-md'>
+                            <img src={dashboardIcon} alt="dashboard" className='mr-3 h-4 w-4 ' />
+                            <p className=''>Dashboard</p>
+                        </div>
                     </div>
-
-                    <div className='opacity-0 bg-white flex hover:opacity-100 text-primary absolute top-0 left-0 px-2 pt-2 w-full h-full rounded-md'>
-                        <img src={dashboardIcon} alt="dashboard" className='mr-3 h-4 w-4 ' />
-                        <p className=''>Dashboard</p>
-                    </div>
-
-
-                </div>
+                </Link>
                 <div className='text-white flex  py-4 rounded-md px-2 relative  group' onClick={handleClick}>
                     <div className='opacity-100 bg-transparent flex hover:opacity-0 absolute top-2 left-0 px-2 '>
                         <img src={jobIcon} alt="jobs" className='mr-3 h-4 w-4' />

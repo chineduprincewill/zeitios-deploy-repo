@@ -7,6 +7,8 @@ import Job from './Pages/Freelancer/Job'
 import Freelancerboard from './Pages/Freelancer/Freelancerboard'
 import Messages from './Pages/Freelancer/Messages'
 import Reviews from './Pages/Freelancer/Reviews'
+import JobReview from './Pages/Freelancer/JobReview'
+import ManageJobs from './Pages/Freelancer/ManageJobs'
 
 function App() {
 
@@ -23,6 +25,8 @@ function App() {
             <Route path="/freelancer/dashboard" exact element={<Freelancerboard />} />
             <Route path="/freelancer/messages" exact element={<Messages />} />
             <Route path="/freelancer/reviews" exact element={<Reviews />} />
+            <Route path="/freelancer/reviews/job" exact element={<JobReview />} />
+            <Route path="/freelancer/reviews/job/all" exact element={<ManageJobs />} />
             <Route path="*" exact element={<Error />} />
 
             {/* <ProtectedRoute path='/' exact>

@@ -12,7 +12,6 @@ import Navbar from '../../Components/Freelancer/Navbar'
 
 const Freelancerboard = () => {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-    const [showDiv, setShowDiv] = useState(false);
     const [showNavbar, setShowNavbar] = useState(false)
     const handleClick = (e) => {
         console.log(showNavbar)

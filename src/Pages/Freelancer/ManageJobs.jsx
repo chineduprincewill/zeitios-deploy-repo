@@ -3,32 +3,25 @@ import { Link } from 'react-router-dom'
 import Sidebar from '../../Components/Sidebar'
 import Navbar from '../../Components/Freelancer/Navbar'
 import filterIcon from '../../assets/icons/filter_icon.png'
-import ReviewNotification from '../../Components/ReviewNotification'
+import JobNotifications from '../../Components/JobNotifications'
 import { MdKeyboardArrowLeft } from 'react-icons/md'
 import { MdKeyboardArrowRight } from 'react-icons/md'
 
-const Reviews = () => {
+
+const ManageJobs = () => {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const [showNavbar, setShowNavbar] = useState(false)
-
     const [posts, setPosts] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]);
     const [currentPage, setCurrentPage] = useState(1);
-
     const totalNotifications = posts.length;
-
-
     const pageSize = 3;
     const pages = Math.ceil(totalNotifications / pageSize);
-
     const goToPrev = () => {
-
         const prevPage = Math.max(currentPage - 1, 1);
         setCurrentPage(prevPage);
         console.log('prev', prevPage)
     };
-
     const goToNext = () => {
-
         const nextPage = Math.min(currentPage + 1, pages);
         setCurrentPage(nextPage);
         console.log('next', nextPage)
@@ -37,9 +30,7 @@ const Reviews = () => {
     const end = pageSize * currentPage;
     const postsPerPage = posts.slice(start, end);
     const canGoPrev = currentPage > 1;
-    const canGoNext = currentPage < pages;
     const handleClick = (e) => {
-        console.log("good")
         console.log(showNavbar)
         setShowNavbar(prev => !prev)
     }
@@ -71,48 +62,45 @@ const Reviews = () => {
     for (let i = 1; i <= pages; i++) {
         pageNumbers.push(i);
     }
-
     return (
-        <div className='w-full h-screen relative flex bg-[#F5F5F5]'>
+        <div className='w-full h-screen flex bg-[#F5F5F5]'>
             {showNavbar && <Sidebar handleClick={handleClick} />}
-            <div className='w-4/5 mx-6 h-full max-md:mx-0  max-md:w-full'>
+            <div className='w-4/5 h-full mx-6 max-md:w-full max-md:mx-0'>
                 <Navbar handleClick={handleClick} />
-                <p className="text-xl font-['Montserrat'] font-semibold text-[#323232] w-full   py-0">
-                    Reviews
+                <p className="text-2xl font-['Montserrat'] font-semibold text-[#323232] w-full mt-3  py-0 max-md:px-2 max-md:text-center">
+                    Manage Jobs
                 </p>
 
-                <p className="font-['Montserrat'] text-[#323232] w-full mt-0 ">
+                <p className="font-['Montserrat'] text-[#323232] w-full mt-0 max-md:px-2 max-md:text-center ">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                 </p>
-                <div className='w-full flex items-center justify-between'>
-                    <div className='w-1/7 items-center flex border justify-around'>
-                        <Link to="/freelancer/reviews">
-                            <p className="text-base font-['Montserrat'] hover:underline font-semibold text-[#928e8e] hover:text-[#0259db]">
-                                Jobs
-                            </p>
-                        </Link>
-                        <Link to="/freelancer/reviews/job">
-                            <p className="text-base font-['Montserrat'] font-semibold text-[#928e8e] hover:text-[#0259db] hover:underline">
-                                Projects
-                            </p>
-                        </Link>
-
-                    </div>
-                    <button className="border-solid border-[#323232] flex flex-row justify-center gap-2 items-center border rounded w-1/6 p-2">
-                        <img
-                            src={filterIcon}
-                            className="w-4 shrink-0"
-                        />
-                        <p className="font-['Montserrat'] font-medium text-[#323232]">
-                            Filter here
-                        </p>
+                <div className='w-full flex items-center justify-end mb-3'>
+                    <button className="border-solid border-[#323232] flex justify-around w-1/7 items-center border rounded">
+                        <img src={filterIcon} className="" />
+                        Filter here
                     </button>
                 </div>
-                <div className="shadow-[0px_4px_76px_0px_rgba(0,_0,_0,_0.1)] bg-white flex flex-col w-full items-center py-2 rounded h-3/4">
-                    {postsPerPage.map(item => <ReviewNotification key={item} />)}
 
-                    {/* <ReviewNotification />
-                    <ReviewNotification /> */}
+                <div className="shadow-[0px_4px_76px_0px_rgba(0,_0,_0,_0.1)] bg-white flex flex-col justify-between  w-full  py-3 px-4 rounded">
+
+                    <div className="bg-blue-100 flex flex-row justify-between items-center px-4">
+                        <div className="font-['Montserrat'] font-medium text-[#332233]">
+                            Project Title
+                        </div>
+                        <div className="flex flex-row w-[42.0%] items-start justify-around">
+                            <div className="font-['Montserrat'] font-medium text-[#332233] ">
+                                Created & Expired
+                            </div>
+                            <div className="font-['Montserrat'] font-medium text-[#332233] ">
+                                Status
+                            </div>
+                            <div className="font-['Montserrat'] font-medium text-[#332233] ">
+                                Action
+                            </div>
+                        </div>
+                    </div>
+                    {postsPerPage.map(item => <JobNotifications key={item} />)}
+                    <JobNotifications />
                     <div className="bg-[#f3f3f3] flex justify-between w-1/2 mx-auto items-center p-2 mt-5">
                         <button disabled={!canGoPrev} className="border-solid border-[#d9d9d9] bg-white flex w-4 items-center border rounded-sm" onClick={goToPrev}>
                             <MdKeyboardArrowLeft />
@@ -132,12 +120,10 @@ const Reviews = () => {
                             <MdKeyboardArrowRight />
                         </button>
                     </div>
-
-
                 </div>
             </div>
         </div>
     )
 }
 
-export default Reviews
+export default ManageJobs

@@ -7,7 +7,8 @@ import ReviewNotification from '../../Components/ReviewNotification'
 import { MdKeyboardArrowLeft } from 'react-icons/md'
 import { MdKeyboardArrowRight } from 'react-icons/md'
 
-const Reviews = () => {
+
+const JobReview = () => {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const [showNavbar, setShowNavbar] = useState(false)
 
@@ -71,7 +72,6 @@ const Reviews = () => {
     for (let i = 1; i <= pages; i++) {
         pageNumbers.push(i);
     }
-
     return (
         <div className='w-full h-screen relative flex bg-[#F5F5F5]'>
             {showNavbar && <Sidebar handleClick={handleClick} />}
@@ -86,13 +86,14 @@ const Reviews = () => {
                 </p>
                 <div className='w-full flex items-center justify-between'>
                     <div className='w-1/7 items-center flex border justify-around'>
+
                         <Link to="/freelancer/reviews">
-                            <p className="text-base font-['Montserrat'] hover:underline font-semibold text-[#928e8e] hover:text-[#0259db]">
+                            <p className="text-base font-['Montserrat'] underline font-semibold text-[#928e8e] active:text-[#0259db]">
                                 Jobs
                             </p>
                         </Link>
-                        <Link to="/freelancer/reviews/job">
-                            <p className="text-base font-['Montserrat'] font-semibold text-[#928e8e] hover:text-[#0259db] hover:underline">
+                        <Link to='/freelancer/reviews/job'>
+                            <p className="text-base font-['Montserrat'] font-medium tracking-[0.5] text-[#928e8e] active:text-[#0259db]">
                                 Projects
                             </p>
                         </Link>
@@ -136,8 +137,9 @@ const Reviews = () => {
 
                 </div>
             </div>
+
         </div>
     )
 }
 
-export default Reviews
+export default JobReview
