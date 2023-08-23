@@ -1,6 +1,6 @@
 import React from 'react'
-import starIcon from '../assets/icons/star_icon.png'
-import secondPicture from '../assets/image/second_picture.png'
+import starIcon from '../../../assets/icons/star_icon.png'
+import secondPicture from '../../../assets/image/second_picture.png'
 
 const SliderItems = ({ sliderData }) => {
     const data = [{ img: `${secondPicture}` }]

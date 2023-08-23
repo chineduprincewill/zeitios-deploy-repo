@@ -1,19 +1,20 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     screens: {
-      'sm': '640px',
-      'md': '768px',
-      'lg': '1024px',
-      'xl': '1280px',
-      '2xl': '1536px',
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
       // => @media (min-width: 640px) { ... }
     },
     extend: {
+      fontFamily: {
+        // body: ["Inter", "sans-serif"],
+        body: ["Red Hat Display", "sans-serif"],
+      },
       colors: ({ colors }) => ({
         primary: '#0259DB',
         milk: '#ECEEEF',
@@ -34,13 +35,13 @@ export default {
         lightGrey: '#CBC8C8',
       }),
       backgroundImage: {
-        "home": "url('/src/assets/image/background-image.png')",
-        "fourthPicture": "url('/src/assets/image/fourth_picture.png')",
-        "fifthPicture": "url('/src/assets/image/fifth_picture.png')",
-        "sixthPicture": "url('/src/assets/image/sixth_picture.png')",
-        "seventhPicture": "url('/src/assets/image/seventh_picture.png')",
-        "eighthPicture": "url('/src/assets/image/eighth_picture.png')",
-        "twelvethPicture": "url('/src/assets/image/twelveth_picture.png')"
+        home: "url('/src/assets/image/background-image.png')",
+        fourthPicture: "url('/src/assets/image/fourth_picture.png')",
+        fifthPicture: "url('/src/assets/image/fifth_picture.png')",
+        sixthPicture: "url('/src/assets/image/sixth_picture.png')",
+        seventhPicture: "url('/src/assets/image/seventh_picture.png')",
+        eighthPicture: "url('/src/assets/image/eighth_picture.png')",
+        twelvethPicture: "url('/src/assets/image/twelveth_picture.png')",
       },
       width: ({ theme }) => ({
         auto: 'auto',
@@ -106,5 +107,4 @@ export default {
     },
   },
   plugins: [],
-}
-
+};

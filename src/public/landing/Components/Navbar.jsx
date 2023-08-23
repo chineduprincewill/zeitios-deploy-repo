@@ -2,11 +2,12 @@ import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { MdKeyboardArrowDown } from 'react-icons/md'
 import { CiSearch } from 'react-icons/ci'
-import Logo from '../assets/logo/Logo.png'
+import Logo from '../../../assets/logo/Logo.png'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [showNavbar, setShowNavbar] = useState(true)
@@ -57,8 +58,8 @@ const Navbar = () => {
                 </div>}
 
 
-                <button className="border border-white md:p-3  p-1 text-white rounded-md text-center text-2xl hover:cursor-pointer hover:bg-primary hover:border-none">Login</button>
-                <button className="bg-primary text-white md:p-3  p-1 text-center rounded-md text-2xl hover:cursor-pointer hover:bg-transparent hover:border hover:border-white">Register</button>
+                <Link to="/login" className="border border-white md:p-3  p-1 text-white rounded-md text-center text-2xl hover:cursor-pointer hover:bg-primary hover:border-none">Login</Link>
+                <Link to="/register-options" className="bg-primary text-white md:p-3  p-1 text-center rounded-md text-2xl hover:cursor-pointer hover:bg-transparent hover:border hover:border-white">Register</Link>
             </div>
 
         </>
