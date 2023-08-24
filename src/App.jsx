@@ -4,9 +4,6 @@ import Home from './public/landing/Pages/Home'
 import Login from './public/authentication/Login'
 import Register from './public/authentication/Register'
 import Error from './public/landing/Pages/Error'
-
-
-
 import RegisterOptions from './public/authentication/RegisterOptions'
 import ResendCode from './public/authentication/ResendCode'
 import Header from './common/Header';
