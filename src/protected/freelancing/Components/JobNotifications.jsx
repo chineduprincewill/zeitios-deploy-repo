@@ -1,6 +1,6 @@
 import React from 'react'
-import microsoftIcon from '../assets/icons/Microsoft.png'
-import threedotIcon from '../assets/icons/threedot.png'
+import microsoftIcon from '../../../assets/icons/Microsoft.png'
+import threedotIcon from '../../../assets/icons/threedot.png'
 
 const JobNotifications = () => {
     return (
@@ -22,8 +22,8 @@ const JobNotifications = () => {
                         </div>
                     </div>
                 </div>
-                <div className='flex w-1/2 max-lg:w-[60%] max-sm:w-3/4 border-2 justify-between items-center'>
-                    <div className=" flex flex-col gap-1 items-start ">
+                <div className='flex w-1/2 max-lg:w-[60%] max-sm:w-3/4  justify-between items-center'>
+                    <div className=" flex flex-col gap-1 items-start max-sm:mr-1">
                         <div className="font-['Poppins'] max-sm:text-[11px]  text-[#343f42]">
                             January 15, 2023
                         </div>

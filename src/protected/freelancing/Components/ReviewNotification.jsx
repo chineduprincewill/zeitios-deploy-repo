@@ -1,6 +1,6 @@
 import React from 'react'
-import microsoftIcon from '../assets/icons/Microsoft.png'
-import starIcon from '../assets/icons/star_icon.png'
+import microsoftIcon from '../../../assets/icons/Microsoft.png'
+import starIcon from '../../../assets/icons/star_icon.png'
 
 const ReviewNotification = () => {
 
@@ -19,9 +19,9 @@ const ReviewNotification = () => {
                             View Details
                         </p>
                     </div>
-                    <div className="self-stretch flex flex-row gap-2 items-start w-1/2">
+                    <div className="self-stretch flex gap-1 items-start w-1/2 max-sm:w-full">
                         <img src={starIcon} className="" />
-                        <div className="text-sm font-['Montserrat'] font-medium text-[#323232]">
+                        <div className="text-sm font-['Montserrat'] font-medium text-[#323232] ">
                             4.51
                             <span className="text-[#989797] ml-2">
                                 Published 2 weeks ago

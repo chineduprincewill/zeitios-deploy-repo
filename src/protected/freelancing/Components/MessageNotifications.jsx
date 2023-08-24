@@ -1,5 +1,5 @@
 import React from 'react'
-import thirdProfileIcon from '../assets/icons/third_profile.png'
+import thirdProfileIcon from '../../../assets/icons/third_profile.png'
 
 const MessageNotifications = ({ heading, text, image, number, time }) => {
     console.log(heading, text, image, number, time)

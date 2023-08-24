@@ -1,53 +1,19 @@
-import React, { useState, useEffect } from 'react'
-import Sidebar from '../../Components/Sidebar'
+import React from 'react'
+import Sidebar from '../../../common/Sidebar'
+import searchIcon from '../../../assets/icons/Search2.png'
+import smiley from '../../../assets/icons/smiley_icon.png'
+import send from '../../../assets/icons/send_icon.png'
+import fileAttach from '../../../assets/icons/file_attach_icon.png'
+import fourthProfilePicture from '../../../assets/icons/fourth_profile.png'
+import thirdProfileIcon from '../../../assets/icons/third_profile.png'
+import MessageNotifications from '../Components/MessageNotifications'
 
-import Navbar from '../../Components/Freelancer/Navbar'
-import searchIcon from '../../assets/icons/Search2.png'
-import smiley from '../../assets/icons/smiley_icon.png'
-import send from '../../assets/icons/send_icon.png'
-import fileAttach from '../../assets/icons/file_attach_icon.png'
-import fourthProfilePicture from '../../assets/icons/fourth_profile.png'
-import thirdProfileIcon from '../../assets/icons/third_profile.png'
-import MessageNotifications from '../../Components/MessageNotifications'
-
-
-
-const Messages = () => {
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-    const [showNavbar, setShowNavbar] = useState(false)
-    const handleClick = (e) => {
-        console.log("good")
-        console.log(showNavbar)
-        setShowNavbar(prev => !prev)
-    }
-    useEffect(() => {
-        const handleResize = () => {
-            setScreenWidth(window.innerWidth);
-        };
-
-        window.addEventListener('resize', handleResize);
-
-        // Cleanup the event listener when the component unmounts
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
-
-    useEffect(() => {
-        // Conditionally update the showDiv state based on screen width
-        if (screenWidth >= 768) {
-            setShowNavbar(true)
-            // setShowDiv(true);
-        } else {
-            setShowNavbar(false)
-            // setShowDiv(false);
-        }
-    }, [screenWidth]);
+const FreelancerMessages = () => {
     return (
-        <div className='w-full h-screen relative flex bg-[#F5F5F5]'>
-            {showNavbar && <Sidebar handleClick={handleClick} />}
-            <div className='w-[76%] ml-auto mx-6 h-full max-md:mx-0  max-md:w-full'>
-                <Navbar handleClick={handleClick} />
+        <div className='w-full min-h-screen relative flex bg-[#F5F5F5]'>
+            <Sidebar />
+            <div className='w-[86%] lg:w-[72%] xl:w-[76%] ml-auto mx-6 h-full max-md:mx-0 max-md:px-3  max-md:w-full'>
+
                 <p className="text-xl font-['Montserrat'] font-semibold text-[#323232] w-full  mt-5">
                     Messages
                 </p>
@@ -59,8 +25,8 @@ const Messages = () => {
                     Leave group
                 </div>
 
-                <div className='flex items-center justify-between w-full h-[75%] pb-3'>
-                    <div className="shadow-[0px_4px_76px_0px_rgba(0,_0,_0,_0.1)]  bg-white flex flex-col justify-around   px-5 py-3 rounded w-1/3 h-full">
+                <div className='flex items-center justify-between w-full h-[35rem] pb-3 max-sm:relative max-sm:flex-none '>
+                    <div className="shadow  bg-white flex flex-col justify-around px-5 py-3 rounded w-1/3 max-lg:w-[42%] max-md:w-[46%] max-xl:w-[37%] h-full max-sm:absolute max-sm:opacity-100 max-sm:w-full">
                         <div className='flex flex-row bg-[#e1edff]  w-full px-4 py-1 rounded items-center'>
                             <img src={searchIcon} alt="search icon" />
                             <input type="text" className="bg-transparent w-full ml-3 font-[' Poppins'] text-[#343f42]" />
@@ -76,29 +42,29 @@ const Messages = () => {
 
                     </div>
 
-                    <div className="shadow-[0px_4px_76px_0px_rgba(0,_0,_0,_0.1)] bg-white flex flex-col  w-7/11 h-full  p-5 rounded justify-between">
-                        <div className="flex w-1/4 items-center justify-between ">
+                    <div className="shadow bg-white flex flex-col  w-7/11 max-md:w-1/2 max-lg:w-[55%] max-xl:w-3/5 h-full  p-5 rounded justify-between max-sm:absolute max-sm:opacity-0">
+                        <div className="flex w-1/3 max-xl:w-[45%] max-lg:w-[45%] max-md:w-1/2 items-center justify-around ">
 
                             <img
                                 src={fourthProfilePicture}
                                 className=" w-10"
                             />
 
-                            <div className="flex flex-col mt-2  ">
-                                <div className="text-2xl font-['Montserrat'] font-medium text-[#323232]">
+                            <div className="flex flex-col ">
+                                <div className="text-xl  font-['Montserrat'] font-medium text-[#323232] max-md:text-sm max-lg:text-lg">
                                     Osaze Abu
                                 </div>
-                                <div className="text-sm font-['Montserrat'] text-[#323232] ml-px">
+                                <div className="text-sm font-['Montserrat'] text-[#323232] ml-px max-md:text-xs">
                                     Online
                                 </div>
                             </div>
                         </div>
 
-                        <div className="border-solid bg-white flex w-full items-center py-2 px-5 border-black border rounded-lg">
-                            <div className='flex items-center justify-between w-1/12'>
+                        <div className="border-solid bg-white flex w-full items-center  py-2 px-5 max-lg:px-2 border-black border rounded-lg justify-between">
+                            <div className='flex items-center justify-between'>
                                 <img
                                     src={smiley}
-                                    className=" w-5 m"
+                                    className=" w-5 mr-2"
                                 />
                                 <img
                                     src={fileAttach}
@@ -106,11 +72,11 @@ const Messages = () => {
                                 />
                             </div>
 
-                            <input className="text-sm font-['Montserrat'] font-medium text-[#7d7d7d] mt-2 ml-1 w-11/12 h-full" type="text" placeholder=' Type your message here' />
-                            <div>
+                            <input className="text-sm font-['Montserrat'] font-medium w-4/5 max-md:w-[70%] text-[#7d7d7d] ml-1  h-full" type="text" placeholder=' Type your message here' />
+                            <div className=''>
                                 <img
                                     src={send}
-                                    className="w-5"
+                                    className="w-5 "
                                 />
                             </div>
 
@@ -128,4 +94,4 @@ const Messages = () => {
     )
 }
 
-export default Messages
+export default FreelancerMessages
