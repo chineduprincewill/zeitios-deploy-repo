@@ -94,7 +94,7 @@ const Home = () => {
     //     setNumber(1)
     //     secondSlideComponents = sliderComponents.slice(number - 1, number)
     // }
-    console.log(screenWidth)
+    //console.log(screenWidth)
     return (
         <div>
 
