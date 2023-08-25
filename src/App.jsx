@@ -28,6 +28,7 @@ import ClientMessages from './protected/client/pages/ClientMessages'
 import MyProject from './protected/client/pages/MyProject'
 import Saved from './protected/client/pages/Saved'
 import FreelancerMessages from './protected/freelancing/pages/FreelancerMessages'
+import Projects from './protected/admin/pages/Projects'
 
 
 function App() {
@@ -64,6 +65,7 @@ function App() {
               <Route path="/client-messages" exact element={<PrivateRoute><ClientMessages /></PrivateRoute>} />
               <Route path="/saved" exact element={<PrivateRoute><Saved /></PrivateRoute>} />
               <Route path="/my-project" exact element={<PrivateRoute><MyProject /></PrivateRoute>} />
+              <Route path="/projects" exact element={<PrivateRoute><Projects /></PrivateRoute>} />
               <Route path="*" exact element={<Error />} />
 
               {/* <ProtectedRoute path='/' exact>
