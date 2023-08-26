@@ -26,6 +26,7 @@ import MyProject from './protected/client/pages/MyProject'
 import Saved from './protected/client/pages/Saved'
 import ManageJobs from './protected/freelancing/pages/ManageJobs'
 import FreelancerMessages from './protected/freelancing/pages/FreelancerMessages'
+import FreelancerProjects from './protected/freelancing/pages/FreelancerProjects'
 
 
 function App() {
@@ -46,7 +47,7 @@ function App() {
               <Route path="/resend-code" exact element={<ResendCode />} />
               <Route path="/dashboard" exact element={<PrivateRoute><Dashboard /></PrivateRoute>} />
               <Route path="/freelancer-dashboard" exact element={<PrivateRoute><FreelancerDashboard /></PrivateRoute>} />
-
+              <Route path="/freelancer-projects" exact element={<PrivateRoute><FreelancerProjects /></PrivateRoute>} />
               <Route path="/freelancer-payouts" exact element={<PrivateRoute><FreelancerPayouts /></PrivateRoute>} />
               <Route path="/freelancer-reviews" exact element={<PrivateRoute><FreelancerReviews /></PrivateRoute>} />
               <Route path="/freelancer-statement" exact element={<PrivateRoute><FreelancerStatment /></PrivateRoute>} />
