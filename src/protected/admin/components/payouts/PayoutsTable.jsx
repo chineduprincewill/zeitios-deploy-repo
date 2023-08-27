@@ -1,26 +1,27 @@
 import React, { useMemo, useState } from 'react'
-import DataTable from 'react-data-table-component'
 import Search from '../../../../common/Search'
-import { tableCustomStyles } from '../../../../common/tableStyles';
+import DataTable from 'react-data-table-component'
+import { tableCustomStyles } from '../../../../common/tableStyles'
+import { formatDateWithFullMonthName } from '../../../../common/helpers/checkRole'
 
-const ProjectsTable = ({ columns, pdata }) => {
+const PayoutsTable = ({ columns, payouts }) => {
 
     const [search, setSearch] = useState("");
 
-    let computedData = pdata;
+    let computedData = payouts;
 
     const searchData = useMemo(() => {
 
         if(search){
             computedData = computedData.filter(
-                pdt => pdt.clientname.toLowerCase().includes(search.toLowerCase()) ||
-                        pdt.description.toLowerCase().includes(search.toLowerCase()) ||
-                        pdt.status.toLowerCase().includes(search.toLowerCase())
+                pdt => pdt.amount.toString().includes(search) ||
+                        formatDateWithFullMonthName(pdt.purchase_date).toLowerCase().includes(search.toLowerCase()) ||
+                        pdt.payment_method.toLowerCase().includes(search.toLowerCase()) ||
+                        pdt.payment_status.toLowerCase().includes(search.toLowerCase())
             )
         }
         return computedData;
     }, [search])
-
 
 
     return (
@@ -28,7 +29,7 @@ const ProjectsTable = ({ columns, pdata }) => {
             <Search setSearch={setSearch} />
             <DataTable 
                 columns={columns} data={searchData}
-                paginationTotalRows={pdata.totalCount}
+                paginationTotalRows={payouts.totalCount}
                 className='w-full table table-responsive'
                 striped={true}
                 responsive={true}
@@ -40,4 +41,4 @@ const ProjectsTable = ({ columns, pdata }) => {
     )
 }
 
-export default ProjectsTable
+export default PayoutsTable
