@@ -69,7 +69,7 @@ const ManageJobs = () => {
 
                 <div className='max-md:px-4'>
 
-                    <p className="text-2xl font-['Montserrat'] font-semibold text-[#323232] w-full mt-10  py-0 max-md:px-2 max-md:text-center max-md:mx-3">
+                    <p className="text-2xl font-['Montserrat'] font-semibold text-[#323232] w-full mt-28  py-0 max-md:px-2 max-md:text-center max-md:mx-3">
                         Manage Jobs
                     </p>
 

@@ -42,9 +42,9 @@ const FreelancerMessages = () => {
         return (
             <div className='w-full min-h-screen relative flex bg-[#F5F5F5]'>
                 <Sidebar />
-                <div className=' h-full mx-0 px-3 w-full'>
+                <div className=' h-full mx-0 px-3   w-full'>
 
-                    <p className="text-xl font-['Montserrat'] font-semibold text-[#323232] w-full  mt-5">
+                    <p className="text-xl font-['Montserrat'] font-semibold text-[#323232] w-full  mt-28">
                         Messages
                     </p>
 

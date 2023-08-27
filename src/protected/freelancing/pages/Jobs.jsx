@@ -8,7 +8,7 @@ const Jobs = () => {
         <div className='w-full h-screen flex bg-[#F5F5F5]'>
             <Sidebar />
             <div className='w-[86%] lg:w-[72%] xl:w-[75%] h-full mx-6 max-md:w-full max-md:mx-0 ml-auto'>
-                <p className="text-2xl font-['Montserrat'] font-semibold text-[#323232] w-full mt-3  py-0 max-md:px-2 max-md:text-center">
+                <p className="text-2xl font-['Montserrat'] font-semibold text-[#323232] w-full mt-28  py-0 max-md:px-2 max-md:text-center">
                     Jobs
                 </p>
 
