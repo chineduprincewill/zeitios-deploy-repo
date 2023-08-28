@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import Sidebar from '../../Components/Sidebar'
-import Navbar from '../../Components/Freelancer/Navbar'
-import filterIcon from '../../assets/icons/filter_icon.png'
-import JobNotifications from '../../Components/JobNotifications'
+import Sidebar from '../../../common/Sidebar'
+import filterIcon from '../../../assets/icons/filter_icon.png'
+import JobNotifications from '../Components/JobNotifications'
 import { MdKeyboardArrowLeft } from 'react-icons/md'
 import { MdKeyboardArrowRight } from 'react-icons/md'
 
 
+
 const ManageJobs = () => {
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-    const [showNavbar, setShowNavbar] = useState(false)
+    // const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+    // const [showNavbar, setShowNavbar] = useState(false)
     const [posts, setPosts] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]);
     const [currentPage, setCurrentPage] = useState(1);
     const totalNotifications = posts.length;
@@ -30,46 +30,46 @@ const ManageJobs = () => {
     const end = pageSize * currentPage;
     const postsPerPage = posts.slice(start, end);
     const canGoPrev = currentPage > 1;
-    const handleClick = (e) => {
-        console.log(showNavbar)
-        setShowNavbar(prev => !prev)
-    }
-    useEffect(() => {
-        const handleResize = () => {
-            setScreenWidth(window.innerWidth);
-        };
+    // const handleClick = (e) => {
+    //     console.log(showNavbar)
+    //     setShowNavbar(prev => !prev)
+    // }
+    // useEffect(() => {
+    //     const handleResize = () => {
+    //         setScreenWidth(window.innerWidth);
+    //     };
 
-        window.addEventListener('resize', handleResize);
+    //     window.addEventListener('resize', handleResize);
 
-        // Cleanup the event listener when the component unmounts
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
+    //     // Cleanup the event listener when the component unmounts
+    //     return () => {
+    //         window.removeEventListener('resize', handleResize);
+    //     };
+    // }, []);
 
-    useEffect(() => {
-        // Conditionally update the showDiv state based on screen width
-        if (screenWidth >= 768) {
-            setShowNavbar(true)
-            // setShowDiv(true);
-        } else {
-            setShowNavbar(false)
-            // setShowDiv(false);
-        }
-    }, [screenWidth]);
+    // useEffect(() => {
+    //     // Conditionally update the showDiv state based on screen width
+    //     if (screenWidth >= 768) {
+    //         setShowNavbar(true)
+    //         // setShowDiv(true);
+    //     } else {
+    //         setShowNavbar(false)
+    //         // setShowDiv(false);
+    //     }
+    // }, [screenWidth]);
     const pageNumbers = Array(pages);
 
     for (let i = 1; i <= pages; i++) {
         pageNumbers.push(i);
     }
     return (
-        <div className='w-full max-h-fit pb-10 flex bg-[#F5F5F5]'>
-            {showNavbar && <Sidebar handleClick={handleClick} />}
-            <div className='w-[76%] ml-auto h-full mx-4 max-md:w-full max-md:mx-0'>
-                <Navbar handleClick={handleClick} />
+        <div className='w-full min-h-screen pb-10 flex bg-[#F5F5F5]'>
+            <Sidebar />
+            <div className='w-[86%] lg:w-[72%] xl:w-[76%]  ml-auto h-full mx-4 max-md:w-full max-md:mx-0'>
+
                 <div className='max-md:px-4'>
 
-                    <p className="text-2xl font-['Montserrat'] font-semibold text-[#323232] w-full mt-10  py-0 max-md:px-2 max-md:text-center max-md:mx-3">
+                    <p className="text-2xl font-['Montserrat'] font-semibold text-[#323232] w-full mt-28  py-0 max-md:px-2 max-md:text-center max-md:mx-3">
                         Manage Jobs
                     </p>
 
@@ -77,7 +77,7 @@ const ManageJobs = () => {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     </p>
                     <div className='w-full flex items-center justify-end mb-3 max-sm:mt-5'>
-                        <button className="border-solid border-[#323232] flex justify-center w-1/7 max-xl:w-1/6 max-sm:w-1/3 items-center border rounded">
+                        <button className="border-solid border-[#323232] flex justify-center w-1/7 max-xl:w-1/6 max-md:w-1/5 max-sm:w-[37%] items-center border rounded">
                             <img src={filterIcon} className="mr-2" />
                             Filter here
                         </button>
@@ -85,11 +85,11 @@ const ManageJobs = () => {
 
                     <div className="shadow-[0px_4px_76px_0px_rgba(0,_0,_0,_0.1)] bg-white flex flex-col justify-between  w-full  py-3 px-4 rounded ">
 
-                        <div className="bg-blue-100 flex flex-row justify-between items-center px-4 max-lg:px-4 max-md:px-1 max-sm:text-[11px]">
+                        <div className="bg-blue-100 flex flex-row justify-between items-center px-4 max-lg:px-4 max-md:px-1 max-sm:text-[8px] max-sm:font-bold max-sm:py-2">
                             <div className="font-['Montserrat'] font-medium text-[#332233]">
                                 Project Title
                             </div>
-                            <div className="flex border-4 border-red-200 w-1/2 max-sm:w-[60%] items-start justify-between">
+                            <div className="flex w-1/2 max-sm:w-[54%] items-start justify-between">
                                 <div className="font-['Montserrat'] font-medium text-[#332233] ">
                                     Created & Expired
                                 </div>

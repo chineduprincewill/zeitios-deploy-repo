@@ -1,10 +1,10 @@
 import React from 'react'
-import thirdProfileIcon from '../assets/icons/third_profile.png'
+import thirdProfileIcon from '../../../assets/icons/third_profile.png'
 
-const MessageNotifications = ({ heading, text, image, number, time }) => {
-    console.log(heading, text, image, number, time)
+const MessageNotifications = ({ heading, text, image, number, time, handleClick }) => {
+
     return (
-        <div className="flex flex-row gap-4 w-full items-center">
+        <div className="flex flex-row gap-4 w-full items-center " onClick={handleClick}>
             <img
                 src={image}
                 className=""
