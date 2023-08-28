@@ -30,6 +30,7 @@ import FreelancerProjects from './protected/freelancing/pages/FreelancerProjects
 import Projects from './protected/admin/pages/Projects'
 import Payouts from './protected/admin/pages/Payouts'
 import Statement from './protected/admin/pages/Statement'
+import Freelancerprofile from './protected/freelancing/pages/Freelancerprofile'
 
 
 function App() {
@@ -51,6 +52,7 @@ function App() {
               <Route path="/dashboard" exact element={<PrivateRoute><Dashboard /></PrivateRoute>} />
               <Route path="/freelancer-dashboard" exact element={<PrivateRoute><FreelancerDashboard /></PrivateRoute>} />
               <Route path="/freelancer-projects" exact element={<PrivateRoute><FreelancerProjects /></PrivateRoute>} />
+              <Route path="/freelancer-profile" exact element={<PrivateRoute><Freelancerprofile /></PrivateRoute>} />
               <Route path="/freelancer-payouts" exact element={<PrivateRoute><FreelancerPayouts /></PrivateRoute>} />
               <Route path="/freelancer-reviews" exact element={<PrivateRoute><FreelancerReviews /></PrivateRoute>} />
               <Route path="/freelancer-statement" exact element={<PrivateRoute><FreelancerStatment /></PrivateRoute>} />
