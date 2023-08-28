@@ -2,8 +2,6 @@ import { useContext } from "react"
 
 export const checkRole = (userRole, adminlinks, clientlinks, freelancerlinks, setNavlinks) => {
 
-    //const { user } = useContext(AuthContext);
-
     if(userRole === 'Client'){
         setNavlinks(clientlinks);
     }
@@ -42,10 +40,10 @@ export const formatDateWithFullMonthName = (dt) => {
     const year = date.getFullYear();
   
     return `${monthNames[month]} ${day}, ${year}`;
-  }
+}
 
 
-  export const formatCurrency = (amount) => {
+export const formatCurrency = (amount) => {
     const currencyCode="USD";
     const formatter = new Intl.NumberFormat("en-US", {
       style: "currency",
@@ -53,6 +51,6 @@ export const formatDateWithFullMonthName = (dt) => {
     });
   
     return formatter.format(amount);
-  }
+}
   
   
