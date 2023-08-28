@@ -39,53 +39,53 @@ const FreelancerStatment = () => {
         <div className='w-full min-h-screen pb-10 relative flex bg-[#F5F5F5]'>
             <Sidebar />
             <div className='w-[86%] lg:w-[72%] xl:w-[76%] ml-auto mx-6 h-full max-md:mx-0 max-md:px-3  max-md:w-full'>
-                <p className="text-xl font-['Montserrat'] font-semibold text-[#323232] w-full  mt-28">
+                <p className="text-xl font-['Montserrat'] font-semibold text-[#323232] w-full  mt-20 max-sm:text-sm">
                     Statement
                 </p>
 
-                <p className="font-['Montserrat'] text-[#323232] w-full mt-0 ">
+                <p className="font-['Montserrat'] text-[#323232] w-full mt-0 max-sm:text-[8px] ">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                 </p>
                 <div className="flex flex-row justify-between w-full mt-5 h-40 max-md:h-32 max-sm:h-64 max-md:px-3 max-sm:flex-wrap max-sm:justify-around">
                     <div className="shadow-[0px_4px_21px_0px_rgba(1,_14,_35,_0.15)] w-2/9 max-sm:w-2/5  bg-white px-2 max-sm:my-2 py-8 rounded-[10px] flex flex-col justify-between">
-                        <p className="text-stone-400 text-sm font-normal leading-none">
+                        <p className="text-stone-400 text-sm max-md:text-xs font-normal leading-none max-sm:text-[8px]">
                             Net Income
                         </p>
                         <div className='flex justify-between items-center mb-2'>
-                            <p className="max-xl:text-sm ml-0 text-zinc-800 text-xl font-medium">
+                            <p className="max-xl:text-sm ml-0 text-zinc-800 text-xl font-medium max-sm:text-[10px]">
                                 $1550
                             </p>
                             <img src={PayoutIcon1} alt="icon" className='w-4 h-4' />
                         </div>
                     </div>
                     <div className="shadow-[0px_4px_21px_0px_rgba(1,_14,_35,_0.15)] max-sm:my-2 w-2/9 max-sm:w-2/5 overflow-hidden bg-white  px-2 py-8 rounded-[10px]  flex flex-col justify-between">
-                        <p className="text-stone-400 text-sm font-normal leading-none">
+                        <p className="text-stone-400 text-sm max-md:text-xs font-normal leading-none max-sm:text-[8px]">
                             Withdrawn
                         </p>
                         <div className='flex justify-between items-center mb-2'>
-                            <p className="max-xl:text-sm ml-0 text-zinc-800 text-xl font-medium">
+                            <p className="max-xl:text-sm ml-0 text-zinc-800 text-xl font-medium max-sm:text-[10px]">
                                 $750
                             </p>
                             <img src={PayoutIcon2} alt="icon" className='w-4 h-4' />
                         </div>
                     </div>
                     <div className="shadow-[0px_4px_21px_0px_rgba(1,_14,_35,_0.15)] max-sm:my-2 w-2/9 max-sm:w-2/5 overflow-hidden bg-white  px-2 py-8 rounded-[10px]  flex flex-col justify-between">
-                        <p className="text-stone-400 text-sm font-normal leading-none">
+                        <p className="text-stone-400 text-sm max-md:text-xs font-normal leading-none max-sm:text-[8px]">
                             Pending Payment
                         </p>
                         <div className='flex justify-between items-center mb-2'>
-                            <p className="max-xl:text-sm ml-0 text-zinc-800 text-xl font-medium">
+                            <p className="max-xl:text-sm ml-0 text-zinc-800 text-xl font-medium max-sm:text-[10px]">
                                 $800
                             </p>
                             <img src={PayoutIcon3} alt="icon" className='w-4 h-4' />
                         </div>
                     </div>
                     <div className="shadow-[0px_4px_21px_0px_rgba(1,_14,_35,_0.15)] max-sm:my-2 w-2/9 max-sm:w-2/5 overflow-hidden bg-white  px-2 py-8 rounded-[10px]  flex flex-col justify-between">
-                        <p className="text-stone-400 text-sm font-normal leading-none">
+                        <p className="text-stone-400 text-sm max-md:text-xs font-normal leading-none max-sm:text-[8px]">
                             Available for Withdrawal
                         </p>
                         <div className='flex justify-between items-center mb-2'>
-                            <p className=" max-xl:text-sm ml-0 text-zinc-800 text-xl font-medium">
+                            <p className=" max-xl:text-sm ml-0 text-zinc-800 text-xl font-medium max-sm:text-[10px]">
                                 $150
                             </p>
                             <img src={PayoutIcon4} alt="icon" className='w-4 h-4' />
@@ -94,25 +94,25 @@ const FreelancerStatment = () => {
                 </div>
                 <div className="shadow-[0px_4px_76px_0px_rgba(0,_0,_0,_0.1)] mt-10 bg-white flex flex-col w-full py-2 rounded h-full">
                     {/* <div className="w-[1083px] h-[53px] "  /> */}
-                    <div className="bg-blue-100 mx-3 flex flex-row justify-between items-center px-4 max-lg:px-4 max-md:px-1 max-sm:text-[8px] max-sm:font-bold py-2">
-                        <div className="font-['Montserrat'] font-medium text-[#332233] w-1/4  flex justify-start">
+                    <div className="bg-blue-100 mx-3 flex flex-row justify-between items-center px-4 max-lg:px-4 max-md:px-1  py-2">
+                        <div className="font-['Montserrat'] font-medium text-[#332233] w-1/4 max-sm:w-1/5  flex justify-start max-md:text-xs max-sm:text-[8px]">
                             Amount
                         </div>
 
-                        <div className="font-['Montserrat'] font-medium text-[#332233] w-1/5  flex justify-start">
+                        <div className="font-['Montserrat'] font-medium text-[#332233] w-1/5 max-sm:w-1/4  flex justify-start max-md:text-xs max-sm:text-[8px]">
                             Purchase Date
                         </div>
-                        <div className="font-['Montserrat'] font-medium text-[#332233] w-[30%]  flex justify-start">
+                        <div className="font-['Montserrat'] font-medium text-[#332233] w-[30%]  flex justify-start max-md:text-xs max-sm:text-[8px]">
                             Payment Method
                         </div>
-                        <div className="font-['Montserrat'] font-medium text-[#332233] w-1/4 flex justify-end">
+                        <div className="font-['Montserrat'] font-medium text-[#332233] w-1/4 flex justify-end max-md:text-xs max-sm:text-[8px]">
                             Payment Status
                         </div>
 
                     </div>
                     {postsPerPage.map(item => <StatementNotifications key={item} />)}
 
-                    <div className="bg-[#f3f3f3] flex justify-between w-1/2 mx-auto items-center p-2 mt-5">
+                    <div className="bg-[#f3f3f3] flex justify-between w-1/3 max-sm:w-[70%] mx-auto items-center p-2 mt-5">
                         <button disabled={!canGoPrev} className="border-solid border-[#d9d9d9] bg-white flex w-4 items-center border rounded-sm" onClick={goToPrev}>
                             <MdKeyboardArrowLeft />
                         </button>

@@ -8,14 +8,14 @@ const Jobs = () => {
         <div className='w-full h-screen flex bg-[#F5F5F5]'>
             <Sidebar />
             <div className='w-[86%] lg:w-[72%] xl:w-[75%] h-full mx-6 max-md:w-full max-md:mx-0 ml-auto'>
-                <p className="text-2xl font-['Montserrat'] font-semibold text-[#323232] w-full mt-28  py-0 max-md:px-2 max-md:text-center">
+                <p className="text-2xl font-['Montserrat'] font-semibold text-[#323232] w-full mt-20  py-0 max-md:px-2 max-md:text-center">
                     Jobs
                 </p>
 
                 <p className="font-['Montserrat'] text-[#323232] w-full mt-0 max-md:px-2 max-md:text-center ">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                 </p>
-                <img src={thirteenthImage} alt="image" className='mx-auto mt-10 max-md:mt-5' />
+                <img src={thirteenthImage} alt="image" className='mx-auto mt-5 max-md:mt-5' />
                 <div className="font-['Montserrat'] text-[#323232] mt-5 max-md:mt-2 text-center max-md:px-2 ">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                 </div>

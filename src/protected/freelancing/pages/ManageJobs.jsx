@@ -69,7 +69,7 @@ const ManageJobs = () => {
 
                 <div className='max-md:px-4'>
 
-                    <p className="text-2xl font-['Montserrat'] font-semibold text-[#323232] w-full mt-28  py-0 max-md:px-2 max-md:text-center max-md:mx-3">
+                    <p className="text-2xl font-['Montserrat'] font-semibold text-[#323232] w-full mt-20  py-0 max-md:px-2 max-md:text-center max-md:mx-3">
                         Manage Jobs
                     </p>
 
@@ -103,7 +103,7 @@ const ManageJobs = () => {
                         </div>
                         {postsPerPage.map(item => <JobNotifications key={item} />)}
                         <JobNotifications />
-                        <div className="bg-[#f3f3f3] flex justify-between w-1/2 mx-auto items-center p-2 mt-5">
+                        <div className="bg-[#f3f3f3] flex justify-between w-1/3 mx-auto items-center p-2 mt-5">
                             <button disabled={!canGoPrev} className="border-solid border-[#d9d9d9] bg-white flex w-4 items-center border rounded-sm" onClick={goToPrev}>
                                 <MdKeyboardArrowLeft />
                             </button>

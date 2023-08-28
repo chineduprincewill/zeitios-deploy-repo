@@ -47,7 +47,7 @@ const FreelancerDashboard = () => {
         <div className='w-full min-h-screen max-sm:h-full max-sm:pb-5 flex bg-[#F5F5F5]'>
             <Sidebar />
             <div className=' w-[86%] lg:w-[72%] xl:w-[78%] max-md:w-full mx-6  max-md:mx-0 h-full ml-auto'>
-                <p className="text-2xl font-['Montserrat'] font-medium text-[#323232] w-full mt-28  py-0 max-md:px-3 ">
+                <p className="text-2xl font-['Montserrat'] font-medium text-[#323232] w-full mt-20  py-0 max-md:px-3 ">
                     Welcome back, Osaze
                 </p>
                 <p className="font-['Montserrat'] text-[#323232] w-full mt-0  max-md:px-3">
