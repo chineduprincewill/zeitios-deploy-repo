@@ -31,6 +31,8 @@ import Projects from './protected/admin/pages/Projects'
 import Payouts from './protected/admin/pages/Payouts'
 import Statement from './protected/admin/pages/Statement'
 import Freelancerprofile from './protected/freelancing/pages/Freelancerprofile'
+import AddService from './protected/freelancing/pages/AddService'
+import ManageServices3 from './protected/freelancing/pages/ManageServices3'
 
 
 function App() {
@@ -52,11 +54,14 @@ function App() {
               <Route path="/dashboard" exact element={<PrivateRoute><Dashboard /></PrivateRoute>} />
               <Route path="/freelancer-dashboard" exact element={<PrivateRoute><FreelancerDashboard /></PrivateRoute>} />
               <Route path="/freelancer-projects" exact element={<PrivateRoute><FreelancerProjects /></PrivateRoute>} />
+              <Route path="/freelancer-services" exact element={<PrivateRoute><ManageServices /></PrivateRoute>} />
+              <Route path="/freelancer-completed-services" exact element={<PrivateRoute><ManageServices3 /></PrivateRoute>} />
               <Route path="/freelancer-profile" exact element={<PrivateRoute><Freelancerprofile /></PrivateRoute>} />
               <Route path="/freelancer-payouts" exact element={<PrivateRoute><FreelancerPayouts /></PrivateRoute>} />
               <Route path="/freelancer-reviews" exact element={<PrivateRoute><FreelancerReviews /></PrivateRoute>} />
               <Route path="/freelancer-statement" exact element={<PrivateRoute><FreelancerStatment /></PrivateRoute>} />
               <Route path="/freelancer-messages" exact element={<PrivateRoute><FreelancerMessages /></PrivateRoute>} />
+              <Route path="/freelancer-create-services" exact element={<PrivateRoute><AddService /></PrivateRoute>} />
               <Route path="/jobs" exact element={<PrivateRoute><Jobs /></PrivateRoute>} />
               <Route path="/jobs/all" exact element={<PrivateRoute><ManageJobs /></PrivateRoute>} />
               <Route path="/manage-projects" exact element={<PrivateRoute><ManageProjects /></PrivateRoute>} />
