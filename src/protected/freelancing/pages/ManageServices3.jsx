@@ -42,9 +42,9 @@ const ManageServices3 = () => {
         <div className='w-full min-h-screen pb-10 relative flex bg-[#F5F5F5]'>
             <Sidebar />
             <div className='w-[86%] lg:w-[72%] xl:w-[76%] ml-auto mx-6 h-full max-md:mx-0 max-md:px-3  max-md:w-full'>
-                <div className='flex justify-between items-center mt-20 border'>
-                    <div>
-                        <p className="text-xl font-['Montserrat'] font-semibold text-[#323232] w-full mt-20   max-sm:text-sm">
+                <div className='flex justify-between items-center mt-20 max-sm:flex-col max-sm:items-start'>
+                    <div className=''>
+                        <p className="text-xl font-['Montserrat'] font-semibold text-[#323232] w-full   max-sm:text-sm">
                             Manage Services
                         </p>
 
@@ -53,22 +53,22 @@ const ManageServices3 = () => {
 
                         </p>
                     </div>
-                    <button className=" px-4 py-2 bg-blue-700 rounded-[5px] justify-center items-center gap-2.5 inline-flex">
+                    <button className=" px-4 py-2 bg-blue-700 rounded-[5px] justify-center items-center gap-2.5 inline-flex max-sm:ml-auto max-sm:mt-2 ">
                         <img src={icon} />
 
                         <div className="text-white text-base max-lg:text-sm max-md:text-[10px] font-medium mr-2">Add Services</div>
                     </button>
                 </div>
-                <div className='flex justify-between items-center mt-10'>
+                <div className='flex justify-between items-center mt-10 max-sm:mt-5'>
                     <div className='flex items-center justify-between w-1/2 max-xl:w-[70%]'>
-                        <div className="text-blue-700 text-base max-lg:text-sm max-md:text-[10px] font-semibold underline">Active Services</div>
-                        <div className="text-zinc-800 text-base max-lg:text-sm max-md:text-[10px] font-normal tracking-wide">Pending Services</div>
-                        <div className="text-zinc-800 text-base max-lg:text-sm max-md:text-[10px] font-normal tracking-wide">Completed Services</div>
+                        <div className="text-blue-700 text-base max-lg:text-sm max-md:text-[10px] font-semibold underline max-sm:mr-1">Active Services</div>
+                        <div className="text-zinc-800 text-base max-lg:text-sm max-md:text-[10px] font-normal tracking-wide max-sm:mr-1">Pending Services</div>
+                        <div className="text-zinc-800 text-base max-lg:text-sm max-md:text-[10px] font-normal tracking-wide max-sm:mr-1">Completed Services</div>
                     </div>
-                    <button className="border-solid border-[#323232] flex flex-row justify-center gap-2 items-center border rounded w-[18%] max-lg:w-1/5 max-md:w-[22%] max-sm:w-[42%] p-2">
+                    <button className="border-solid border-[#323232] flex flex-row justify-center gap-2 max-sm:gap-1 items-center border rounded w-[18%] max-lg:w-1/5 max-md:w-[22%] max-sm:w-[28%] max-sm:text-[8px] p-2 max-sm:px-0 max-sm:py-1">
                         <img
                             src={filterIcon}
-                            className="w-4 shrink-0"
+                            className="w-4 max-sm:w-3 shrink-0"
                         />
                         <p className="font-['Montserrat'] font-medium text-[#323232] max-md:text-sm max-sm:text-xs">
                             Filter here
