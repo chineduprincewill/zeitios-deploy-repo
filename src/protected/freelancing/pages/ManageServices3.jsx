@@ -44,13 +44,13 @@ const ManageServices3 = () => {
             <div className='w-[86%] lg:w-[72%] xl:w-[76%] ml-auto mx-6 h-full max-md:mx-0 max-md:px-3  max-md:w-full'>
                 <div className='flex justify-between items-center mt-20 border'>
                     <div>
-                        <p className="text-xl font-['Montserrat'] font-semibold text-[#323232] w-full   max-sm:text-sm">
+                        <p className="text-xl font-['Montserrat'] font-semibold text-[#323232] w-full mt-20   max-sm:text-sm">
                             Manage Services
                         </p>
 
                         <p className="font-['Montserrat'] text-[#323232] w-full mt-0 max-lg:text-sm max-md:text-[10px]  ">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                            {/* max-sm:text-[8px] */}
+
                         </p>
                     </div>
                     <button className=" px-4 py-2 bg-blue-700 rounded-[5px] justify-center items-center gap-2.5 inline-flex">
