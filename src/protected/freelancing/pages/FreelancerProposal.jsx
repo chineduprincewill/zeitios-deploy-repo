@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Sidebar from '../../../common/Sidebar'
-import filterIcon from '../../../assets/icons/filter_icon.png'
-import JobNotifications from '../Components/JobNotifications'
+
 import { MdKeyboardArrowLeft } from 'react-icons/md'
 import { MdKeyboardArrowRight } from 'react-icons/md'
 import ProposalNotifications from '../Components/ProposalNotifications'
@@ -47,10 +46,10 @@ const FreelancerProposal = () => {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     </p>
                     <div className='flex items-center justify-between w-4/5 max-xl:w-full mt-5 max-md:text-sm'>
-                        <div className="text-blue-700 text-base max-md:text-sm max-sm:text-[10px] font-semibold underline">Active Proposals</div>
-                        <div className="text-stone-400 text-base max-md:text-sm max-sm:text-[10px]  font-medium ">Pending Proposals</div>
-                        <div className="text-stone-400 text-base max-md:text-sm max-sm:text-[10px]  font-medium ">Completed Proposals</div>
-                        <div className="text-stone-400 text-base max-md:text-sm max-sm:text-[10px]  font-medium ">Rejected Proposals</div>
+                        <div className="text-blue-700 text-base max-md:text-sm max-sm:text-[10px] font-semibold underline max-sm:mr-2">Active Proposals</div>
+                        <div className="text-stone-400 text-base max-md:text-sm max-sm:text-[10px]  font-medium max-sm:mr-2">Pending Proposals</div>
+                        <div className="text-stone-400 text-base max-md:text-sm max-sm:text-[10px]  font-medium max-sm:mr-2">Completed Proposals</div>
+                        <div className="text-stone-400 text-base max-md:text-sm max-sm:text-[10px]  font-medium max-sm:mr-2">Rejected Proposals</div>
                     </div>
 
                     <div className="shadow-[0px_4px_76px_0px_rgba(0,_0,_0,_0.1)] bg-white flex flex-col justify-between  w-full  py-3 rounded mt-5">

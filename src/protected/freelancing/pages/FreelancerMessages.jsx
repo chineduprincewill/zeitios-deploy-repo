@@ -6,7 +6,7 @@ import send from '../../../assets/icons/send_icon.png'
 import fileAttach from '../../../assets/icons/file_attach_icon.png'
 import fourthProfilePicture from '../../../assets/icons/fourth_profile.png'
 import thirdProfileIcon from '../../../assets/icons/third_profile.png'
-import MessageNotifications from '../Components/MessageNotifications'
+import MessageNotifications from '../components/MessageNotifications'
 
 const FreelancerMessages = () => {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -40,7 +40,7 @@ const FreelancerMessages = () => {
     }, [screenWidth]);
     if (screenWidth < 640) {
         return (
-            <div className='w-full min-h-screen relative flex bg-[#F5F5F5]'>
+            <div className='w-full min-h-screen relative flex bg-[#F5F5F5] pb-5'>
                 <Sidebar />
                 <div className=' h-full mx-0 px-3   w-full'>
 
