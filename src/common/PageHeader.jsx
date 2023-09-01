@@ -1,21 +1,28 @@
-// import { useLocation } from "react-router-dom";
+import React, { useContext } from 'react'
+import { useLocation } from 'react-router-dom'
+import { AuthContext } from '../context/AuthContext';
 
-const PageHeader = ({ userid, text }) => {
-  // const location = useLocation();
-  //const useremail = JSON.parse(localStorage.getItem('auth'));
-  // const pagetitle = location.pathname
-  //   .replace("/", "")
-  //   .replace("-", " ")
-  //   .replace("freelancer", "")
-  //   .replace("client", "");
+const PageHeader = () => {
 
-  return (
-    <div className="w-full  pb-6 pt-12 mt-12 ">
-      <span className="text-[#0259dc] text-3xl font-[500]">Welcome Back,</span>
-      <span className="text-3xl capitalize font-[500]">{userid}</span>
-      <p>{text}</p>
-    </div>
-  );
-};
+    const location  = useLocation();
+    const { userid } = useContext(AuthContext);
+    //const useremail = JSON.parse(localStorage.getItem('auth'));
+    const pagetitle = location.pathname.replace('/', '').replace('-', ' ').replace('freelancer', '').replace('client', '');
 
-export default PageHeader;
+    return (
+        <div className='w-full flex justify-start items-center pb-6 pt-12 mt-12'>
+          {pagetitle.includes('dashboard') ? 
+            <div className='grid space-y-2'>
+                <span className='text-3xl capitalize'>welcome back, {userid}</span>
+                <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic placeat nobis id.</span>
+            </div> :
+            <div className='grid space-y-2'>
+              <span className='text-3xl capitalize'>{pagetitle}</span>
+              <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic placeat nobis id.</span>
+          </div>
+          }
+        </div>
+    )
+}
+
+export default PageHeader
