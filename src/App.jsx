@@ -34,6 +34,7 @@ import Freelancerprofile from './protected/freelancing/pages/Freelancerprofile'
 import AddService from './protected/freelancing/pages/AddService'
 import ManageServices3 from './protected/freelancing/pages/ManageServices3'
 import ManageServices2 from './protected/freelancing/pages/ManageServices2'
+import FreelancerProposal from './protected/freelancing/pages/FreelancerProposal'
 
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
               <Route path="/dashboard" exact element={<PrivateRoute><Dashboard /></PrivateRoute>} />
               <Route path="/freelancer-dashboard" exact element={<PrivateRoute><FreelancerDashboard /></PrivateRoute>} />
               <Route path="/freelancer-projects" exact element={<PrivateRoute><FreelancerProjects /></PrivateRoute>} />
+              <Route path="/freelancer-proposals" exact element={<PrivateRoute><FreelancerProposal /></PrivateRoute>} />
               <Route path="/freelancer-services" exact element={<PrivateRoute><ManageServices /></PrivateRoute>} />
               <Route path="/freelancer-ongoing-services" exact element={<PrivateRoute><ManageServices2 /></PrivateRoute>} />
               <Route path="/freelancer-completed-services" exact element={<PrivateRoute><ManageServices3 /></PrivateRoute>} />
