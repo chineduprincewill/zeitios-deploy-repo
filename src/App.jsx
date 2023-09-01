@@ -33,6 +33,11 @@ import ClientProjects from "./protected/client/Components/ClientProjects";
 import ActiveProject from "./protected/client/Components/ActiveProject";
 import ClientSaved from "./protected/client/pages/ClientSaved";
 import ActiveJobs from "./protected/client/Components/ActiveJobs";
+import Freelancerprofile from './protected/freelancing/pages/Freelancerprofile'
+import AddService from './protected/freelancing/pages/AddService'
+import ManageServices3 from './protected/freelancing/pages/ManageServices3'
+import ManageServices2 from './protected/freelancing/pages/ManageServices2'
+import FreelancerProposal from './protected/freelancing/pages/FreelancerProposal'
 
 function App() {
   return (
@@ -98,6 +103,51 @@ function App() {
                 }
               />
               <Route
+                path="/freelancer-profile"
+                exact
+                element={
+                  <PrivateRoute>
+                    <Freelancerprofile />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/freelancer-create-services"
+                exact
+                element={
+                  <PrivateRoute>
+                    <AddService />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/freelancer-ongoing-services"
+                exact
+                element={
+                  <PrivateRoute>
+                    <ManageServices2 />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/freelancer-completed-services"
+                exact
+                element={
+                  <PrivateRoute>
+                    <ManageServices3 />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/freelancer-proposal"
+                exact
+                element={
+                  <PrivateRoute>
+                    <FreelancerProposal />
+                  </PrivateRoute>
+                }
+              />
+              <Route
                 path="/freelancer-statement"
                 exact
                 element={
@@ -143,7 +193,7 @@ function App() {
                 }
               />
               <Route
-                path="/manage-services"
+                path="/freelancer-services"
                 exact
                 element={
                   <PrivateRoute>

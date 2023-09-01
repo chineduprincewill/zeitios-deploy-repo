@@ -74,7 +74,7 @@ const FreelancerReviews = () => {
             <Sidebar />
             <div className='w-[84%] lg:w-[72%] xl:w-[76%] ml-auto mx-6 h-full max-md:mx-0 max-md:px-4  max-md:w-full'>
 
-                <p className="text-xl font-['Montserrat'] font-semibold text-[#323232] w-full mt-28">
+                <p className="text-xl font-['Montserrat'] font-semibold text-[#323232] w-full mt-20">
                     Reviews
                 </p>
 
@@ -111,7 +111,7 @@ const FreelancerReviews = () => {
 
                     {/* <ReviewNotification />
                     <ReviewNotification /> */}
-                    <div className="bg-[#f3f3f3] flex justify-between w-1/2 mx-auto items-center p-2 mt-5">
+                    <div className="bg-[#f3f3f3] flex justify-between w-1/3 mx-auto items-center p-2 mt-5">
                         <button disabled={!canGoPrev} className="border-solid border-[#d9d9d9] bg-white flex w-4 items-center border rounded-sm" onClick={goToPrev}>
                             <MdKeyboardArrowLeft />
                         </button>
