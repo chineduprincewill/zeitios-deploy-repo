@@ -29,6 +29,9 @@ import FreelancerProjects from "./protected/freelancing/pages/FreelancerProjects
 import Projects from "./protected/admin/pages/Projects";
 import Payouts from "./protected/admin/pages/Payouts";
 import Statement from "./protected/admin/pages/Statement";
+import CreateProject from "./protected/client/Components/CreateProject";
+import ClientProjects from "./protected/client/Components/ClientProjects";
+import ActiveProject from "./protected/client/Components/ActiveProject";
 
 function App() {
   return (
@@ -201,12 +204,41 @@ function App() {
                   </PrivateRoute>
                 }
               />
+
               <Route
                 path="/my-project"
                 exact
                 element={
                   <PrivateRoute>
                     <MyProject />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/active-projects"
+                exact
+                element={
+                  <PrivateRoute>
+                    <ActiveProject />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="create-project"
+                exact
+                element={
+                  <PrivateRoute>
+                    <CreateProject />
+                  </PrivateRoute>
+                }
+              />
+
+              <Route
+                path="my-projects"
+                exact
+                element={
+                  <PrivateRoute>
+                    <ClientProjects />
                   </PrivateRoute>
                 }
               />
