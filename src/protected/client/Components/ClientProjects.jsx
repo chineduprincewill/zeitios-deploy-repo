@@ -50,7 +50,7 @@ const ClientProjects = ({ children }) => {
                 <li className=" text-[#323232]">
                   <NavLink
                     exact
-                    to="/other-route"
+                    to="/"
                     className={({ isActive }) =>
                       isActive
                         ? " font-[600] text-[#0259DB] border-b-2 border-b-[#0259DB]"
@@ -63,7 +63,7 @@ const ClientProjects = ({ children }) => {
                 <li className=" text-[#323232]">
                   <NavLink
                     exact
-                    to="/another-route"
+                    to="/"
                     className={({ isActive }) =>
                       isActive
                         ? " font-[600] text-[#0259DB] border-b-2  border-b-[#0259DB]"
