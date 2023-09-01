@@ -22,7 +22,6 @@ import ClientReviews from "./protected/client/pages/ClientReviews";
 import ClientStatement from "./protected/client/pages/ClientStatement";
 import ClientMessages from "./protected/client/pages/ClientMessages";
 import MyProject from "./protected/client/pages/MyProject";
-import Saved from "./protected/client/pages/Saved";
 import ManageJobs from "./protected/freelancing/pages/ManageJobs";
 import FreelancerMessages from "./protected/freelancing/pages/FreelancerMessages";
 import FreelancerProjects from "./protected/freelancing/pages/FreelancerProjects";
@@ -32,6 +31,8 @@ import Statement from "./protected/admin/pages/Statement";
 import CreateProject from "./protected/client/Components/CreateProject";
 import ClientProjects from "./protected/client/Components/ClientProjects";
 import ActiveProject from "./protected/client/Components/ActiveProject";
+import ClientSaved from "./protected/client/pages/ClientSaved";
+import ActiveJobs from "./protected/client/Components/ActiveJobs";
 
 function App() {
   return (
@@ -200,7 +201,17 @@ function App() {
                 exact
                 element={
                   <PrivateRoute>
-                    <Saved />
+                    <ClientSaved />
+                  </PrivateRoute>
+                }
+              />
+
+              <Route
+                path="/active-jobs"
+                exact
+                element={
+                  <PrivateRoute>
+                    <ActiveJobs />
                   </PrivateRoute>
                 }
               />
