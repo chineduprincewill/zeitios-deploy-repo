@@ -33,6 +33,7 @@ import ClientProjects from "./protected/client/Components/ClientProjects";
 import ActiveProject from "./protected/client/Components/ActiveProject";
 import ClientSaved from "./protected/client/pages/ClientSaved";
 import ActiveJobs from "./protected/client/Components/ActiveJobs";
+import ActiveReviews from "./protected/client/Components/ActiveReviews";
 
 function App() {
   return (
@@ -175,6 +176,16 @@ function App() {
                 element={
                   <PrivateRoute>
                     <ClientReviews />
+                  </PrivateRoute>
+                }
+              />
+
+              <Route
+                path="/active-reviews"
+                exact
+                element={
+                  <PrivateRoute>
+                    <ActiveReviews />
                   </PrivateRoute>
                 }
               />
