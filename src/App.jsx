@@ -33,15 +33,12 @@ import ClientProjects from "./protected/client/Components/ClientProjects";
 import ActiveProject from "./protected/client/Components/ActiveProject";
 import ClientSaved from "./protected/client/pages/ClientSaved";
 import ActiveJobs from "./protected/client/Components/ActiveJobs";
-<<<<<<< HEAD
 import ActiveReviews from "./protected/client/Components/ActiveReviews";
-=======
-import Freelancerprofile from './protected/freelancing/pages/Freelancerprofile'
-import AddService from './protected/freelancing/pages/AddService'
-import ManageServices3 from './protected/freelancing/pages/ManageServices3'
-import ManageServices2 from './protected/freelancing/pages/ManageServices2'
-import FreelancerProposal from './protected/freelancing/pages/FreelancerProposal'
->>>>>>> e0f012c76b49ac7b3bcf705bfce96ea8c27b05b8
+import AddService from "./protected/freelancing/pages/AddService";
+import FreelancerProposal from "./protected/freelancing/pages/FreelancerProposal";
+import ManageServices3 from "./protected/freelancing/pages/ManageServices3";
+import Freelancerprofile from "./protected/freelancing/pages/Freelancerprofile";
+import ManageServices2 from "./protected/freelancing/pages/ManageServices2";
 
 function App() {
   return (
