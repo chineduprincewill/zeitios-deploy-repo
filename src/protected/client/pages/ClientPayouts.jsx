@@ -3,15 +3,8 @@ import { Link } from "react-router-dom";
 import Sidebar from "../../../common/Sidebar";
 import PageHeader from "../../../common/PageHeader";
 import filter from "../../../assets/icons/filter_icon.png";
-import CustomRadio from "../Components/CustomRadio";
 
-const ClientPayouts = ({ children }) => {
-  // const [selectedOption, setSelectedOption] = useState("option1");
-
-  // const handleRadioChange = (e) => {
-  //   setSelectedOption(e.target.value);
-  // };
-
+const ClientPayouts = () => {
   const [activeItem, setActiveItem] = useState(null);
 
   const handleItemClick = (item) => {

@@ -39,6 +39,7 @@ import FreelancerProposal from "./protected/freelancing/pages/FreelancerProposal
 import ManageServices3 from "./protected/freelancing/pages/ManageServices3";
 import Freelancerprofile from "./protected/freelancing/pages/Freelancerprofile";
 import ManageServices2 from "./protected/freelancing/pages/ManageServices2";
+import ClientProfile from "./protected/client/pages/ClientProfile";
 
 function App() {
   return (
@@ -338,6 +339,16 @@ function App() {
                 element={
                   <PrivateRoute>
                     <Statement />
+                  </PrivateRoute>
+                }
+              />
+
+              <Route
+                path="/profile"
+                exact
+                element={
+                  <PrivateRoute>
+                    <ClientProfile />
                   </PrivateRoute>
                 }
               />
