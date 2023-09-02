@@ -6,8 +6,19 @@ import profile from "../../../assets/icons/fourth_profile.png";
 import file from "../../../assets/icons/file_attach_icon.png";
 import smiley from "../../../assets/icons/smiley_icon.png";
 import send from "../../../assets/icons/send_icon.png";
+import { useState } from "react";
+import Modal from "../Components/Modal";
 
 const ClientMessages = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
   return (
     <div>
       <Sidebar />
@@ -15,6 +26,15 @@ const ClientMessages = () => {
         <div className="hidden md:w-[80px] lg:w-[200px]">...</div>
         <div className="grow md:ml-[80px] lg:ml-[250px] bg-gray-100 px-3 lg:px-12">
           <PageHeader />
+
+          <div className=" flex justify-end items-center">
+            <p
+              className=" inline-flex text-[#EE2A1D] font-[400] py-3 cursor-pointer"
+              onClick={openModal}
+            >
+              Terminate group
+            </p>
+          </div>
           <div className=" grid grid-cols-1 md:grid-cols-3 gap-5">
             <div className=" bg-white px-2 py-2">
               <div className=" relative w-full">
@@ -103,6 +123,29 @@ const ClientMessages = () => {
           </div>
         </div>
       </div>
+      <Modal isOpen={isModalOpen} closeModal={closeModal}>
+        <div className=" flex justify-center py-3">
+          <div className=" flex flex-col gap-3">
+            <label htmlFor="" className=" text-[#19212C]">
+              Give Reasons
+            </label>
+            <div className=" ">
+              <textarea
+                name=""
+                id=""
+                cols="30"
+                rows="5"
+                className=" border px-3 py-2 rounded"
+                placeholder="Answer Here..."
+              ></textarea>
+            </div>
+
+            <button className=" w-full py-3 px-2 bg-[#0259DB] rounded text-white">
+              Send
+            </button>
+          </div>
+        </div>
+      </Modal>
     </div>
   );
 };
