@@ -9,7 +9,7 @@ const ReviewNotification = () => {
             <div className='flex w-11/12 justify-between mx-auto py-3'>
                 <div className="flex items-start justify-center w-1/6 ">
                     <div className=" bg-darkerBlue flex justify-center items-center p-2 rounded-full">
-                        <img src={microsoftIcon} className=" " />
+                        <img src={microsoftIcon} className="max-sm:w-6" />
                     </div>
                 </div>
                 <div className="flex flex-col gap-2 items-start w-5/6 ">

@@ -6,7 +6,7 @@ const JobNotifications = () => {
     return (
         <div className="flex flex-col w-full items-start">
             <div className="w-full flex flex-row items-center  justify-between px-4 max-md:px-1 py-5">
-                <div className='flex  justify-between items-center max-sm:flex-col max-sm:items-start mr-2 border'>
+                <div className='flex  justify-between items-center max-sm:flex-col max-sm:items-start mr-2'>
                     <div className="bg-lightOrange flex justify-center items-center p-2 rounded-full max-sm:mb-2">
                         <img
                             src={microsoftIcon}
