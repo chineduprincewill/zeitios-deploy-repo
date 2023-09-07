@@ -1,10 +1,15 @@
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../../context/AuthContext";
 import Sidebar from "../../../common/Sidebar";
 import PageHeader from "../../../common/PageHeader";
 import profile from "../../../assets/icons/third_profile_icon.png";
 import { HiOutlineCamera } from "react-icons/hi";
 
 const ClientProfile = () => {
+  const { user } = useContext(AuthContext);
+  console.log(user, "profile");
+
   return (
     <div>
       <Sidebar />
@@ -27,10 +32,12 @@ const ClientProfile = () => {
               <img src={profile} alt="" />
               <div className="">
                 <p className=" font-[600] text-[14px] text-[#323232]">
-                  Osaze Abu
+                  {user?.first_name}-{user?.last_name}
                 </p>
-                <p className=" text-[12px]">UI/UX Designer </p>
-                <p className=" text-[12px] text-[#323232]">Freelancer</p>
+                <p className=" text-[12px]">{user?.skills} </p>
+                <p className=" text-[12px] text-[#323232] capitalize">
+                  {user?.category}
+                </p>
               </div>
             </div>
 
