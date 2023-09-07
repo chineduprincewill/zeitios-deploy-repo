@@ -1,4 +1,4 @@
-import axios, { params } from "../../../baseUrl/axios";
+import axios from "../../../baseUrl/axios";
 
 export const registerUser = async (
   data,
@@ -9,7 +9,8 @@ export const registerUser = async (
   setRegistering(true);
 
   try {
-    const response = await axios.post(`auth/sign-up${params}`, data, {
+    const response = await axios.post(`accounts/user/create`, data, {
+      mode:'cors',
       headers: { Accept: "application/json" },
     });
 
@@ -41,7 +42,7 @@ export const resendCode = async (data, setSuccess, setError, setResending) => {
     if (!err?.response) {
       setError("No Response from Server");
     } else {
-      console.log(err);
+      console.log(err.response.data);
       setError(err);
     }
   }
@@ -53,7 +54,7 @@ export const loginUser = async (data, setSuccess, setError, setLoggingin) => {
   setLoggingin(true);
 
   try {
-    const response = await axios.post(`auth/login${params}`, data, {
+    const response = await axios.post('accounts/user/login', data, {
       headers: { Accept: "application/json" },
     });
 
@@ -63,10 +64,31 @@ export const loginUser = async (data, setSuccess, setError, setLoggingin) => {
     if (!err?.response) {
       setError("No Response from Server");
     } else {
-      console.log(err.response.data.message.message);
-      setError(err.response.data.message.message);
+      console.log(err.response.data?.detail);
+      setError(err.response.data?.detail);
     }
   }
 
   setLoggingin(false);
+};
+
+
+export const getUserDetail = async (token, setUserdetail, setError) => {
+
+  try {
+    const response = await axios.get('accounts/user/get-user-detail',
+    {
+      headers: { Accept: "application/json", Authorization: `Bearer ${token}` },
+    });
+
+    console.log(response.data);
+    setUserdetail(response.data);
+  } catch (err) {
+    if (!err?.response) {
+      setError("No Response from Server");
+    } else {
+      console.log(err.response.data.message.message);
+      setError(err.response.data.message.message);
+    }
+  }
 };

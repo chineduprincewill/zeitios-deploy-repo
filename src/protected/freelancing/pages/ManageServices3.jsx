@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import Sidebar from '../../../common/Sidebar'
-import PayoutIcon1 from '../../../assets/icons/payouts1_icon.png'
+/**import PayoutIcon1 from '../../../assets/icons/payouts1_icon.png'
 import PayoutIcon2 from '../../../assets/icons/payouts2_icon.png'
 import PayoutIcon3 from '../../../assets/icons/payouts3_icon.png'
 import PayoutIcon4 from '../../../assets/icons/payouts4_icon.png'
-import StatementNotifications from '../Components/StatementNotifications'
+import StatementNotifications from '../components/StatementNotifications'*/
 import { MdKeyboardArrowLeft } from 'react-icons/md'
 import { MdKeyboardArrowRight } from 'react-icons/md'
 import icon from '../../../assets/icons/circle_plus_icon.png'
