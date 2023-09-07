@@ -49,9 +49,9 @@ const RegisterOptions = () => {
                         <div className='w-full md:flex md:justify-center md:space-x-12 space-y-8 md:space-y-0'>
                             <div 
                                 className={`flex justify-center items-center`}
-                                onClick={(e) => selectOption('Client')}
+                                onClick={(e) => selectOption('client')}
                             >
-                                <div className={`w-[350px] rounded-lg bg-white shadow ${selectedOption === 'Client' && 'border border-[#0259dc]'} cursor-pointer`}>
+                                <div className={`w-[350px] rounded-lg bg-white shadow ${selectedOption === 'client' && 'border border-[#0259dc]'} cursor-pointer`}>
                                     <div className='w-full flex justify-center items-center bg-[#0259dc] h-12 rounded-t-lg'>
                                         <div className='text-white'>Client</div>
                                     </div>
@@ -66,9 +66,9 @@ const RegisterOptions = () => {
 
                             <div 
                                 className={`flex justify-center items-center`}
-                                onClick={(e) => selectOption('Freelancer')}
+                                onClick={(e) => selectOption('freelancer')}
                             >
-                                <div className={`w-[350px] rounded-lg bg-white shadow ${selectedOption === 'Freelancer' && 'border border-[#0259dc]'} cursor-pointer`}>
+                                <div className={`w-[350px] rounded-lg bg-white shadow ${selectedOption === 'freelancer' && 'border border-[#0259dc]'} cursor-pointer`}>
                                     <div className='w-full flex justify-center items-center bg-[#0259dc] h-12 rounded-t-lg'>
                                         <div className='text-white'>Freelancer</div>
                                     </div>

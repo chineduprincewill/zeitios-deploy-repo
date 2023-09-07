@@ -3,6 +3,8 @@ import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { registerUser } from './actions/authActions'
 import Navigate from '../../common/Navigate'
 import Banner from '../../common/Banner'
+import { HiPlus } from 'react-icons/hi'
+import { AiOutlineClose, AiOutlineCloseCircle } from 'react-icons/ai'
 
 const Register = () => {
 
@@ -13,13 +15,41 @@ const Register = () => {
     const [lastname, setLastname] = useState();
     const [phonenumber, setPhonenumber] = useState();
     const [email, setEmail] = useState();
-    const [username, setUsername] = useState();
-    const [country, setCountry] = useState();
+    const [category, setCategory] = useState(state?.selectedOption);
+    const [password, setPassword] = useState();
+    const [skills, setSkills] = useState([]);
+    const [skill, setSkill] = useState("");
 
     const [success, setSuccess] = useState(null);
     const [error, setError] = useState(null);
 
     const [registering, setRegistering] = useState(false);
+
+    const addSkill = () => {
+        if(skill === ""){
+            alert("No skill entered!")
+        }
+        else{
+            setSkills(skills => [ 
+                    ...skills,
+                    skill
+                ]
+            );
+        }
+        
+        setSkill("");
+    }
+
+
+    const removeSkill = (e, skillitem) => {
+        if(window.confirm(`Are you sure you want to remove ${skillitem} from your skills?`)){
+
+            let filteredArray = skills.filter(item => item !== skillitem)
+            setSkills(filteredArray);
+        }
+    }
+
+
 
     const handleRegister = (e) => {
         e.preventDefault();
@@ -27,20 +57,18 @@ const Register = () => {
         setRegistering(true);
 
         const data = {
-            given_name : firstname, 
-            family_name : lastname, 
+            first_name : firstname, 
+            last_name : lastname, 
             phone_number : phonenumber, 
             email, 
-            username, 
-            locale : country,
-            website : state?.selectedOption,
-            email_verified : true,
-            phone_number_verified : true
+            password,
+            category, 
+            skills
         }
 
         console.log(data);
 
-        registerUser(data, setSuccess, setError, setRegistering);
+        phonenumber.length > 13 ? setError("Invalid Phone number!") : registerUser(data, setSuccess, setError, setRegistering);
     }
 
     if(success !== null){
@@ -61,9 +89,6 @@ const Register = () => {
                         <div className='w-full flex justify-center text-xs text-gray-600 my-1'></div>
                     </div>
                     <span className='text-red-500 text-sm'>{error !== null && error}</span>
-                    {(success !== null || error !== null) && <p className='text-sm text-[#0259dc] my-3'>
-                        You did not receive an email on sign up? Click <Link to="/resend-code"><strong>here</strong></Link> to receive SMS
-                    </p> }
                     <form onSubmit={handleRegister}>
 
                         <div className='grid lg:grid-cols-2'>
@@ -78,11 +103,11 @@ const Register = () => {
                                 />
                             </div>
                             <div className='space-y-1 my-2 lg:ml-2'>
-                                <span className='text-gray-600 text-sm'>Username</span>
+                                <span className='text-gray-600 text-sm'>Password</span>
                                 <input 
-                                    type='text'
+                                    type='password'
                                     className='w-full border border-gray-400 rounded-sm p-1 text-gray-600'
-                                    onChange={(e) => setUsername(e.target.value)}
+                                    onChange={(e) => setPassword(e.target.value)}
                                     required
                                 />
                             </div>
@@ -115,23 +140,42 @@ const Register = () => {
                         <div className='space-y-1 my-2 lg:mr-2'>
                                 <span className='text-gray-600 text-sm'>Phone Number</span>
                                 <input 
-                                    type='text'
+                                    type='number'
                                     className='w-full border border-gray-400 rounded-sm p-1 text-gray-600'
+                                    maxLength={13}
                                     onChange={(e) => setPhonenumber(e.target.value)}
                                     required
                                 />
                             </div>
                             <div className='space-y-1 my-2 lg:ml-2'>
-                                <span className='text-gray-600 text-sm'>Country</span>
-                                <select
-                                    className='w-full border border-gray-400 rounded-sm p-1 text-gray-600'
-                                    onChange={(e) => setCountry(e.target.value)}
-                                    required
-                                >
-                                    <option value="">select country</option>
-                                    <option value="United States">United States</option>
-                                    <option value="Nigeria">Nigeria</option>
-                                </select>
+                                <span className='text-gray-600 text-sm'>Skills</span>
+                                <div className='w-full flex'>
+                                    <input 
+                                        type='text'
+                                        className='grow border border-gray-400 rounded-sm p-1 text-gray-600'
+                                        onChange={(e) => setSkill(e.target.value)}
+                                        required
+                                    />
+                                    <HiPlus 
+                                        size={35} 
+                                        className='bg-[#0259dc] hover:bg-[#2f5081] text-white p-2 cursor-pointer' 
+                                        onClick={(e) => addSkill()}
+                                    />
+                                </div>
+                                <div className='w-full flex flex-wrap space-x-3'>
+                                {
+                                    skills.length === 0 ? <span className='text-xs'>No skill added yet</span> : skills.map( (skl, index) => {
+                                        return <div 
+                                                    key={index} 
+                                                    className='flex items-center space-x-1 my-1 py-0.5 px-2 rounded-md bg-gray-200 text-xs cursor-pointer'
+                                                    onClick={(e) => removeSkill(e, skl)}
+                                                >
+                                                    <span>{skl}</span>
+                                                    <AiOutlineCloseCircle size={10} className='text-red-500' />
+                                                </div>
+                                    })
+                                }
+                                </div> 
                             </div>
                         </div>
 

@@ -13,11 +13,8 @@ import { checkRole } from "./helpers/checkRole";
 
 const NavDB = () => {
   const { user, shownav, logout } = useContext(AuthContext);
-  const [userRole, setUserRole] = useState(user && user.website);
+  //const [userRole, setUserRole] = useState(user && user?.category);
   const [navlinks, setNavlinks] = useState(null);
-
-  //console.log(user.website);
-  console.log(userRole);
 
   //const location = useLocation();
   const navigate = useNavigate();
@@ -125,25 +122,25 @@ const NavDB = () => {
       icon: <BsBriefcase size={15} />,
     },
     {
-      id: 2,
+      id: 3,
       title: "Messages",
       url: "/freelancer-messages",
       icon: <FaRegComment size={15} />,
     },
     {
-      id: 3,
+      id: 4,
       title: "Reviews",
       url: "/freelancer-reviews",
       icon: <MdOutlineReviews size={15} />,
     },
     {
-      id: 4,
+      id: 5,
       title: "Payouts",
       url: "/freelancer-payouts",
       icon: <BsCreditCard size={15} />,
     },
     {
-      id: 5,
+      id: 6,
       title: "Statement",
       url: "/freelancer-statement",
       icon: <HiOutlineDocumentText size={15} />,
@@ -151,7 +148,7 @@ const NavDB = () => {
   ];
 
   const getUserLinks = () => {
-    checkRole(userRole, adminlinks, clientlinks, freelancerlinks, setNavlinks);
+    checkRole(user?.category, adminlinks, clientlinks, freelancerlinks, setNavlinks);
     //location.reload();
   };
 
@@ -190,7 +187,7 @@ const NavDB = () => {
           );
         })}
 
-      {userRole === "Freelancer" && (
+      {user?.category === "freelancer" && (
         <Fragment>
           <div className="flex justify-start px-3">
             <span className="text-blue-500 text-xs mt-6">
