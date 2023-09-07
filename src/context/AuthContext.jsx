@@ -5,11 +5,11 @@ export const AuthContext = createContext();
 const AuthContextProvider = (props) => {
 
     const userData = JSON.parse(localStorage.getItem('logged_in'));
-    const userInfo = localStorage.getItem('userInfo');
+    const userInfo = localStorage.getItem('userInfo') ? JSON.parse(localStorage.getItem('userInfo')) : null;
     
-    const [token, setToken] = useState(userData ? userData?.Session : '');
-    const [user, setUser] = useState(userInfo ? JSON.parse(userInfo) : null);
-    const [userid, setUserid] = useState(userData ? userData?.ChallengeParameters?.USER_ID_FOR_SRP : '');
+    const [token, setToken] = useState(userData ? userData?.access : '');
+    const [user, setUser] = useState(userInfo ? userInfo : null);
+    //const [userid, setUserid] = useState(userData ? userData?.ChallengeParameters?.USER_ID_FOR_SRP : '');
 
     //const [activenav, setActivenav] = useState('dashboard');
     const [shownav, setShownav] = useState(false);
@@ -17,7 +17,7 @@ const AuthContextProvider = (props) => {
     const logout = () => {
         setToken('');
         setUser(null);
-        setUserid('');
+        //setUserid('');
         localStorage.removeItem('logged_in');
         localStorage.removeItem('userInfo');
         window.location.reload();
@@ -31,9 +31,16 @@ const AuthContextProvider = (props) => {
         
         if(localStorage.getItem('logged_in')){
             
-            setToken(userData?.Session);
+            setToken(userData?.access);
+        }
+    }, [])
+
+    useEffect(() => {
+        
+        if(localStorage.getItem('userInfo')){
+
             setUser(userInfo);
-            setUserid(userData?.ChallengeParameters?.USER_ID_FOR_SRP);
+            //setUserid(userData?.ChallengeParameters?.USER_ID_FOR_SRP);
         }
     }, [])
 
@@ -43,7 +50,7 @@ const AuthContextProvider = (props) => {
 
 
     return(
-        <AuthContext.Provider value={{ token, user, userid, shownav, updateShownav, logout }}>
+        <AuthContext.Provider value={{ token, user, shownav, updateShownav, logout }}>
             {props.children}
         </AuthContext.Provider>
     )

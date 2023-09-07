@@ -6,7 +6,7 @@ import { CiSearch } from "react-icons/ci";
 import { AuthContext } from "../context/AuthContext";
 
 const Header = () => {
-  const { userid, shownav, updateShownav, logout } = useContext(AuthContext);
+  const { user, shownav, updateShownav, logout } = useContext(AuthContext);
 
   //   console.log(userid);
   //const [userinfo, setUserinfo] = useState(null);
@@ -32,7 +32,7 @@ const Header = () => {
         />
       </div>
       <div className="flex space-x-4 items-center">
-        <span className="text-white">{userid}</span>
+        <span className="text-white">{user?.username}</span>
         <HiOutlineMail size={20} className="text-gray-300 cursor-pointer" />
 
         <AiOutlineLogout

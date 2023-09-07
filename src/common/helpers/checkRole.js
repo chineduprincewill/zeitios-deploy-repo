@@ -2,13 +2,13 @@ import { useContext } from "react"
 
 export const checkRole = (userRole, adminlinks, clientlinks, freelancerlinks, setNavlinks) => {
 
-    if(userRole === 'Client'){
+    if(userRole === 'client'){
         setNavlinks(clientlinks);
     }
-    else if(userRole === 'Freelancer'){
+    else if(userRole === 'freelancer'){
         setNavlinks(freelancerlinks);
     }
-    else if(userRole === 'Admin'){
+    else if(userRole === 'admin'){
         setNavlinks(adminlinks);
     }
 }
