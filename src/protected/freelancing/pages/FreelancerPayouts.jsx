@@ -5,7 +5,7 @@ import PayoutNotifications from '../components/PayoutNotifications'
 import { MdKeyboardArrowLeft } from 'react-icons/md'
 import { MdKeyboardArrowRight } from 'react-icons/md'
 import { PayoutData } from '../../../data'
-import { RiArrowDropDownLine } from 'react-icons/ri'
+//import { RiArrowDropDownLine } from 'react-icons/ri'
 
 const FreelancerPayouts = () => {
     const [posts, setPosts] = useState(PayoutData);
