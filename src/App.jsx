@@ -33,11 +33,13 @@ import ClientProjects from "./protected/client/Components/ClientProjects";
 import ActiveProject from "./protected/client/Components/ActiveProject";
 import ClientSaved from "./protected/client/pages/ClientSaved";
 import ActiveJobs from "./protected/client/Components/ActiveJobs";
-import Freelancerprofile from './protected/freelancing/pages/Freelancerprofile'
-import AddService from './protected/freelancing/pages/AddService'
-import ManageServices3 from './protected/freelancing/pages/ManageServices3'
-import ManageServices2 from './protected/freelancing/pages/ManageServices2'
-import FreelancerProposal from './protected/freelancing/pages/FreelancerProposal'
+import ActiveReviews from "./protected/client/Components/ActiveReviews";
+import AddService from "./protected/freelancing/pages/AddService";
+import FreelancerProposal from "./protected/freelancing/pages/FreelancerProposal";
+import ManageServices3 from "./protected/freelancing/pages/ManageServices3";
+import Freelancerprofile from "./protected/freelancing/pages/Freelancerprofile";
+import ManageServices2 from "./protected/freelancing/pages/ManageServices2";
+import ClientProfile from "./protected/client/pages/ClientProfile";
 
 function App() {
   return (
@@ -228,6 +230,16 @@ function App() {
                   </PrivateRoute>
                 }
               />
+
+              <Route
+                path="/active-reviews"
+                exact
+                element={
+                  <PrivateRoute>
+                    <ActiveReviews />
+                  </PrivateRoute>
+                }
+              />
               <Route
                 path="/client-statement"
                 exact
@@ -327,6 +339,16 @@ function App() {
                 element={
                   <PrivateRoute>
                     <Statement />
+                  </PrivateRoute>
+                }
+              />
+
+              <Route
+                path="/profile"
+                exact
+                element={
+                  <PrivateRoute>
+                    <ClientProfile />
                   </PrivateRoute>
                 }
               />

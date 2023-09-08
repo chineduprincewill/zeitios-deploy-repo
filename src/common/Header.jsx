@@ -7,6 +7,7 @@ import { AuthContext } from "../context/AuthContext";
 
 const Header = () => {
   const { user, shownav, updateShownav, logout } = useContext(AuthContext);
+  // console.log(user);
 
   //   console.log(userid);
   //const [userinfo, setUserinfo] = useState(null);
@@ -34,13 +35,11 @@ const Header = () => {
       <div className="flex space-x-4 items-center">
         <span className="text-white">{user?.username}</span>
         <HiOutlineMail size={20} className="text-gray-300 cursor-pointer" />
-
         <AiOutlineLogout
           size={20}
           className="text-red-500 cursor-pointer"
           onClick={() => handleLogout()}
         />
-
         <div className="md:hidden z-50">
           {shownav ? (
             <AiOutlineClose
