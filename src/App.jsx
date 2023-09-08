@@ -9,14 +9,12 @@ import Header from "./common/Header";
 import Dashboard from "./protected/admin/Dashboard";
 import PrivateRoute from "./common/PrivateRoute";
 import AuthContextProvider from "./context/AuthContext";
-import FreelancerDashboard from "./protected/freelancing/pages/FreelancerDashboard";
 import FreelancerPayouts from "./protected/freelancing/pages/FreelancerPayouts";
 import FreelancerReviews from "./protected/freelancing/pages/FreelancerReviews";
 import FreelancerStatment from "./protected/freelancing/pages/FreelancerStatment";
 import Jobs from "./protected/freelancing/pages/Jobs";
 import ManageProjects from "./protected/freelancing/pages/ManageProjects";
 import ManageServices from "./protected/freelancing/pages/ManageServices";
-import ClientDashboard from "./protected/client/pages/ClientDashboard";
 import ClientPayouts from "./protected/client/pages/ClientPayouts";
 import ClientReviews from "./protected/client/pages/ClientReviews";
 import ClientStatement from "./protected/client/pages/ClientStatement";
@@ -65,15 +63,6 @@ function App() {
                 element={
                   <PrivateRoute>
                     <Dashboard />
-                  </PrivateRoute>
-                }
-              />
-              <Route
-                path="/freelancer-dashboard"
-                exact
-                element={
-                  <PrivateRoute>
-                    <FreelancerDashboard />
                   </PrivateRoute>
                 }
               />
@@ -200,15 +189,6 @@ function App() {
                 element={
                   <PrivateRoute>
                     <ManageServices />
-                  </PrivateRoute>
-                }
-              />
-              <Route
-                path="/client-dashboard"
-                exact
-                element={
-                  <PrivateRoute>
-                    <ClientDashboard />
                   </PrivateRoute>
                 }
               />

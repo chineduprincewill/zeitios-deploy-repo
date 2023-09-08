@@ -1,6 +1,3 @@
-import React, { useState, useEffect } from "react";
-import Sidebar from "../../../common/Sidebar";
-import PageHeader from "../../../common/PageHeader";
 import thirdProfileIcon from "../../../assets/icons/third_profile.png";
 import firstDashboardIcon from "../../../assets/icons/first_dashboard_icon.png";
 import secondDashboardIcon from "../../../assets/icons/second_dashboard_icon.png";
@@ -45,15 +42,7 @@ const FreelancerDashboard = () => {
   //     }
   // }, [screenWidth]);
   return (
-    <div className='w-full min-h-screen max-sm:h-full max-sm:pb-5 flex bg-[#F5F5F5]'>
-      <Sidebar />
-      <div className=' w-[86%] lg:w-[72%] xl:w-[78%] max-md:w-full mx-6  max-md:mx-0 h-full ml-auto'>
-        <p className="text-2xl font-['Montserrat'] font-medium text-[#323232] w-full mt-20  py-0 max-md:px-3 ">
-          Welcome back, Osaze
-        </p>
-        <p className="font-['Montserrat'] text-[#323232] w-full mt-0  max-md:px-3">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-        </p>
+    <div>
         <div className="flex flex-row justify-between w-full mt-5 h-40 max-md:h-32 max-sm:h-64 max-md:px-3 max-sm:flex-wrap max-sm:justify-around">
           <div className="shadow-[0px_4px_21px_0px_rgba(1,_14,_35,_0.15)] w-2/9 max-sm:w-2/5  bg-[#c00e3a] px-2 max-sm:my-2 py-3 rounded-lg flex flex-col justify-between">
             <p className="text-lg max-xl:text-sm font-['Poppins'] font-medium  text-white">
@@ -306,10 +295,6 @@ const FreelancerDashboard = () => {
             </div>
           </div>
         </div>
-
-
-
-      </div>
     </div>
 
   );
