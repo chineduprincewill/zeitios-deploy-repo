@@ -4,7 +4,7 @@ import { RxDashboard } from "react-icons/rx";
 import { FaRegUserCircle, FaTasks } from "react-icons/fa";
 import { FaRegComment } from "react-icons/fa";
 import { BsBriefcase, BsCalendarWeek, BsCreditCard } from "react-icons/bs";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import { AiOutlineHeart, AiOutlineLogout } from "react-icons/ai";
 import { MdOutlineReviews } from "react-icons/md";
@@ -12,12 +12,8 @@ import { TbDeviceDesktopCog } from "react-icons/tb";
 import { checkRole } from "./helpers/checkRole";
 
 const NavDB = () => {
-  const { user, shownav, logout } = useContext(AuthContext);
-  //const [userRole, setUserRole] = useState(user && user?.category);
+  const { user_role, shownav, logout } = useContext(AuthContext);
   const [navlinks, setNavlinks] = useState(null);
-
-  //const location = useLocation();
-  const navigate = useNavigate();
 
   const handleLogout = () => {
     logout();
@@ -148,7 +144,7 @@ const NavDB = () => {
   ];
 
   const getUserLinks = () => {
-    checkRole(user?.category, adminlinks, clientlinks, freelancerlinks, setNavlinks);
+    checkRole(user_role, adminlinks, clientlinks, freelancerlinks, setNavlinks);
     //location.reload();
   };
 
@@ -187,7 +183,7 @@ const NavDB = () => {
           );
         })}
 
-      {user?.category === "freelancer" && (
+      {user_role === "freelancer" && (
         <Fragment>
           <div className="flex justify-start px-3">
             <span className="text-blue-500 text-xs mt-6">

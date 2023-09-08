@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { getUserDetail, loginUser } from "./actions/authActions";
+import { useNavigate } from "react-router-dom";
+import { loginUser } from "./actions/authActions";
 import Navigate from "../../common/Navigate";
 import Banner from "../../common/Banner";
 
@@ -10,7 +10,6 @@ const Login = () => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [success, setSuccess] = useState(null);
-  const [userdetail, setUserdetail] = useState(null);
   const [error, setError] = useState(null);
   const [loggingin, setLoggingin] = useState(false);
 
@@ -28,19 +27,9 @@ const Login = () => {
 
   if (success !== null) {
     localStorage.setItem("logged_in", JSON.stringify(success));
-    //getUserDetail(success?.access, setUserdetail, setError);
     navigate("/dashboard");
     location.reload();
-    /**  
-    if(userdetail !== null && userdetail?.status === "success"){
-      localStorage.setItem("userInfo", JSON.stringify(userdetail?.data));
-      navigate("/dashboard");
-      location.reload();
-    } */
   }
-
-
-
 
   useEffect(() => {
     if (JSON.parse(localStorage.getItem("logged_in")) !== null) {
