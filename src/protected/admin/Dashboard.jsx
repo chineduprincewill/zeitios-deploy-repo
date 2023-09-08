@@ -7,23 +7,20 @@ import FreelancerDashboard from '../freelancing/pages/FreelancerDashboard'
 
 const Dashboard = () => {
 
-    const { user } = useContext(AuthContext);
+    const { user_role } = useContext(AuthContext);
 
     let dashboardComponent;
 
-    if(user && user !== null){
+    if(user_role && user_role !== null){
 
-        if(user?.category === 'client'){
+        if(user_role === 'client'){
             dashboardComponent = <ClientDashboard />     
-
         }
-        else if(user?.category === 'freelancer'){
+        else if(user_role === 'freelancer'){
             dashboardComponent = <FreelancerDashboard /> 
-
         }
         else{  
-        }
-        
+        }  
     }
     else{
       dashboardComponent = <div className="w-full flex justify-center items-center my-12">
@@ -41,12 +38,6 @@ const Dashboard = () => {
             {
               dashboardComponent 
             }
-          </div>
-
-          <div>
-            {/* 
-                          YOUR PAGE COMPONENTS APPEAR HERE
-            */}
           </div>
         </div>
       </div>

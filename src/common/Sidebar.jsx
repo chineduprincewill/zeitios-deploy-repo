@@ -1,23 +1,10 @@
-import { Fragment, useContext, useEffect, useState } from "react";
+import { Fragment, useContext } from "react";
 import Logo from "../assets/logo/Logo.png";
 import { AuthContext } from "../context/AuthContext";
 import NavDB from "./NavDB";
-import { getUserDetail } from "../public/authentication/actions/authActions";
 
 const Sidebar = () => {
-  const { token, shownav } = useContext(AuthContext);
-
-  const [userdetail, setUserdetail] = useState(null);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-
-    token && getUserDetail(token, setUserdetail, setError);
-  }, [token])
-
-  if(userdetail !== null && token){
-    localStorage.setItem('userInfo', JSON.stringify(userdetail?.data));
-  }
+  const { shownav } = useContext(AuthContext);
 
   return (
     <Fragment>
@@ -47,7 +34,7 @@ const Sidebar = () => {
           />
         </div>
         <div className="my-16 flex justify-center">
-          {userdetail === null ? <span className="text-white my-12">Loading...</span> : <NavDB />}
+          <NavDB />
         </div>
       </div>
     </Fragment>
