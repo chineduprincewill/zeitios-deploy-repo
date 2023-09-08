@@ -1,5 +1,3 @@
-import Sidebar from "../../../common/Sidebar";
-import PageHeader from "../../../common/PageHeader";
 import icon1 from "../../../assets/icons/first_dashboard_icon.png";
 import icon2 from "../../../assets/icons/second_dashboard_icon.png";
 import icon3 from "../../../assets/icons/manage_project_icon.png";
@@ -11,14 +9,7 @@ import profile from "../../../assets/icons/third_profile.png";
 const ClientDashboard = () => {
   return (
     <div>
-      <Sidebar />
-      <div className="flex flex-col">
-        <div className="hidden md:w-[80px] lg:w-[200px]">...</div>
-        <div className="grow md:ml-[80px] lg:ml-[250px] bg-gray-100 px-3 lg:px-12">
-          <PageHeader />
-        </div>
-        <div className="grow md:ml-[80px] lg:ml-[250px] px-3 lg:px-12 mt-5">
-          <div className=" grid sm:grid-cols-2 md:grid-cols-4 gap-5">
+        <div className=" grid sm:grid-cols-2 md:grid-cols-4 gap-5">
             <div className=" bg-[#C00E3A] py-5 px-3 rounded-md">
               <p className=" mb-10 text-[20px] text-white font-[500]">
                 Number of Projects
@@ -256,8 +247,6 @@ const ClientDashboard = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
     </div>
   );
 };

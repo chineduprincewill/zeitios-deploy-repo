@@ -67,7 +67,7 @@ const NavDB = () => {
     {
       id: 1,
       title: "Dashboard",
-      url: "/client-dashboard",
+      url: "/dashboard",
       icon: <RxDashboard size={15} />,
     },
     {
@@ -112,7 +112,7 @@ const NavDB = () => {
     {
       id: 1,
       title: "Dashboard",
-      url: "/freelancer-dashboard",
+      url: "/dashboard",
       icon: <RxDashboard size={15} />,
     },
     {

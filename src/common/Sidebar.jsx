@@ -7,8 +7,6 @@ import { getUserDetail } from "../public/authentication/actions/authActions";
 const Sidebar = () => {
   const { token, shownav } = useContext(AuthContext);
 
-  console.log(token);
-
   const [userdetail, setUserdetail] = useState(null);
   const [error, setError] = useState(null);
 
@@ -17,7 +15,7 @@ const Sidebar = () => {
     token && getUserDetail(token, setUserdetail, setError);
   }, [token])
 
-  if(userdetail !== null){
+  if(userdetail !== null && token){
     localStorage.setItem('userInfo', JSON.stringify(userdetail?.data));
   }
 
@@ -49,7 +47,7 @@ const Sidebar = () => {
           />
         </div>
         <div className="my-16 flex justify-center">
-          {userdetail === null && !localStorage.getItem('userInfo') ? <span className="text-white my-12">Loading...</span> : <NavDB />}
+          {userdetail === null ? <span className="text-white my-12">Loading...</span> : <NavDB />}
         </div>
       </div>
     </Fragment>
