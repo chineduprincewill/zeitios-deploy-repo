@@ -1,8 +1,8 @@
 import React from "react";
 import Sidebar from "../../../common/Sidebar";
-import ProfileIcon from "../../../assets/icons/third_profile_icon.png";
+//import ProfileIcon from "../../../assets/icons/third_profile_icon.png";
 import CameraIcon from "../../../assets/icons/camera_icon.png";
-import { AiOutlinePlus } from "react-icons/ai";
+//import { AiOutlinePlus } from "react-icons/ai";
 
 const AddService = () => {
   return (
