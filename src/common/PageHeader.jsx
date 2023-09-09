@@ -2,17 +2,17 @@ import React, { useContext, useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { AuthContext } from '../context/AuthContext';
 import { getUserDetail } from '../protected/actions/userActions';
+import VerifyEmail from './VerifyEmail';
 
 const PageHeader = () => {
 
     const location  = useLocation();
-    const { token, user_username } = useContext(AuthContext);
+    const { token } = useContext(AuthContext);
     const pagetitle = location.pathname.replace('/', '').replace('-', ' ').replace('freelancer', '').replace('client', '');
 
     const [userdetail, setUserdetail] = useState(null);
     const [error, setError] = useState(null);
 
-    console.log(userdetail?.first_name);
 
     useEffect(() => {
         getUserDetail(token, setUserdetail, setError);
@@ -33,17 +33,7 @@ const PageHeader = () => {
               </div>
             }
           </div>
-          <div>
-            {userdetail !== null && 
-              userdetail?.email_verified ?
-                <span className='bg-blue-100 hover:bg-blue-200 text-blue-900 text-sm font-medium p-3 rounded-md cursor-pointer'>
-                  Email verified!
-                </span> :
-                <span className='bg-orange-100 hover:bg-orange-200 text-orange-900 text-sm font-medium p-3 rounded-md cursor-pointer'>
-                  Email not verified. Click to verify your email
-                </span>
-          }
-          </div>
+          <VerifyEmail userdetail={userdetail} error={error} setError={setError} />
           
         </div>
     )
